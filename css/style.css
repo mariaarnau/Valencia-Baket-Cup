@@ -288,6 +288,26 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .nav__links a:hover { color: var(--white); }
 .nav__links a:hover::after { width: 100%; }
 
+.nav__sponsors {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 8px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+.nav__sponsor-logo {
+  height: 34px;
+  width: auto;
+  max-width: 80px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+.nav__sponsor-logo:hover { opacity: 1; }
+@media (max-width: 900px) { .nav__sponsors { display: none; } }
+
 .nav__burger {
   display: none;
   flex-direction: column;
