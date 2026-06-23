@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valencia Basket Cup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">
+      <span class="nav__logo-vbc">VBC</span>
+      <span class="nav__logo-text">Valencia Basket Cup</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#torneos">Torneos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#revista">Revista</a></li>
+      <li><a href="#pagos">Inscripción</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" alt="La Alqueria del Basket" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">El torneo de baloncesto más prestigioso del Mediterráneo</p>
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line">Valencia</span>
+        <span class="hero__title-line hero__title-line--accent">Basket</span>
+        <span class="hero__title-line">Cup</span>
+      </h1>
+      <div class="hero__dates reveal">
+        <div class="hero__date-pill">VBC · Ene 2027</div>
+        <div class="hero__date-pill">VIC · Mar 2027</div>
+        <div class="hero__date-pill">VSC · Jun 2026</div>
+      </div>
+      <a href="#torneos" class="btn btn--hero reveal">Descubre los torneos</a>
+    </div>
+    <div class="hero__ball">
+      <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/close-up-of-basketball-with-black-lines-cut-out-transparent-png.png" alt="" aria-hidden="true" />
+    </div>
+    <div class="hero__scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- TORNEOS -->
+  <section class="torneos" id="torneos">
+    <div class="section-header reveal">
+      <span class="section-header__tag">Calendario</span>
+      <h2 class="section-header__title">Nuestros <em>Torneos</em></h2>
+    </div>
+
+    <div class="torneos__grid">
+
+      <!-- VBC -->
+      <article class="torneo-card" data-torneo="vbc">
+        <div class="torneo-card__img-wrap">
+          <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2084.jpg" alt="Valencia Basket Cup" class="torneo-card__img" />
+          <div class="torneo-card__num">01</div>
+        </div>
+        <div class="torneo-card__body">
+          <span class="torneo-card__tag">VBC</span>
+          <h3 class="torneo-card__name">Valencia<br/>Basket Cup</h3>
+          <div class="torneo-card__fecha">
+            <div class="torneo-card__fecha-icon">📅</div>
+            <div>
+              <strong>3 — 5 Enero 2027</strong>
+              <p>Valencia · La Alqueria del Basket</p>
+            </div>
+          </div>
+          <p class="torneo-card__desc">El torneo estrella de la temporada de invierno. Equipos de toda España compiten en la emblemática Alqueria del Basket de Valencia.</p>
+          <div class="torneo-card__stats">
+            <div class="torneo-card__stat"><span>32+</span><small>Equipos</small></div>
+            <div class="torneo-card__stat"><span>3</span><small>Días</small></div>
+            <div class="torneo-card__stat"><span>U12–U18</span><small>Categorías</small></div>
+          </div>
+          <a href="#pagos" class="btn btn--card">Inscribirse</a>
+        </div>
+        <div class="torneo-card__magazine">
+          <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/l-alqueria-del-basket-pista-acb-photo.jpeg" alt="Revista VBC" />
+        </div>
+      </article>
+
+      <!-- VIC -->
+      <article class="torneo-card torneo-card--alt" data-torneo="vic">
+        <div class="torneo-card__img-wrap">
+          <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_9902.jpg" alt="Valencia Indoor Cup" class="torneo-card__img" />
+          <div class="torneo-card__num">02</div>
+        </div>
+        <div class="torneo-card__body">
+          <span class="torneo-card__tag">VIC</span>
+          <h3 class="torneo-card__name">Valencia<br/>Indoor Cup</h3>
+          <div class="torneo-card__fecha">
+            <div class="torneo-card__fecha-icon">📅</div>
+            <div>
+              <strong>25 — 28 Marzo 2027</strong>
+              <p>Valencia · Instalaciones Federación</p>
+            </div>
+          </div>
+          <p class="torneo-card__desc">La gran cita de primavera. Cuatro días de baloncesto de alta intensidad con equipos nacionales e internacionales.</p>
+          <div class="torneo-card__stats">
+            <div class="torneo-card__stat"><span>48+</span><small>Equipos</small></div>
+            <div class="torneo-card__stat"><span>4</span><small>Días</small></div>
+            <div class="torneo-card__stat"><span>U10–U18</span><small>Categorías</small></div>
+          </div>
+          <a href="#pagos" class="btn btn--card">Inscribirse</a>
+        </div>
+        <div class="torneo-card__magazine">
+          <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8730.jpg" alt="Revista VIC" />
+        </div>
+      </article>
+
+      <!-- VSC -->
+      <article class="torneo-card" data-torneo="vsc">
+        <div class="torneo-card__img-wrap">
+          <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_7858.jpg" alt="Valencia Summer Cup" class="torneo-card__img" />
+          <div class="torneo-card__num">03</div>
+        </div>
+        <div class="torneo-card__body">
+          <span class="torneo-card__tag">VSC</span>
+          <h3 class="torneo-card__name">Valencia<br/>Summer Cup</h3>
+          <div class="torneo-card__fecha">
+            <div class="torneo-card__fecha-icon">📅</div>
+            <div>
+              <strong>25 — 27 Junio 2026</strong>
+              <p>Valencia · Pabellones Municipales</p>
+            </div>
+          </div>
+          <p class="torneo-card__desc">El broche de oro del verano valenciano. Torneo de verano donde el talento joven luce bajo el sol del Mediterráneo.</p>
+          <div class="torneo-card__stats">
+            <div class="torneo-card__stat"><span>24+</span><small>Equipos</small></div>
+            <div class="torneo-card__stat"><span>3</span><small>Días</small></div>
+            <div class="torneo-card__stat"><span>U8–U16</span><small>Categorías</small></div>
+          </div>
+          <a href="#pagos" class="btn btn--card">Inscribirse</a>
+        </div>
+        <div class="torneo-card__magazine">
+          <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2347.jpg" alt="Revista VSC" />
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ALQUERIA BANNER -->
+  <div class="alqueria-banner">
+    <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/l-alqueria-del-basket-pista-acb-photo.jpeg" alt="Pista La Alqueria del Basket" loading="lazy" />
+    <div class="alqueria-banner__overlay">
+      <span>La Alqueria del Basket · Valencia</span>
+    </div>
+  </div>
+
+  <!-- CONTADOR -->
+  <section class="contador">
+    <div class="contador__inner reveal">
+      <div class="contador__item">
+        <span class="contador__num" data-target="5000">0</span>
+        <span class="contador__label">Jugadores</span>
+      </div>
+      <div class="contador__divider"></div>
+      <div class="contador__item">
+        <span class="contador__num" data-target="320">0</span>
+        <span class="contador__label">Equipos</span>
+      </div>
+      <div class="contador__divider"></div>
+      <div class="contador__item">
+        <span class="contador__num" data-target="12">0</span>
+        <span class="contador__label">Ediciones</span>
+      </div>
+      <div class="contador__divider"></div>
+      <div class="contador__item">
+        <span class="contador__num" data-target="28">0</span>
+        <span class="contador__label">Países</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="galeria" id="galeria">
+    <div class="section-header reveal">
+      <span class="section-header__tag">Momentos</span>
+      <h2 class="section-header__title">Galería <em>de Imágenes</em></h2>
+    </div>
+
+    <div class="galeria__filters reveal">
+      <button class="galeria__filter active" data-filter="all">Todas</button>
+      <button class="galeria__filter" data-filter="vbc">VBC</button>
+      <button class="galeria__filter" data-filter="vic">VIC</button>
+      <button class="galeria__filter" data-filter="vsc">VSC</button>
+    </div>
+
+    <div class="galeria__grid" id="galeriaGrid">
+      <div class="galeria__item galeria__item--wide" data-cat="vbc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2129.jpg" alt="Valencia Basket Cup acción" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vbc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0374.jpg" alt="Jugadores VBC" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vic">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1505.jpg" alt="Valencia Indoor Cup" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
+      </div>
+      <div class="galeria__item galeria__item--tall" data-cat="vsc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8418.jpg" alt="Valencia Summer Cup" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VSC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vic">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1860.jpg" alt="VIC acción" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vbc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0612.jpg" alt="Ceremonia VBC" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
+      </div>
+      <div class="galeria__item galeria__item--wide" data-cat="vsc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2260.jpg" alt="VSC equipo" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VSC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vbc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1882.jpg" alt="VBC final" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vic">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8064.jpg" alt="VIC podium" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vsc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0776.jpg" alt="VSC acción" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VSC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vbc">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1365.jpg" alt="VBC equipos" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
+      </div>
+      <div class="galeria__item" data-cat="vic">
+        <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2240.jpg" alt="VIC final" loading="lazy" />
+        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" id="lightboxClose">&times;</button>
+      <button class="lightbox__prev" id="lightboxPrev">&#8249;</button>
+      <button class="lightbox__next" id="lightboxNext">&#8250;</button>
+      <div class="lightbox__inner">
+        <img src="" alt="" id="lightboxImg" />
+        <p class="lightbox__caption" id="lightboxCaption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILM STRIP -->
+  <div class="filmstrip" aria-hidden="true">
+    <div class="filmstrip__track">
+      <div class="filmstrip__reel">
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0374.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0612.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0776.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1365.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1505.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1860.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1882.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2084.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2129.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2240.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2260.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2347.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_7858.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8064.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8418.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8730.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_9902.jpg" alt="" loading="lazy" /></div>
+      </div>
+      <!-- Duplicado para loop infinito -->
+      <div class="filmstrip__reel" aria-hidden="true">
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0374.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0612.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0776.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1365.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1505.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1860.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1882.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2084.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2129.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2240.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2260.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2347.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_7858.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8064.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8418.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8730.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_9902.jpg" alt="" loading="lazy" /></div>
+      </div>
+    </div>
+    <!-- Segunda fila en dirección contraria -->
+    <div class="filmstrip__track filmstrip__track--reverse">
+      <div class="filmstrip__reel">
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_9902.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8730.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8418.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8064.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_7858.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2347.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2260.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2240.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2129.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2084.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1882.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1860.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1505.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1365.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0776.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0612.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0374.jpg" alt="" loading="lazy" /></div>
+      </div>
+      <div class="filmstrip__reel" aria-hidden="true">
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_9902.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8730.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8418.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_8064.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_7858.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2347.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2260.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2240.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2129.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2084.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1882.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1860.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1505.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_1365.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0776.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0612.jpg" alt="" loading="lazy" /></div>
+        <div class="filmstrip__frame"><img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_0374.jpg" alt="" loading="lazy" /></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVISTA -->
+  <section class="revista" id="revista">
+    <div class="revista__bg"></div>
+    <div class="revista__content">
+      <div class="section-header reveal">
+        <span class="section-header__tag">Media</span>
+        <h2 class="section-header__title">Nuestra <em>Revista</em></h2>
+      </div>
+      <div class="revista__grid">
+        <div class="revista__portada reveal">
+          <div class="revista__book">
+            <div class="revista__book-front">
+              <img src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/IMG_2347.jpg" alt="Revista VBC" />
+              <div class="revista__book-spine"></div>
+            </div>
+          </div>
+        </div>
+        <div class="revista__info reveal">
+          <h3>Valencia Basket Cup Magazine</h3>
+          <p class="revista__desc">Revive los mejores momentos de cada torneo en nuestra revista oficial. Reportajes exclusivos, estadísticas, entrevistas a jugadores y entrenadores, y las mejores fotografías de cada edición.</p>
+          <ul class="revista__list">
+            <li>Reportajes exclusivos de cada torneo</li>
+            <li>Estadísticas y resultados completos</li>
+            <li>Entrevistas con jugadores y entrenadores</li>
+            <li>Fotografía profesional de alta calidad</li>
+          </ul>
+          <a href="#" class="btn btn--primary">Ver Revistas Anteriores</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGOS -->
+  <section class="pagos" id="pagos">
+    <div class="pagos__deco-top"></div>
+    <div class="section-header reveal">
+      <span class="section-header__tag">Inscripción</span>
+      <h2 class="section-header__title">Proceso de <em>Pago</em></h2>
+    </div>
+
+    <div class="pagos__steps reveal">
+      <div class="pagos__step">
+        <div class="pagos__step-num">01</div>
+        <div class="pagos__step-icon">🏀</div>
+        <h4>Elige tu torneo</h4>
+        <p>Selecciona el torneo y la categoría en la que quieres participar.</p>
+      </div>
+      <div class="pagos__step-arrow">→</div>
+      <div class="pagos__step">
+        <div class="pagos__step-num">02</div>
+        <div class="pagos__step-icon">📋</div>
+        <h4>Completa el formulario</h4>
+        <p>Rellena los datos de tu equipo y jugadores inscritos.</p>
+      </div>
+      <div class="pagos__step-arrow">→</div>
+      <div class="pagos__step">
+        <div class="pagos__step-num">03</div>
+        <div class="pagos__step-icon">💳</div>
+        <h4>Realiza el pago</h4>
+        <p>Pago seguro mediante tarjeta de crédito o transferencia bancaria.</p>
+      </div>
+      <div class="pagos__step-arrow">→</div>
+      <div class="pagos__step">
+        <div class="pagos__step-num">04</div>
+        <div class="pagos__step-icon">✅</div>
+        <h4>Confirmación</h4>
+        <p>Recibirás la confirmación por email con todos los detalles.</p>
+      </div>
+    </div>
+
+    <div class="pagos__cards reveal">
+
+      <div class="pagos__card">
+        <div class="pagos__card-header">
+          <span class="pagos__card-tag">VBC</span>
+          <h3>Valencia Basket Cup</h3>
+          <div class="pagos__card-fecha">3–5 Enero 2027</div>
+        </div>
+        <div class="pagos__card-price">
+          <span class="pagos__card-currency">€</span>
+          <span class="pagos__card-amount">380</span>
+          <span class="pagos__card-period">/ equipo</span>
+        </div>
+        <ul class="pagos__card-features">
+          <li>✓ Inscripción completa</li>
+          <li>✓ Arbitraje incluido</li>
+          <li>✓ Camiseta oficial del torneo</li>
+          <li>✓ Acceso a la revista digital</li>
+          <li>✓ Trofeos y medallas</li>
+        </ul>
+        <a href="#" class="btn btn--primary pagos__btn">Inscribirse al VBC</a>
+      </div>
+
+      <div class="pagos__card pagos__card--featured">
+        <div class="pagos__card-badge">Más Popular</div>
+        <div class="pagos__card-header">
+          <span class="pagos__card-tag">VIC</span>
+          <h3>Valencia Indoor Cup</h3>
+          <div class="pagos__card-fecha">25–28 Marzo 2027</div>
+        </div>
+        <div class="pagos__card-price">
+          <span class="pagos__card-currency">€</span>
+          <span class="pagos__card-amount">420</span>
+          <span class="pagos__card-period">/ equipo</span>
+        </div>
+        <ul class="pagos__card-features">
+          <li>✓ Inscripción completa</li>
+          <li>✓ Arbitraje incluido</li>
+          <li>✓ Pack equipación oficial</li>
+          <li>✓ Acceso a la revista impresa</li>
+          <li>✓ Trofeos y medallas</li>
+          <li>✓ Foto oficial del equipo</li>
+        </ul>
+        <a href="#" class="btn btn--featured pagos__btn">Inscribirse al VIC</a>
+      </div>
+
+      <div class="pagos__card">
+        <div class="pagos__card-header">
+          <span class="pagos__card-tag">VSC</span>
+          <h3>Valencia Summer Cup</h3>
+          <div class="pagos__card-fecha">25–27 Junio 2026</div>
+        </div>
+        <div class="pagos__card-price">
+          <span class="pagos__card-currency">€</span>
+          <span class="pagos__card-amount">350</span>
+          <span class="pagos__card-period">/ equipo</span>
+        </div>
+        <ul class="pagos__card-features">
+          <li>✓ Inscripción completa</li>
+          <li>✓ Arbitraje incluido</li>
+          <li>✓ Camiseta oficial del torneo</li>
+          <li>✓ Acceso a la revista digital</li>
+          <li>✓ Trofeos y medallas</li>
+        </ul>
+        <a href="#" class="btn btn--primary pagos__btn">Inscribirse al VSC</a>
+      </div>
+
+    </div>
+
+    <div class="pagos__metodos reveal">
+      <p>Métodos de pago aceptados</p>
+      <div class="pagos__metodos-icons">
+        <div class="pagos__metodo">💳 Tarjeta</div>
+        <div class="pagos__metodo">🏦 Transferencia</div>
+        <div class="pagos__metodo">📱 Bizum</div>
+        <div class="pagos__metodo">🌐 PayPal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="section-header reveal">
+      <span class="section-header__tag">Contacto</span>
+      <h2 class="section-header__title">¿Tienes <em>preguntas?</em></h2>
+    </div>
+    <div class="contacto__grid">
+      <form class="contacto__form reveal" id="contactForm">
+        <div class="contacto__field">
+          <label for="nombre">Nombre del club / equipo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Club Baloncesto Valencia" required />
+        </div>
+        <div class="contacto__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="contacto@clubvalencia.es" required />
+        </div>
+        <div class="contacto__field">
+          <label for="torneo">Torneo de interés</label>
+          <select id="torneo" name="torneo">
+            <option value="">Selecciona un torneo...</option>
+            <option value="vbc">VBC — Valencia Basket Cup (Ene 2027)</option>
+            <option value="vic">VIC — Valencia Indoor Cup (Mar 2027)</option>
+            <option value="vsc">VSC — Valencia Summer Cup (Jun 2026)</option>
+          </select>
+        </div>
+        <div class="contacto__field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+      </form>
+      <div class="contacto__info reveal">
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon">📍</div>
+          <div>
+            <strong>Ubicación</strong>
+            <p>La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia</p>
+          </div>
+        </div>
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon">📧</div>
+          <div>
+            <strong>Email</strong>
+            <p>info@valenciabasketcup.com</p>
+          </div>
+        </div>
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon">📱</div>
+          <div>
+            <strong>Redes Sociales</strong>
+            <div class="contacto__redes">
+              <a href="#" class="contacto__red">Instagram</a>
+              <a href="#" class="contacto__red">Twitter</a>
+              <a href="#" class="contacto__red">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VBC</span>
+        <p>Valencia Basket Cup<br/>El torneo más prestigioso del Mediterráneo</p>
+      </div>
+      <div class="footer__torneos">
+        <h5>Torneos 2026–2027</h5>
+        <ul>
+          <li>VSC · 25–27 Jun 2026</li>
+          <li>VBC · 3–5 Ene 2027</li>
+          <li>VIC · 25–28 Mar 2027</li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#torneos">Torneos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#revista">Revista</a></li>
+          <li><a href="#pagos">Inscripción</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="https://raw.githubusercontent.com/mariaarnau/Valencia-Baket-Cup/claude/happy-babbage-35g79r/js/main.js"></script>
+</body>
+</html>
