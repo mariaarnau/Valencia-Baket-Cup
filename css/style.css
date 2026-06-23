@@ -821,6 +821,82 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .lightbox__next:hover { color: var(--orange); }
 
 /* ================================
+   FILM STRIP
+================================ */
+.filmstrip {
+  background: var(--black);
+  padding: 40px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.filmstrip::before,
+.filmstrip::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.filmstrip::before {
+  left: 0;
+  background: linear-gradient(to right, var(--black), transparent);
+}
+.filmstrip::after {
+  right: 0;
+  background: linear-gradient(to left, var(--black), transparent);
+}
+
+.filmstrip__track {
+  display: flex;
+  width: max-content;
+  animation: filmScroll 55s linear infinite;
+}
+.filmstrip__track--reverse {
+  animation: filmScrollReverse 45s linear infinite;
+}
+.filmstrip__track:hover,
+.filmstrip__track--reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes filmScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes filmScrollReverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.filmstrip__reel {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.filmstrip__frame {
+  width: 220px;
+  height: 155px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.filmstrip__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: saturate(0.7) brightness(0.85);
+}
+.filmstrip__frame:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.1) brightness(1);
+}
+
+/* ================================
    REVISTA
 ================================ */
 .revista {
