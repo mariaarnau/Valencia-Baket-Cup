@@ -14,15 +14,16 @@
   <!-- NAV -->
   <nav class="nav" id="navbar">
     <div class="nav__logo">
-      <span class="nav__logo-vbc">VBC</span>
+      <a href="index.html"><span class="nav__logo-vbc">VBC</span></a>
       <span class="nav__logo-text">Valencia Basket Cup</span>
     </div>
     <ul class="nav__links">
-      <li><a href="#torneos">Torneos</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#revista">Revista</a></li>
-      <li><a href="#pagos">Inscripción</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="torneos.html">Torneos</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="pagos.html">Inscripción</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
     <div class="nav__sponsors">
       <img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" />
@@ -52,7 +53,7 @@
         <button class="hero__date-pill" onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')">VIC · Mar 2027</button>
         <button class="hero__date-pill" onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')">VSC · Jun 2026</button>
       </div>
-      <a href="#torneos" class="btn btn--hero reveal">Descubre los torneos</a>
+      <a href="torneos.html" class="btn btn--hero reveal">Descubre los torneos</a>
     </div>
     <div class="hero__ball">
       <img src="close-up-of-basketball-with-black-lines-cut-out-transparent-png.png" alt="" aria-hidden="true" />
@@ -62,110 +63,52 @@
     </div>
   </section>
 
-  <!-- TORNEOS -->
-  <section class="torneos" id="torneos">
+  <!-- TORNEO PREVIEW CARDS -->
+  <section class="home-torneos">
     <div class="section-header reveal">
-      <span class="section-header__tag">Calendario</span>
+      <span class="section-header__tag">Próximas citas</span>
       <h2 class="section-header__title">Nuestros <em>Torneos</em></h2>
     </div>
+    <div class="home-torneos__grid">
 
-    <div class="torneos__grid">
+      <a href="torneos.html#vbc" class="home-torneo-card reveal">
+        <div class="home-torneo-card__img">
+          <img src="IMG_2084.jpg" alt="Valencia Basket Cup" loading="lazy" />
+          <div class="home-torneo-card__overlay"></div>
+        </div>
+        <div class="home-torneo-card__body">
+          <span class="home-torneo-card__tag">VBC</span>
+          <h3 class="home-torneo-card__name">Valencia Basket Cup</h3>
+          <p class="home-torneo-card__fecha">3 — 5 Enero 2027</p>
+          <span class="home-torneo-card__cta">Ver torneo →</span>
+        </div>
+      </a>
 
-      <!-- VBC -->
-      <article class="torneo-card" data-torneo="vbc">
-        <div class="torneo-card__img-wrap">
-          <img src="IMG_2084.jpg" alt="Valencia Basket Cup" class="torneo-card__img" />
-          <div class="torneo-card__num">01</div>
+      <a href="torneos.html#vic" class="home-torneo-card reveal">
+        <div class="home-torneo-card__img">
+          <img src="IMG_9902.jpg" alt="Valencia International Cup" loading="lazy" />
+          <div class="home-torneo-card__overlay"></div>
         </div>
-        <div class="torneo-card__body">
-          <span class="torneo-card__tag">VBC</span>
-          <h3 class="torneo-card__name">Valencia<br/>Basket Cup</h3>
-          <div class="torneo-card__fecha">
-            <div class="torneo-card__fecha-icon">📅</div>
-            <div>
-              <strong>3 — 5 Enero 2027</strong>
-              <p>Valencia · La Alqueria del Basket</p>
-            </div>
-          </div>
-          <p class="torneo-card__desc">El torneo estrella de la temporada de invierno. Equipos de toda España compiten en la emblemática Alqueria del Basket de Valencia.</p>
-          <div class="torneo-card__stats">
-            <div class="torneo-card__stat"><span>32+</span><small>Equipos</small></div>
-            <div class="torneo-card__stat"><span>3</span><small>Días</small></div>
-            <div class="torneo-card__stat"><span>U12–U18</span><small>Categorías</small></div>
-          </div>
-          <div class="torneo-card__btns">
-            <a href="#pagos" class="btn btn--card">Inscribirse</a>
-            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--revista">📖 Ver Revista VBC</button>
-          </div>
+        <div class="home-torneo-card__body">
+          <span class="home-torneo-card__tag">VIC</span>
+          <h3 class="home-torneo-card__name">Valencia International Cup</h3>
+          <p class="home-torneo-card__fecha">25 — 28 Marzo 2027</p>
+          <span class="home-torneo-card__cta">Ver torneo →</span>
         </div>
-        <div class="torneo-card__magazine">
-          <img src="l-alqueria-del-basket-pista-acb-photo.jpeg" alt="Revista VBC" />
-        </div>
-      </article>
+      </a>
 
-      <!-- VIC -->
-      <article class="torneo-card torneo-card--alt" data-torneo="vic">
-        <div class="torneo-card__img-wrap">
-          <img src="IMG_9902.jpg" alt="Valencia International Cup" class="torneo-card__img" />
-          <div class="torneo-card__num">02</div>
+      <a href="torneos.html#vsc" class="home-torneo-card reveal">
+        <div class="home-torneo-card__img">
+          <img src="IMG_7858.jpg" alt="Valencia Summer Cup" loading="lazy" />
+          <div class="home-torneo-card__overlay"></div>
         </div>
-        <div class="torneo-card__body">
-          <span class="torneo-card__tag">VIC</span>
-          <h3 class="torneo-card__name">Valencia<br/>International Cup</h3>
-          <div class="torneo-card__fecha">
-            <div class="torneo-card__fecha-icon">📅</div>
-            <div>
-              <strong>25 — 28 Marzo 2027</strong>
-              <p>Valencia · Instalaciones Federación</p>
-            </div>
-          </div>
-          <p class="torneo-card__desc">La gran cita de primavera. Cuatro días de baloncesto de alta intensidad con equipos nacionales e internacionales.</p>
-          <div class="torneo-card__stats">
-            <div class="torneo-card__stat"><span>48+</span><small>Equipos</small></div>
-            <div class="torneo-card__stat"><span>4</span><small>Días</small></div>
-            <div class="torneo-card__stat"><span>U10–U18</span><small>Categorías</small></div>
-          </div>
-          <div class="torneo-card__btns">
-            <a href="#pagos" class="btn btn--card">Inscribirse</a>
-            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--revista">📖 Ver Revista VIC</button>
-          </div>
+        <div class="home-torneo-card__body">
+          <span class="home-torneo-card__tag">VSC</span>
+          <h3 class="home-torneo-card__name">Valencia Summer Cup</h3>
+          <p class="home-torneo-card__fecha">25 — 27 Junio 2026</p>
+          <span class="home-torneo-card__cta">Ver torneo →</span>
         </div>
-        <div class="torneo-card__magazine">
-          <img src="IMG_8730.jpg" alt="Revista VIC" />
-        </div>
-      </article>
-
-      <!-- VSC -->
-      <article class="torneo-card" data-torneo="vsc">
-        <div class="torneo-card__img-wrap">
-          <img src="IMG_7858.jpg" alt="Valencia Summer Cup" class="torneo-card__img" />
-          <div class="torneo-card__num">03</div>
-        </div>
-        <div class="torneo-card__body">
-          <span class="torneo-card__tag">VSC</span>
-          <h3 class="torneo-card__name">Valencia<br/>Summer Cup</h3>
-          <div class="torneo-card__fecha">
-            <div class="torneo-card__fecha-icon">📅</div>
-            <div>
-              <strong>25 — 27 Junio 2026</strong>
-              <p>Valencia · Pabellones Municipales</p>
-            </div>
-          </div>
-          <p class="torneo-card__desc">El broche de oro del verano valenciano. Torneo de verano donde el talento joven luce bajo el sol del Mediterráneo.</p>
-          <div class="torneo-card__stats">
-            <div class="torneo-card__stat"><span>24+</span><small>Equipos</small></div>
-            <div class="torneo-card__stat"><span>3</span><small>Días</small></div>
-            <div class="torneo-card__stat"><span>U8–U16</span><small>Categorías</small></div>
-          </div>
-          <div class="torneo-card__btns">
-            <a href="#pagos" class="btn btn--card">Inscribirse</a>
-            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--revista">📖 Ver Revista VSC</button>
-          </div>
-        </div>
-        <div class="torneo-card__magazine">
-          <img src="IMG_2347.jpg" alt="Revista VSC" />
-        </div>
-      </article>
+      </a>
 
     </div>
   </section>
@@ -203,384 +146,6 @@
     </div>
   </section>
 
-  <!-- GALERÍA -->
-  <section class="galeria" id="galeria">
-    <div class="section-header reveal">
-      <span class="section-header__tag">Momentos</span>
-      <h2 class="section-header__title">Galería <em>de Imágenes</em></h2>
-    </div>
-
-    <div class="galeria__filters reveal">
-      <button class="galeria__filter active" data-filter="all">Todas</button>
-      <button class="galeria__filter" data-filter="vbc">VBC</button>
-      <button class="galeria__filter" data-filter="vic">VIC</button>
-      <button class="galeria__filter" data-filter="vsc">VSC</button>
-    </div>
-
-    <div class="galeria__grid" id="galeriaGrid">
-      <div class="galeria__item galeria__item--wide" data-cat="vbc">
-        <img src="IMG_2129.jpg" alt="Valencia Basket Cup acción" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vbc">
-        <img src="IMG_0374.jpg" alt="Jugadores VBC" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vic">
-        <img src="IMG_1505.jpg" alt="Valencia International Cup" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
-      </div>
-      <div class="galeria__item galeria__item--tall" data-cat="vsc">
-        <img src="IMG_8418.jpg" alt="Valencia Summer Cup" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VSC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vic">
-        <img src="IMG_1860.jpg" alt="VIC acción" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vbc">
-        <img src="IMG_0612.jpg" alt="Ceremonia VBC" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
-      </div>
-      <div class="galeria__item galeria__item--wide" data-cat="vsc">
-        <img src="IMG_2260.jpg" alt="VSC equipo" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VSC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vbc">
-        <img src="IMG_1882.jpg" alt="VBC final" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vic">
-        <img src="IMG_8064.jpg" alt="VIC podium" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vsc">
-        <img src="IMG_0776.jpg" alt="VSC acción" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VSC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vbc">
-        <img src="IMG_1365.jpg" alt="VBC equipos" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VBC 2024</span></div>
-      </div>
-      <div class="galeria__item" data-cat="vic">
-        <img src="IMG_2240.jpg" alt="VIC final" loading="lazy" />
-        <div class="galeria__item-overlay"><span>VIC 2024</span></div>
-      </div>
-    </div>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox__close" id="lightboxClose">&times;</button>
-      <button class="lightbox__prev" id="lightboxPrev">&#8249;</button>
-      <button class="lightbox__next" id="lightboxNext">&#8250;</button>
-      <div class="lightbox__inner">
-        <img src="" alt="" id="lightboxImg" />
-        <p class="lightbox__caption" id="lightboxCaption"></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FILM STRIP -->
-  <div class="filmstrip" aria-hidden="true">
-    <div class="filmstrip__track">
-      <div class="filmstrip__reel">
-        <div class="filmstrip__frame"><img src="IMG_0374.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0612.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0776.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1365.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1505.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1860.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1882.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2084.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2129.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2240.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2260.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2347.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_7858.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8064.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8418.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8730.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_9902.jpg" alt="" loading="lazy" /></div>
-      </div>
-      <!-- Duplicado para loop infinito -->
-      <div class="filmstrip__reel" aria-hidden="true">
-        <div class="filmstrip__frame"><img src="IMG_0374.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0612.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0776.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1365.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1505.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1860.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1882.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2084.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2129.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2240.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2260.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2347.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_7858.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8064.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8418.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8730.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_9902.jpg" alt="" loading="lazy" /></div>
-      </div>
-    </div>
-    <!-- Segunda fila en dirección contraria -->
-    <div class="filmstrip__track filmstrip__track--reverse">
-      <div class="filmstrip__reel">
-        <div class="filmstrip__frame"><img src="IMG_9902.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8730.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8418.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8064.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_7858.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2347.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2260.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2240.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2129.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2084.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1882.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1860.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1505.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1365.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0776.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0612.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0374.jpg" alt="" loading="lazy" /></div>
-      </div>
-      <div class="filmstrip__reel" aria-hidden="true">
-        <div class="filmstrip__frame"><img src="IMG_9902.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8730.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8418.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_8064.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_7858.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2347.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2260.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2240.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2129.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_2084.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1882.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1860.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1505.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_1365.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0776.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0612.jpg" alt="" loading="lazy" /></div>
-        <div class="filmstrip__frame"><img src="IMG_0374.jpg" alt="" loading="lazy" /></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- REVISTA -->
-  <section class="revista" id="revista">
-    <div class="revista__bg"></div>
-    <div class="revista__content">
-      <div class="section-header reveal">
-        <span class="section-header__tag">Media</span>
-        <h2 class="section-header__title">Nuestra <em>Revista</em></h2>
-      </div>
-      <div class="revista__grid">
-        <div class="revista__portada reveal">
-          <div class="revista__book">
-            <div class="revista__book-front">
-              <img src="IMG_2347.jpg" alt="Revista VBC" />
-              <div class="revista__book-spine"></div>
-            </div>
-          </div>
-        </div>
-        <div class="revista__info reveal">
-          <h3>Valencia Basket Cup Magazine</h3>
-          <p class="revista__desc">Revive los mejores momentos de cada torneo en nuestra revista oficial. Reportajes exclusivos, estadísticas, entrevistas a jugadores y entrenadores, y las mejores fotografías de cada edición.</p>
-          <ul class="revista__list">
-            <li>Reportajes exclusivos de cada torneo</li>
-            <li>Estadísticas y resultados completos</li>
-            <li>Entrevistas con jugadores y entrenadores</li>
-            <li>Fotografía profesional de alta calidad</li>
-          </ul>
-          <div class="revista__btns">
-            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--primary">📖 Revista VBC</button>
-            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--primary">📖 Revista VIC</button>
-            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--primary">📖 Revista VSC</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PAGOS -->
-  <section class="pagos" id="pagos">
-    <div class="pagos__deco-top"></div>
-    <div class="section-header reveal">
-      <span class="section-header__tag">Inscripción</span>
-      <h2 class="section-header__title">Proceso de <em>Pago</em></h2>
-    </div>
-
-    <div class="pagos__steps reveal">
-      <div class="pagos__step">
-        <div class="pagos__step-num">01</div>
-        <div class="pagos__step-icon">🏀</div>
-        <h4>Elige tu torneo</h4>
-        <p>Selecciona el torneo y la categoría en la que quieres participar.</p>
-      </div>
-      <div class="pagos__step-arrow">→</div>
-      <div class="pagos__step">
-        <div class="pagos__step-num">02</div>
-        <div class="pagos__step-icon">📋</div>
-        <h4>Completa el formulario</h4>
-        <p>Rellena los datos de tu equipo y jugadores inscritos.</p>
-      </div>
-      <div class="pagos__step-arrow">→</div>
-      <div class="pagos__step">
-        <div class="pagos__step-num">03</div>
-        <div class="pagos__step-icon">💳</div>
-        <h4>Realiza el pago</h4>
-        <p>Pago seguro mediante tarjeta de crédito o transferencia bancaria.</p>
-      </div>
-      <div class="pagos__step-arrow">→</div>
-      <div class="pagos__step">
-        <div class="pagos__step-num">04</div>
-        <div class="pagos__step-icon">✅</div>
-        <h4>Confirmación</h4>
-        <p>Recibirás la confirmación por email con todos los detalles.</p>
-      </div>
-    </div>
-
-    <div class="pagos__cards reveal">
-
-      <div class="pagos__card">
-        <div class="pagos__card-header">
-          <span class="pagos__card-tag">VBC</span>
-          <h3>Valencia Basket Cup</h3>
-          <div class="pagos__card-fecha">3–5 Enero 2027</div>
-        </div>
-        <div class="pagos__card-price">
-          <span class="pagos__card-currency">€</span>
-          <span class="pagos__card-amount">380</span>
-          <span class="pagos__card-period">/ equipo</span>
-        </div>
-        <ul class="pagos__card-features">
-          <li>✓ Inscripción completa</li>
-          <li>✓ Arbitraje incluido</li>
-          <li>✓ Camiseta oficial del torneo</li>
-          <li>✓ Acceso a la revista digital</li>
-          <li>✓ Trofeos y medallas</li>
-        </ul>
-        <a href="#" class="btn btn--primary pagos__btn">Inscribirse al VBC</a>
-      </div>
-
-      <div class="pagos__card pagos__card--featured">
-        <div class="pagos__card-badge">Más Popular</div>
-        <div class="pagos__card-header">
-          <span class="pagos__card-tag">VIC</span>
-          <h3>Valencia International Cup</h3>
-          <div class="pagos__card-fecha">25–28 Marzo 2027</div>
-        </div>
-        <div class="pagos__card-price">
-          <span class="pagos__card-currency">€</span>
-          <span class="pagos__card-amount">420</span>
-          <span class="pagos__card-period">/ equipo</span>
-        </div>
-        <ul class="pagos__card-features">
-          <li>✓ Inscripción completa</li>
-          <li>✓ Arbitraje incluido</li>
-          <li>✓ Pack equipación oficial</li>
-          <li>✓ Acceso a la revista impresa</li>
-          <li>✓ Trofeos y medallas</li>
-          <li>✓ Foto oficial del equipo</li>
-        </ul>
-        <a href="#" class="btn btn--featured pagos__btn">Inscribirse al VIC</a>
-      </div>
-
-      <div class="pagos__card">
-        <div class="pagos__card-header">
-          <span class="pagos__card-tag">VSC</span>
-          <h3>Valencia Summer Cup</h3>
-          <div class="pagos__card-fecha">25–27 Junio 2026</div>
-        </div>
-        <div class="pagos__card-price">
-          <span class="pagos__card-currency">€</span>
-          <span class="pagos__card-amount">350</span>
-          <span class="pagos__card-period">/ equipo</span>
-        </div>
-        <ul class="pagos__card-features">
-          <li>✓ Inscripción completa</li>
-          <li>✓ Arbitraje incluido</li>
-          <li>✓ Camiseta oficial del torneo</li>
-          <li>✓ Acceso a la revista digital</li>
-          <li>✓ Trofeos y medallas</li>
-        </ul>
-        <a href="#" class="btn btn--primary pagos__btn">Inscribirse al VSC</a>
-      </div>
-
-    </div>
-
-    <div class="pagos__metodos reveal">
-      <p>Métodos de pago aceptados</p>
-      <div class="pagos__metodos-icons">
-        <div class="pagos__metodo">💳 Tarjeta</div>
-        <div class="pagos__metodo">🏦 Transferencia</div>
-        <div class="pagos__metodo">📱 Bizum</div>
-        <div class="pagos__metodo">🌐 PayPal</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="contacto" id="contacto">
-    <div class="section-header reveal">
-      <span class="section-header__tag">Contacto</span>
-      <h2 class="section-header__title">¿Tienes <em>preguntas?</em></h2>
-    </div>
-    <div class="contacto__grid">
-      <form class="contacto__form reveal" id="contactForm">
-        <div class="contacto__field">
-          <label for="nombre">Nombre del club / equipo</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Club Baloncesto Valencia" required />
-        </div>
-        <div class="contacto__field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="contacto@clubvalencia.es" required />
-        </div>
-        <div class="contacto__field">
-          <label for="torneo">Torneo de interés</label>
-          <select id="torneo" name="torneo">
-            <option value="">Selecciona un torneo...</option>
-            <option value="vbc">VBC — Valencia Basket Cup (Ene 2027)</option>
-            <option value="vic">VIC — Valencia International Cup (Mar 2027)</option>
-            <option value="vsc">VSC — Valencia Summer Cup (Jun 2026)</option>
-          </select>
-        </div>
-        <div class="contacto__field">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
-      </form>
-      <div class="contacto__info reveal">
-        <div class="contacto__info-item">
-          <div class="contacto__info-icon">📍</div>
-          <div>
-            <strong>Ubicación</strong>
-            <p>La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia</p>
-          </div>
-        </div>
-        <div class="contacto__info-item">
-          <div class="contacto__info-icon">📧</div>
-          <div>
-            <strong>Email</strong>
-            <p>info@valenciabasketcup.com</p>
-          </div>
-        </div>
-        <div class="contacto__info-item">
-          <div class="contacto__info-icon">📱</div>
-          <div>
-            <strong>Redes Sociales</strong>
-            <div class="contacto__redes">
-              <a href="#" class="contacto__red">Instagram</a>
-              <a href="#" class="contacto__red">Twitter</a>
-              <a href="#" class="contacto__red">Facebook</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- PATROCINADORES -->
   <section class="patrocinadores">
     <div class="patrocinadores__inner">
@@ -612,11 +177,12 @@
       <div class="footer__links">
         <h5>Navegación</h5>
         <ul>
-          <li><a href="#torneos">Torneos</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#revista">Revista</a></li>
-          <li><a href="#pagos">Inscripción</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="revista.html">Revista</a></li>
+          <li><a href="pagos.html">Inscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -624,7 +190,6 @@
       <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
     </div>
   </footer>
-
 
   <!-- MODAL PDF -->
   <div class="pdf-modal" id="pdfModal">

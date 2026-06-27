@@ -266,6 +266,22 @@ document.addEventListener('keydown', e => {
 });
 
 /* ================================
+   NAV ACTIVE LINK (multi-page)
+================================ */
+(function () {
+  const path = window.location.pathname;
+  const filename = path.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav__links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    const linkFile = href.split('/').pop().split('#')[0] || 'index.html';
+    if (linkFile === filename) {
+      a.classList.add('nav__active');
+    }
+  });
+})();
+
+/* ================================
    SMOOTH ANCHOR SCROLL
 ================================ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

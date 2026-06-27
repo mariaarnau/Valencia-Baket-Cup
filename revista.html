@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revista · Valencia Basket Cup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-vbc">VBC</span></a>
+      <span class="nav__logo-text">Valencia Basket Cup</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="torneos.html">Torneos</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="revista.html" class="nav__active">Revista</a></li>
+      <li><a href="pagos.html">Inscripción</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav__sponsors">
+      <img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" />
+      <img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" />
+      <img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia Basket Cup" class="nav__sponsor-logo nav__sponsor-logo--invert" />
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero__content">
+      <span class="page-hero__tag">Media</span>
+      <h1 class="page-hero__title">Nuestra <em>Revista</em></h1>
+    </div>
+  </div>
+
+  <!-- REVISTA -->
+  <section class="revista" id="revista">
+    <div class="revista__bg"></div>
+    <div class="revista__content">
+      <div class="revista__grid">
+        <div class="revista__portada reveal">
+          <div class="revista__book">
+            <div class="revista__book-front">
+              <img src="IMG_2347.jpg" alt="Revista VBC" />
+              <div class="revista__book-spine"></div>
+            </div>
+          </div>
+        </div>
+        <div class="revista__info reveal">
+          <h3>Valencia Basket Cup Magazine</h3>
+          <p class="revista__desc">Revive los mejores momentos de cada torneo en nuestra revista oficial. Reportajes exclusivos, estadísticas, entrevistas a jugadores y entrenadores, y las mejores fotografías de cada edición.</p>
+          <ul class="revista__list">
+            <li>Reportajes exclusivos de cada torneo</li>
+            <li>Estadísticas y resultados completos</li>
+            <li>Entrevistas con jugadores y entrenadores</li>
+            <li>Fotografía profesional de alta calidad</li>
+          </ul>
+          <div class="revista__btns">
+            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--primary">📖 Revista VBC</button>
+            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--primary">📖 Revista VIC</button>
+            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--primary">📖 Revista VSC</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section class="patrocinadores">
+    <div class="patrocinadores__inner">
+      <span class="patrocinadores__label">Con el apoyo de</span>
+      <div class="patrocinadores__logos">
+        <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
+        <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
+        <div class="patrocinadores__logo"><img src="turismo (1).png" alt="Turisme Comunitat Valenciana" /></div>
+        <div class="patrocinadores__logo"><img src="WhatsApp Image 2026-06-25 at 18.49.15.jpeg" alt="Colaborador" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VBC</span>
+        <p>Valencia Basket Cup<br/>El torneo más prestigioso del Mediterráneo</p>
+      </div>
+      <div class="footer__torneos">
+        <h5>Torneos 2026–2027</h5>
+        <ul>
+          <li>VSC · 25–27 Jun 2026</li>
+          <li>VBC · 3–5 Ene 2027</li>
+          <li>VIC · 25–28 Mar 2027</li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="revista.html">Revista</a></li>
+          <li><a href="pagos.html">Inscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- MODAL PDF -->
+  <div class="pdf-modal" id="pdfModal">
+    <div class="pdf-modal__backdrop" onclick="closePDF()"></div>
+    <div class="pdf-modal__box">
+      <button class="pdf-modal__close" onclick="closePDF()">✕</button>
+      <iframe class="pdf-modal__frame" id="pdfFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

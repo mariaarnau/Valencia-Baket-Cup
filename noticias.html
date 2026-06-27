@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noticias · Valencia Basket Cup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-vbc">VBC</span></a>
+      <span class="nav__logo-text">Valencia Basket Cup</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="torneos.html">Torneos</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="noticias.html" class="nav__active">Noticias</a></li>
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="pagos.html">Inscripción</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav__sponsors">
+      <img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" />
+      <img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" />
+      <img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia Basket Cup" class="nav__sponsor-logo nav__sponsor-logo--invert" />
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero__content">
+      <span class="page-hero__tag">Actualidad</span>
+      <h1 class="page-hero__title">Últimas <em>Noticias</em></h1>
+    </div>
+  </div>
+
+  <!-- NOTICIAS -->
+  <section class="noticias">
+
+    <!-- NOTICIA DESTACADA -->
+    <article class="noticia-card noticia-card--featured reveal">
+      <div class="noticia-card__img">
+        <img src="IMG_2129.jpg" alt="Valencia Basket Cup 2027 - Inscripciones abiertas" loading="lazy" />
+        <div class="noticia-card__img-overlay"></div>
+      </div>
+      <div class="noticia-card__body">
+        <div class="noticia-card__meta">
+          <span class="noticia-card__cat noticia-card__cat--vbc">VBC</span>
+          <time class="noticia-card__fecha">15 Junio 2026</time>
+        </div>
+        <h2 class="noticia-card__titulo">La Valencia Basket Cup 2027 abre inscripciones con récord histórico de solicitudes en las primeras 48 horas</h2>
+        <p class="noticia-card__extracto">El torneo de baloncesto más prestigioso del Mediterráneo ha batido todos sus registros previos en el primer fin de semana de inscripción. Más de 120 equipos de 15 países diferentes han formalizado ya su participación en la edición que se celebrará del 3 al 5 de enero en La Alqueria del Basket.</p>
+        <p class="noticia-card__extracto">La dirección del torneo atribuye este éxito sin precedentes a la consolidación de la marca VBC a nivel europeo y a la mejora constante de las instalaciones en La Alqueria, sede oficial del Valencia Basket en ACB. Este año se incorporan nuevas categorías sub-10 y sub-12 femenino que han generado gran expectación entre los clubes participantes.</p>
+        <a href="#" class="noticia-card__link">Leer artículo completo →</a>
+      </div>
+    </article>
+
+    <!-- GRID DE NOTICIAS SECUNDARIAS -->
+    <div class="noticias__grid">
+
+      <article class="noticia-card reveal">
+        <div class="noticia-card__img">
+          <img src="IMG_9902.jpg" alt="Valencia International Cup 2027" loading="lazy" />
+          <div class="noticia-card__img-overlay"></div>
+        </div>
+        <div class="noticia-card__body">
+          <div class="noticia-card__meta">
+            <span class="noticia-card__cat noticia-card__cat--vic">VIC</span>
+            <time class="noticia-card__fecha">10 Junio 2026</time>
+          </div>
+          <h3 class="noticia-card__titulo">La Valencia International Cup 2027 confirma la participación de equipos de Francia, Italia y Portugal</h3>
+          <p class="noticia-card__extracto">La cita internacional de primavera refuerza su dimensión europea con la incorporación de doce clubes del continente. El torneo, que se disputará del 25 al 28 de marzo de 2027, espera superar los 48 equipos participantes por primera vez en su historia.</p>
+          <a href="#" class="noticia-card__link">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="noticia-card reveal">
+        <div class="noticia-card__img">
+          <img src="IMG_8418.jpg" alt="Valencia Summer Cup campeones" loading="lazy" />
+          <div class="noticia-card__img-overlay"></div>
+        </div>
+        <div class="noticia-card__body">
+          <div class="noticia-card__meta">
+            <span class="noticia-card__cat noticia-card__cat--vsc">VSC</span>
+            <time class="noticia-card__fecha">28 Junio 2026</time>
+          </div>
+          <h3 class="noticia-card__titulo">El CB Castellón se corona campeón de la Valencia Summer Cup 2026 en una final épica</h3>
+          <p class="noticia-card__extracto">El conjunto castellonense venció al Joventut B por 68-64 en una final disputada hasta el último segundo en el Pabellón Municipal de Patraix. La VSC 2026 ha congregado a más de 800 jugadores de todo el arco mediterráneo.</p>
+          <a href="#" class="noticia-card__link">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="noticia-card reveal">
+        <div class="noticia-card__img">
+          <img src="IMG_1882.jpg" alt="Jugadores VBC" loading="lazy" />
+          <div class="noticia-card__img-overlay"></div>
+        </div>
+        <div class="noticia-card__body">
+          <div class="noticia-card__meta">
+            <span class="noticia-card__cat noticia-card__cat--vbc">VBC</span>
+            <time class="noticia-card__fecha">5 Junio 2026</time>
+          </div>
+          <h3 class="noticia-card__titulo">Valencia Basket Club firma un acuerdo de colaboración con el VBC para la detección de talento</h3>
+          <p class="noticia-card__extracto">El equipo de la ACB se convierte en socio estratégico del torneo y enviará a sus ojeadores a observar a los mejores jugadores sub-16 y sub-18. Un paso histórico que refuerza la proyección del VBC como cantera de referencia en España.</p>
+          <a href="#" class="noticia-card__link">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="noticia-card reveal">
+        <div class="noticia-card__img">
+          <img src="IMG_1860.jpg" alt="Jugadores VIC" loading="lazy" />
+          <div class="noticia-card__img-overlay"></div>
+        </div>
+        <div class="noticia-card__body">
+          <div class="noticia-card__meta">
+            <span class="noticia-card__cat noticia-card__cat--vic">VIC</span>
+            <time class="noticia-card__fecha">20 Mayo 2026</time>
+          </div>
+          <h3 class="noticia-card__titulo">Turisme Comunitat Valenciana renueva su patrocinio con el VIC por tres temporadas</h3>
+          <p class="noticia-card__extracto">La institución autonómica apostará por el torneo como escaparate del destino Valencia ante el turismo deportivo internacional. El acuerdo incluye actividades de difusión en mercados de Europa del Norte y del Este.</p>
+          <a href="#" class="noticia-card__link">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="noticia-card reveal">
+        <div class="noticia-card__img">
+          <img src="IMG_2084.jpg" alt="Acción VBC" loading="lazy" />
+          <div class="noticia-card__img-overlay"></div>
+        </div>
+        <div class="noticia-card__body">
+          <div class="noticia-card__meta">
+            <span class="noticia-card__cat noticia-card__cat--vbc">VBC</span>
+            <time class="noticia-card__fecha">2 Mayo 2026</time>
+          </div>
+          <h3 class="noticia-card__titulo">El VBC lanza su programa de becas para equipos de clubes sin recursos del área rural valenciana</h3>
+          <p class="noticia-card__extracto">Hasta seis equipos podrán participar gratuitamente gracias al fondo solidario creado por los organizadores. El programa busca democratizar el acceso a la alta competición infantil y juvenil más allá de los grandes núcleos urbanos.</p>
+          <a href="#" class="noticia-card__link">Leer más →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section class="patrocinadores">
+    <div class="patrocinadores__inner">
+      <span class="patrocinadores__label">Con el apoyo de</span>
+      <div class="patrocinadores__logos">
+        <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
+        <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
+        <div class="patrocinadores__logo"><img src="turismo (1).png" alt="Turisme Comunitat Valenciana" /></div>
+        <div class="patrocinadores__logo"><img src="WhatsApp Image 2026-06-25 at 18.49.15.jpeg" alt="Colaborador" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VBC</span>
+        <p>Valencia Basket Cup<br/>El torneo más prestigioso del Mediterráneo</p>
+      </div>
+      <div class="footer__torneos">
+        <h5>Torneos 2026–2027</h5>
+        <ul>
+          <li>VSC · 25–27 Jun 2026</li>
+          <li>VBC · 3–5 Ene 2027</li>
+          <li>VIC · 25–28 Mar 2027</li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="revista.html">Revista</a></li>
+          <li><a href="pagos.html">Inscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

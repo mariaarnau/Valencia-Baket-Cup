@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto · Valencia Basket Cup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-vbc">VBC</span></a>
+      <span class="nav__logo-text">Valencia Basket Cup</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="torneos.html">Torneos</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="pagos.html">Inscripción</a></li>
+      <li><a href="contacto.html" class="nav__active">Contacto</a></li>
+    </ul>
+    <div class="nav__sponsors">
+      <img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" />
+      <img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" />
+      <img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia Basket Cup" class="nav__sponsor-logo nav__sponsor-logo--invert" />
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero__content">
+      <span class="page-hero__tag">Contacto</span>
+      <h1 class="page-hero__title">¿Tienes <em>preguntas?</em></h1>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__grid">
+      <form class="contacto__form reveal" id="contactForm">
+        <div class="contacto__field">
+          <label for="nombre">Nombre del club / equipo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Club Baloncesto Valencia" required />
+        </div>
+        <div class="contacto__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="contacto@clubvalencia.es" required />
+        </div>
+        <div class="contacto__field">
+          <label for="torneo">Torneo de interés</label>
+          <select id="torneo" name="torneo">
+            <option value="">Selecciona un torneo...</option>
+            <option value="vbc">VBC — Valencia Basket Cup (Ene 2027)</option>
+            <option value="vic">VIC — Valencia International Cup (Mar 2027)</option>
+            <option value="vsc">VSC — Valencia Summer Cup (Jun 2026)</option>
+          </select>
+        </div>
+        <div class="contacto__field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+      </form>
+      <div class="contacto__info reveal">
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon">📍</div>
+          <div>
+            <strong>Ubicación</strong>
+            <p>La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia</p>
+          </div>
+        </div>
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon">📧</div>
+          <div>
+            <strong>Email</strong>
+            <p>info@valenciabasketcup.com</p>
+          </div>
+        </div>
+        <div class="contacto__info-item">
+          <div class="contacto__info-icon">📱</div>
+          <div>
+            <strong>Redes Sociales</strong>
+            <div class="contacto__redes">
+              <a href="#" class="contacto__red">Instagram</a>
+              <a href="#" class="contacto__red">Twitter</a>
+              <a href="#" class="contacto__red">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section class="patrocinadores">
+    <div class="patrocinadores__inner">
+      <span class="patrocinadores__label">Con el apoyo de</span>
+      <div class="patrocinadores__logos">
+        <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
+        <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
+        <div class="patrocinadores__logo"><img src="turismo (1).png" alt="Turisme Comunitat Valenciana" /></div>
+        <div class="patrocinadores__logo"><img src="WhatsApp Image 2026-06-25 at 18.49.15.jpeg" alt="Colaborador" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VBC</span>
+        <p>Valencia Basket Cup<br/>El torneo más prestigioso del Mediterráneo</p>
+      </div>
+      <div class="footer__torneos">
+        <h5>Torneos 2026–2027</h5>
+        <ul>
+          <li>VSC · 25–27 Jun 2026</li>
+          <li>VBC · 3–5 Ene 2027</li>
+          <li>VIC · 25–28 Mar 2027</li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="revista.html">Revista</a></li>
+          <li><a href="pagos.html">Inscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

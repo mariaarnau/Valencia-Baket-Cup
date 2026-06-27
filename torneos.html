@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torneos · Valencia Basket Cup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-vbc">VBC</span></a>
+      <span class="nav__logo-text">Valencia Basket Cup</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="torneos.html" class="nav__active">Torneos</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="revista.html">Revista</a></li>
+      <li><a href="pagos.html">Inscripción</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav__sponsors">
+      <img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" />
+      <img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" />
+      <img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia Basket Cup" class="nav__sponsor-logo nav__sponsor-logo--invert" />
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero__content">
+      <span class="page-hero__tag">Calendario</span>
+      <h1 class="page-hero__title">Nuestros <em>Torneos</em></h1>
+    </div>
+  </div>
+
+  <!-- TORNEOS -->
+  <section class="torneos" id="torneos">
+    <div class="torneos__grid">
+
+      <!-- VBC -->
+      <article class="torneo-card" data-torneo="vbc" id="vbc">
+        <div class="torneo-card__img-wrap">
+          <img src="IMG_2084.jpg" alt="Valencia Basket Cup" class="torneo-card__img" />
+          <div class="torneo-card__num">01</div>
+        </div>
+        <div class="torneo-card__body">
+          <span class="torneo-card__tag">VBC</span>
+          <h3 class="torneo-card__name">Valencia<br/>Basket Cup</h3>
+          <div class="torneo-card__fecha">
+            <div class="torneo-card__fecha-icon">📅</div>
+            <div>
+              <strong>3 — 5 Enero 2027</strong>
+              <p>Valencia · La Alqueria del Basket</p>
+            </div>
+          </div>
+          <p class="torneo-card__desc">El torneo estrella de la temporada de invierno. Equipos de toda España compiten en la emblemática Alqueria del Basket de Valencia.</p>
+          <div class="torneo-card__stats">
+            <div class="torneo-card__stat"><span>32+</span><small>Equipos</small></div>
+            <div class="torneo-card__stat"><span>3</span><small>Días</small></div>
+            <div class="torneo-card__stat"><span>U12–U18</span><small>Categorías</small></div>
+          </div>
+          <div class="torneo-card__btns">
+            <a href="pagos.html" class="btn btn--card">Inscribirse</a>
+            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--revista">📖 Ver Revista VBC</button>
+          </div>
+        </div>
+        <div class="torneo-card__magazine">
+          <img src="l-alqueria-del-basket-pista-acb-photo.jpeg" alt="Revista VBC" />
+        </div>
+      </article>
+
+      <!-- VIC -->
+      <article class="torneo-card torneo-card--alt" data-torneo="vic" id="vic">
+        <div class="torneo-card__img-wrap">
+          <img src="IMG_9902.jpg" alt="Valencia International Cup" class="torneo-card__img" />
+          <div class="torneo-card__num">02</div>
+        </div>
+        <div class="torneo-card__body">
+          <span class="torneo-card__tag">VIC</span>
+          <h3 class="torneo-card__name">Valencia<br/>International Cup</h3>
+          <div class="torneo-card__fecha">
+            <div class="torneo-card__fecha-icon">📅</div>
+            <div>
+              <strong>25 — 28 Marzo 2027</strong>
+              <p>Valencia · Instalaciones Federación</p>
+            </div>
+          </div>
+          <p class="torneo-card__desc">La gran cita de primavera. Cuatro días de baloncesto de alta intensidad con equipos nacionales e internacionales.</p>
+          <div class="torneo-card__stats">
+            <div class="torneo-card__stat"><span>48+</span><small>Equipos</small></div>
+            <div class="torneo-card__stat"><span>4</span><small>Días</small></div>
+            <div class="torneo-card__stat"><span>U10–U18</span><small>Categorías</small></div>
+          </div>
+          <div class="torneo-card__btns">
+            <a href="pagos.html" class="btn btn--card">Inscribirse</a>
+            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--revista">📖 Ver Revista VIC</button>
+          </div>
+        </div>
+        <div class="torneo-card__magazine">
+          <img src="IMG_8730.jpg" alt="Revista VIC" />
+        </div>
+      </article>
+
+      <!-- VSC -->
+      <article class="torneo-card" data-torneo="vsc" id="vsc">
+        <div class="torneo-card__img-wrap">
+          <img src="IMG_7858.jpg" alt="Valencia Summer Cup" class="torneo-card__img" />
+          <div class="torneo-card__num">03</div>
+        </div>
+        <div class="torneo-card__body">
+          <span class="torneo-card__tag">VSC</span>
+          <h3 class="torneo-card__name">Valencia<br/>Summer Cup</h3>
+          <div class="torneo-card__fecha">
+            <div class="torneo-card__fecha-icon">📅</div>
+            <div>
+              <strong>25 — 27 Junio 2026</strong>
+              <p>Valencia · Pabellones Municipales</p>
+            </div>
+          </div>
+          <p class="torneo-card__desc">El broche de oro del verano valenciano. Torneo de verano donde el talento joven luce bajo el sol del Mediterráneo.</p>
+          <div class="torneo-card__stats">
+            <div class="torneo-card__stat"><span>24+</span><small>Equipos</small></div>
+            <div class="torneo-card__stat"><span>3</span><small>Días</small></div>
+            <div class="torneo-card__stat"><span>U8–U16</span><small>Categorías</small></div>
+          </div>
+          <div class="torneo-card__btns">
+            <a href="pagos.html" class="btn btn--card">Inscribirse</a>
+            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--revista">📖 Ver Revista VSC</button>
+          </div>
+        </div>
+        <div class="torneo-card__magazine">
+          <img src="IMG_2347.jpg" alt="Revista VSC" />
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section class="patrocinadores">
+    <div class="patrocinadores__inner">
+      <span class="patrocinadores__label">Con el apoyo de</span>
+      <div class="patrocinadores__logos">
+        <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
+        <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
+        <div class="patrocinadores__logo"><img src="turismo (1).png" alt="Turisme Comunitat Valenciana" /></div>
+        <div class="patrocinadores__logo"><img src="WhatsApp Image 2026-06-25 at 18.49.15.jpeg" alt="Colaborador" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VBC</span>
+        <p>Valencia Basket Cup<br/>El torneo más prestigioso del Mediterráneo</p>
+      </div>
+      <div class="footer__torneos">
+        <h5>Torneos 2026–2027</h5>
+        <ul>
+          <li>VSC · 25–27 Jun 2026</li>
+          <li>VBC · 3–5 Ene 2027</li>
+          <li>VIC · 25–28 Mar 2027</li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="revista.html">Revista</a></li>
+          <li><a href="pagos.html">Inscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- MODAL PDF -->
+  <div class="pdf-modal" id="pdfModal">
+    <div class="pdf-modal__backdrop" onclick="closePDF()"></div>
+    <div class="pdf-modal__box">
+      <button class="pdf-modal__close" onclick="closePDF()">✕</button>
+      <iframe class="pdf-modal__frame" id="pdfFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
