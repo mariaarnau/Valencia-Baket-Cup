@@ -1339,6 +1339,54 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .contacto__red:hover { color: var(--orange); border-color: var(--orange); }
 
 /* ================================
+   PATROCINADORES
+================================ */
+.patrocinadores {
+  background: var(--black-soft);
+  border-top: 1px solid var(--black-border);
+  border-bottom: 1px solid var(--black-border);
+  padding: 48px 5%;
+}
+.patrocinadores__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.patrocinadores__label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--white-faint);
+}
+.patrocinadores__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.patrocinadores__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), opacity var(--transition);
+  opacity: 0.6;
+}
+.patrocinadores__logo:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+.patrocinadores__logo img {
+  height: 52px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* ================================
    FOOTER
 ================================ */
 .footer {
