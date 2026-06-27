@@ -307,6 +307,10 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .nav__sponsor-logo--invert {
   filter: brightness(0) invert(1);
 }
+.nav__sponsor-logo--color {
+  filter: none;
+  opacity: 0.92;
+}
 .nav__sponsor-logo:hover {
   opacity: 1;
   transform: scale(1.05);
