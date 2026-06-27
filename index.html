@@ -48,9 +48,9 @@
         <span class="hero__title-line">Cup</span>
       </h1>
       <div class="hero__dates reveal">
-        <div class="hero__date-pill">VBC · Ene 2027</div>
-        <div class="hero__date-pill">VIC · Mar 2027</div>
-        <div class="hero__date-pill">VSC · Jun 2026</div>
+        <button class="hero__date-pill" onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')">VBC · Ene 2027</button>
+        <button class="hero__date-pill" onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')">VIC · Mar 2027</button>
+        <button class="hero__date-pill" onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')">VSC · Jun 2026</button>
       </div>
       <a href="#torneos" class="btn btn--hero reveal">Descubre los torneos</a>
     </div>
@@ -95,7 +95,7 @@
           </div>
           <div class="torneo-card__btns">
             <a href="#pagos" class="btn btn--card">Inscribirse</a>
-            <a href="https://drive.google.com/file/d/1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5/view" target="_blank" class="btn btn--revista">📖 Ver Revista</a>
+            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--revista">📖 Ver Revista VBC</button>
           </div>
         </div>
         <div class="torneo-card__magazine">
@@ -127,7 +127,7 @@
           </div>
           <div class="torneo-card__btns">
             <a href="#pagos" class="btn btn--card">Inscribirse</a>
-            <a href="https://drive.google.com/file/d/1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM/view" target="_blank" class="btn btn--revista">📖 Ver Revista</a>
+            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--revista">📖 Ver Revista VIC</button>
           </div>
         </div>
         <div class="torneo-card__magazine">
@@ -159,7 +159,7 @@
           </div>
           <div class="torneo-card__btns">
             <a href="#pagos" class="btn btn--card">Inscribirse</a>
-            <a href="https://drive.google.com/file/d/10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4/view" target="_blank" class="btn btn--revista">📖 Ver Revista</a>
+            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--revista">📖 Ver Revista VSC</button>
           </div>
         </div>
         <div class="torneo-card__magazine">
@@ -393,9 +393,9 @@
             <li>Fotografía profesional de alta calidad</li>
           </ul>
           <div class="revista__btns">
-            <a href="https://drive.google.com/file/d/1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5/view" target="_blank" class="btn btn--primary">📖 Revista VBC</a>
-            <a href="https://drive.google.com/file/d/1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM/view" target="_blank" class="btn btn--primary">📖 Revista VIC</a>
-            <a href="https://drive.google.com/file/d/10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4/view" target="_blank" class="btn btn--primary">📖 Revista VSC</a>
+            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--primary">📖 Revista VBC</button>
+            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--primary">📖 Revista VIC</button>
+            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--primary">📖 Revista VSC</button>
           </div>
         </div>
       </div>
@@ -624,6 +624,16 @@
       <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
     </div>
   </footer>
+
+
+  <!-- MODAL PDF -->
+  <div class="pdf-modal" id="pdfModal">
+    <div class="pdf-modal__backdrop" onclick="closePDF()"></div>
+    <div class="pdf-modal__box">
+      <button class="pdf-modal__close" onclick="closePDF()">✕</button>
+      <iframe class="pdf-modal__frame" id="pdfFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
 
   <!-- CURSOR PERSONALIZADO -->
   <div class="cursor" id="cursor"></div>

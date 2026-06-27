@@ -245,6 +245,27 @@ if (contactForm) {
 }
 
 /* ================================
+   PDF MODAL
+================================ */
+function openPDF(fileId) {
+  const modal = document.getElementById('pdfModal');
+  const frame = document.getElementById('pdfFrame');
+  frame.src = `https://drive.google.com/file/d/${fileId}/preview`;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePDF() {
+  const modal = document.getElementById('pdfModal');
+  const frame = document.getElementById('pdfFrame');
+  modal.classList.remove('open');
+  frame.src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePDF();
+});
+
+/* ================================
    SMOOTH ANCHOR SCROLL
 ================================ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
