@@ -695,8 +695,9 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .alqueria-video__blocker {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 10;
   cursor: default;
+  pointer-events: all;
 }
 .alqueria-video__overlay {
   position: absolute;
