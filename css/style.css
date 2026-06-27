@@ -1005,16 +1005,13 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
    REVISTA
 ================================ */
 /* ================================
-   REVISTA HERO
+   REVISTA
 ================================ */
 .revista-hero {
   position: relative;
-  height: 70vh;
-  min-height: 500px;
+  height: 75vh;
+  min-height: 520px;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  margin-top: 0;
 }
 .revista-hero__bg {
   position: absolute;
@@ -1024,263 +1021,206 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 25%;
 }
 .revista-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.92) 0%,
-    rgba(0,0,0,0.5) 50%,
-    rgba(0,0,0,0.2) 100%
-  );
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.15) 100%);
 }
 .revista-hero__content {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 0 6% 60px;
   z-index: 1;
-  width: 100%;
 }
 .revista-hero__tag {
-  display: inline-block;
+  display: block;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .revista-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 900;
   line-height: 1.05;
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
-.revista-hero__title em {
-  color: var(--orange);
-  font-style: italic;
-}
+.revista-hero__title em { color: var(--orange); font-style: italic; }
 .revista-hero__sub {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.45);
 }
 
-/* ================================
-   REVISTA STRIP
-================================ */
+/* strip */
 .revista-strip {
   background: var(--orange);
   overflow: hidden;
-  padding: 13px 0;
+  padding: 12px 0;
 }
 .revista-strip__track {
   display: flex;
   white-space: nowrap;
-  animation: stripScroll 22s linear infinite;
+  animation: revistaTicker 24s linear infinite;
 }
 .revista-strip__track span {
-  display: inline-block;
-  font-size: 0.7rem;
+  flex-shrink: 0;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--black);
-  flex-shrink: 0;
+  padding-right: 40px;
 }
-@keyframes stripScroll {
+@keyframes revistaTicker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 
-/* ================================
-   REVISTA EDICIONES
-================================ */
+/* ediciones */
 .revista-ediciones {
-  padding: 80px 0 0;
   background: var(--black);
+  padding: 80px 5% 100px;
 }
 .revista-ediciones__header {
   text-align: center;
-  margin-bottom: 50px;
-  padding: 0 5%;
+  margin-bottom: 56px;
 }
 .revista-ediciones__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .revista-ed {
-  position: relative;
   cursor: pointer;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.07);
   overflow: hidden;
-  background: var(--black-soft);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
-.revista-ed--featured {
-  grid-row: span 1;
+.revista-ed:hover {
+  border-color: var(--orange);
+  transform: translateY(-6px);
 }
 .revista-ed__badge {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 16px;
   z-index: 3;
   background: var(--orange);
   color: var(--black);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 800;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 4px 10px;
 }
 .revista-ed__img {
   position: relative;
   width: 100%;
-  padding-top: 130%;
+  height: 280px;
   overflow: hidden;
 }
 .revista-ed__img img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  transition: transform 0.7s ease;
+  object-position: center 20%;
+  transition: transform 0.6s ease;
 }
+.revista-ed:hover .revista-ed__img img { transform: scale(1.05); }
 .revista-ed__img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.95) 0%,
-    rgba(0,0,0,0.3) 60%,
-    transparent 100%
-  );
-  transition: background 0.4s ease;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
 }
-.revista-ed:hover .revista-ed__img img {
-  transform: scale(1.06);
-}
-.revista-ed:hover .revista-ed__img-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.98) 0%,
-    rgba(0,0,0,0.6) 60%,
-    rgba(0,0,0,0.2) 100%
-  );
+.revista-ed__body {
+  padding: 24px 24px 20px;
 }
 .revista-ed__meta {
-  position: absolute;
-  bottom: 110px;
-  left: 0;
-  right: 0;
-  padding: 0 28px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  z-index: 2;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 .revista-ed__tag {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 800;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   background: var(--orange);
   color: var(--black);
-  padding: 4px 10px;
+  padding: 3px 8px;
 }
 .revista-ed__year {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.5);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
   text-transform: uppercase;
-}
-.revista-ed__info {
-  position: absolute;
-  bottom: 56px;
-  left: 0;
-  right: 0;
-  padding: 0 28px;
-  z-index: 2;
 }
 .revista-ed__name {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   line-height: 1.2;
 }
 .revista-ed__desc {
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.45);
-  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
 }
 .revista-ed__cta {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px 28px;
-  z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  gap: 8px;
   color: var(--orange);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: border-color 0.3s ease;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 16px;
+  transition: gap 0.3s ease;
 }
-.revista-ed:hover .revista-ed__cta {
-  border-color: var(--orange);
-}
+.revista-ed:hover .revista-ed__cta { gap: 14px; }
 
-/* ================================
-   REVISTA COLLAGE
-================================ */
+/* collage */
 .revista-collage {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 280px 280px;
-  gap: 3px;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 260px 260px;
+  gap: 4px;
   position: relative;
-  overflow: hidden;
 }
-.revista-collage__item {
-  overflow: hidden;
-}
+.revista-collage__item { overflow: hidden; }
 .revista-collage__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
-.revista-collage__item:hover img {
-  transform: scale(1.04);
-}
-.revista-collage__item--tall {
-  grid-row: span 2;
-}
-.revista-collage__col {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.revista-collage__col .revista-collage__item {
-  flex: 1;
-}
+.revista-collage__item:hover img { transform: scale(1.04); }
+.revista-collage__item--tall { grid-row: span 2; }
+.revista-collage__col { display: flex; flex-direction: column; gap: 4px; }
+.revista-collage__col .revista-collage__item { flex: 1; }
 .revista-collage__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, transparent 55%);
   display: flex;
   align-items: center;
   padding: 5%;
@@ -1288,20 +1228,15 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 .revista-collage__overlay p {
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-size: clamp(1rem, 2.2vw, 1.6rem);
   font-style: italic;
   color: var(--white);
   line-height: 1.5;
-  max-width: 420px;
+  max-width: 380px;
 }
 
 @media (max-width: 900px) {
-  .revista-ediciones__grid { grid-template-columns: 1fr; }
-  .revista-ed__img { padding-top: 70%; }
-  .revista-collage { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px; }
-  .revista-collage__item--tall { grid-row: span 1; }
-}
-@media (max-width: 600px) {
+  .revista-ediciones__grid { grid-template-columns: 1fr; max-width: 480px; }
   .revista-collage { display: none; }
 }
 
