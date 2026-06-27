@@ -116,13 +116,7 @@
   <!-- ALQUERIA VIDEO -->
   <div class="alqueria-video">
     <div class="alqueria-video__wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/52CPemxUGRA?start=10&end=32&vq=hd1080&autoplay=1&mute=1&loop=1&playlist=52CPemxUGRA&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="La Alqueria del Basket"
-      ></iframe>
+      <div id="alqueriaYT"></div>
       <div class="alqueria-video__blocker"></div>
     </div>
     <div class="alqueria-video__overlay">
@@ -214,5 +208,53 @@
   <div class="cursor-follower" id="cursorFollower"></div>
 
   <script src="js/main.js"></script>
+
+  <!-- YOUTUBE API -->
+  <script>
+    var alqueriaPlayer;
+    var alqueriaStart = 10;
+    var alqueriaEnd = 32;
+    var alqueriaTimer;
+
+    function onYouTubeIframeAPIReady() {
+      alqueriaPlayer = new YT.Player('alqueriaYT', {
+        videoId: '52CPemxUGRA',
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 0,
+          disablekb: 1,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0,
+          iv_load_policy: 3,
+          start: alqueriaStart,
+          end: alqueriaEnd,
+          vq: 'hd1080'
+        },
+        events: {
+          onReady: function(e) { e.target.playVideo(); },
+          onStateChange: function(e) {
+            if (e.data === YT.PlayerState.PLAYING) {
+              clearInterval(alqueriaTimer);
+              alqueriaTimer = setInterval(function() {
+                if (alqueriaPlayer.getCurrentTime() >= alqueriaEnd) {
+                  alqueriaPlayer.seekTo(alqueriaStart, true);
+                }
+              }, 250);
+            }
+            if (e.data === YT.PlayerState.ENDED) {
+              alqueriaPlayer.seekTo(alqueriaStart, true);
+              alqueriaPlayer.playVideo();
+            }
+          }
+        }
+      });
+    }
+
+    var ytScript = document.createElement('script');
+    ytScript.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(ytScript);
+  </script>
 </body>
 </html>
