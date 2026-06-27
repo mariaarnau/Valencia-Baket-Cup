@@ -291,22 +291,27 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .nav__sponsors {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-left: 8px;
-  padding-left: 20px;
+  gap: 20px;
+  padding-left: 24px;
   border-left: 1px solid rgba(255,255,255,0.15);
 }
 .nav__sponsor-logo {
-  height: 34px;
+  height: 38px;
   width: auto;
-  max-width: 80px;
+  max-width: 90px;
   object-fit: contain;
   filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: opacity var(--transition-fast);
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
-.nav__sponsor-logo:hover { opacity: 1; }
-@media (max-width: 900px) { .nav__sponsors { display: none; } }
+.nav__sponsor-logo--invert {
+  filter: brightness(0) invert(1);
+}
+.nav__sponsor-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+@media (max-width: 1100px) { .nav__sponsors { display: none; } }
 
 .nav__burger {
   display: none;
