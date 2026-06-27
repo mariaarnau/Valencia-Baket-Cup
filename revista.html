@@ -35,45 +35,117 @@
     </button>
   </nav>
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="page-hero__content">
-      <span class="page-hero__tag">Media</span>
-      <h1 class="page-hero__title">Nuestra <em>Revista</em></h1>
+  <!-- REVISTA HERO -->
+  <div class="revista-hero">
+    <div class="revista-hero__bg">
+      <img src="IMG_0054.jpg" alt="Revista VBC" />
+      <div class="revista-hero__overlay"></div>
+    </div>
+    <div class="revista-hero__content reveal">
+      <span class="revista-hero__tag">Ediciones oficiales</span>
+      <h1 class="revista-hero__title">Valencia Basket Cup<br/><em>Magazine</em></h1>
+      <p class="revista-hero__sub">Reportajes exclusivos · Estadísticas · Fotografía profesional</p>
     </div>
   </div>
 
-  <!-- REVISTA -->
-  <section class="revista" id="revista">
-    <div class="revista__bg"></div>
-    <div class="revista__content">
-      <div class="revista__grid">
-        <div class="revista__portada reveal">
-          <div class="revista__book">
-            <div class="revista__book-front">
-              <img src="IMG_2347.jpg" alt="Revista VBC" />
-              <div class="revista__book-spine"></div>
-            </div>
-          </div>
+  <!-- INTRO STRIP -->
+  <div class="revista-strip">
+    <span>Revive cada torneo · Entrevistas exclusivas · Los mejores momentos · Fotografía de alta calidad · Revive cada torneo · Entrevistas exclusivas · Los mejores momentos · Fotografía de alta calidad ·</span>
+  </div>
+
+  <!-- EDICIONES -->
+  <section class="revista-ediciones">
+    <div class="revista-ediciones__header reveal">
+      <span class="section-header__tag">Colección</span>
+      <h2 class="section-header__title">Nuestras <em>Ediciones</em></h2>
+    </div>
+
+    <div class="revista-ediciones__grid">
+
+      <!-- VBC -->
+      <div class="revista-ed reveal" onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')">
+        <div class="revista-ed__img">
+          <img src="IMG_0187.jpg" alt="Revista Valencia Basket Cup" loading="lazy" />
+          <div class="revista-ed__img-overlay"></div>
         </div>
-        <div class="revista__info reveal">
-          <h3>Valencia Basket Cup Magazine</h3>
-          <p class="revista__desc">Revive los mejores momentos de cada torneo en nuestra revista oficial. Reportajes exclusivos, estadísticas, entrevistas a jugadores y entrenadores, y las mejores fotografías de cada edición.</p>
-          <ul class="revista__list">
-            <li>Reportajes exclusivos de cada torneo</li>
-            <li>Estadísticas y resultados completos</li>
-            <li>Entrevistas con jugadores y entrenadores</li>
-            <li>Fotografía profesional de alta calidad</li>
-          </ul>
-          <div class="revista__btns">
-            <button onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')" class="btn btn--primary">📖 Revista VBC</button>
-            <button onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')" class="btn btn--primary">📖 Revista VIC</button>
-            <button onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')" class="btn btn--primary">📖 Revista VSC</button>
-          </div>
+        <div class="revista-ed__meta">
+          <span class="revista-ed__tag">VBC</span>
+          <span class="revista-ed__year">Enero 2027</span>
+        </div>
+        <div class="revista-ed__info">
+          <h3 class="revista-ed__name">Valencia Basket Cup</h3>
+          <p class="revista-ed__desc">3 — 5 Enero 2027 · La Alqueria del Basket</p>
+        </div>
+        <div class="revista-ed__cta">
+          <span>Leer revista</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </div>
+
+      <!-- VIC -->
+      <div class="revista-ed revista-ed--featured reveal" onclick="openPDF('10GGd5W7RKyKqgiah56JUTrFY5Z2VcBg4')">
+        <div class="revista-ed__badge">Edición especial</div>
+        <div class="revista-ed__img">
+          <img src="IMG_7420.jpg" alt="Revista Valencia International Cup" loading="lazy" />
+          <div class="revista-ed__img-overlay"></div>
+        </div>
+        <div class="revista-ed__meta">
+          <span class="revista-ed__tag">VIC</span>
+          <span class="revista-ed__year">Marzo 2027</span>
+        </div>
+        <div class="revista-ed__info">
+          <h3 class="revista-ed__name">Valencia International Cup</h3>
+          <p class="revista-ed__desc">25 — 28 Marzo 2027 · La Alqueria del Basket</p>
+        </div>
+        <div class="revista-ed__cta">
+          <span>Leer revista</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+
+      <!-- VSC -->
+      <div class="revista-ed reveal" onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')">
+        <div class="revista-ed__img">
+          <img src="IMG_2347.jpg" alt="Revista Valencia Summer Cup" loading="lazy" />
+          <div class="revista-ed__img-overlay"></div>
+        </div>
+        <div class="revista-ed__meta">
+          <span class="revista-ed__tag">VSC</span>
+          <span class="revista-ed__year">Junio 2026</span>
+        </div>
+        <div class="revista-ed__info">
+          <h3 class="revista-ed__name">Valencia Summer Cup</h3>
+          <p class="revista-ed__desc">25 — 27 Junio 2026 · La Alqueria del Basket</p>
+        </div>
+        <div class="revista-ed__cta">
+          <span>Leer revista</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <!-- FOTO COLLAGE -->
+  <div class="revista-collage reveal">
+    <div class="revista-collage__item revista-collage__item--tall">
+      <img src="IMG_0054.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="revista-collage__col">
+      <div class="revista-collage__item">
+        <img src="IMG_8418.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="revista-collage__item">
+        <img src="IMG_8730.jpg" alt="" loading="lazy" />
+      </div>
+    </div>
+    <div class="revista-collage__item revista-collage__item--tall">
+      <img src="IMG_0187.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="revista-collage__overlay">
+      <p>"El torneo más prestigioso del Mediterráneo,<br/>contado desde dentro."</p>
+    </div>
+  </div>
 
   <!-- PATROCINADORES -->
   <section class="patrocinadores">
