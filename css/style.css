@@ -1010,10 +1010,11 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .revista-hero {
   position: relative;
   height: 70vh;
-  min-height: 480px;
+  min-height: 500px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  margin-top: 0;
 }
 .revista-hero__bg {
   position: absolute;
@@ -1037,8 +1038,9 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 .revista-hero__content {
   position: relative;
-  padding: 60px 6%;
+  padding: 0 6% 60px;
   z-index: 1;
+  width: 100%;
 }
 .revista-hero__tag {
   display: inline-block;
@@ -1074,17 +1076,21 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .revista-strip {
   background: var(--orange);
   overflow: hidden;
-  padding: 12px 0;
-  white-space: nowrap;
+  padding: 13px 0;
 }
-.revista-strip span {
+.revista-strip__track {
+  display: flex;
+  white-space: nowrap;
+  animation: stripScroll 22s linear infinite;
+}
+.revista-strip__track span {
   display: inline-block;
-  animation: stripScroll 20s linear infinite;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--black);
+  flex-shrink: 0;
 }
 @keyframes stripScroll {
   from { transform: translateX(0); }
@@ -1095,19 +1101,18 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
    REVISTA EDICIONES
 ================================ */
 .revista-ediciones {
-  padding: 100px 5%;
+  padding: 80px 0 0;
   background: var(--black);
 }
 .revista-ediciones__header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  padding: 0 5%;
 }
 .revista-ediciones__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  max-width: 1300px;
-  margin: 0 auto;
+  gap: 3px;
 }
 .revista-ed {
   position: relative;
