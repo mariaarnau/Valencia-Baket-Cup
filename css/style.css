@@ -588,6 +588,27 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   margin-top: 2px;
 }
 
+.torneo-card__btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.btn--revista {
+  background: transparent;
+  color: var(--orange);
+  border-color: rgba(255,107,0,0.4);
+  padding: 10px 18px;
+  font-size: 0.72rem;
+}
+.btn--revista::before { background: var(--orange); }
+.btn--revista:hover { color: var(--black); border-color: var(--orange); }
+
+.revista__btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .torneo-card__magazine {
   position: absolute;
   top: 0;
