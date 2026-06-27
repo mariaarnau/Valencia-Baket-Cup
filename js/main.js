@@ -292,3 +292,91 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+/* ================================
+   SELECTOR DE IDIOMA
+================================ */
+const translations = {
+  es: {
+    'nav-torneos': 'Torneos',
+    'nav-galeria': 'Galería',
+    'nav-noticias': 'Noticias',
+    'nav-revista': 'Revista',
+    'nav-inscripcion': 'Inscripción',
+    'nav-contacto': 'Contacto',
+    'hero-eyebrow': 'El torneo de baloncesto más prestigioso del Mediterráneo',
+    'hero-btn': 'Descubre los torneos',
+    'torneos-tag': 'Próximas citas',
+    'torneos-title': 'Nuestros <em>Torneos</em>',
+    'patrocinadores-label': 'Con el apoyo de',
+    'footer-brand-sub': 'El torneo más prestigioso del Mediterráneo',
+    'footer-torneos-title': 'Torneos 2026–2027',
+    'footer-nav-title': 'Navegación',
+    'footer-copy': '© 2026 Valencia Basket Cup · Todos los derechos reservados',
+  },
+  en: {
+    'nav-torneos': 'Tournaments',
+    'nav-galeria': 'Gallery',
+    'nav-noticias': 'News',
+    'nav-revista': 'Magazine',
+    'nav-inscripcion': 'Registration',
+    'nav-contacto': 'Contact',
+    'hero-eyebrow': 'The most prestigious basketball tournament in the Mediterranean',
+    'hero-btn': 'Discover the tournaments',
+    'torneos-tag': 'Upcoming dates',
+    'torneos-title': 'Our <em>Tournaments</em>',
+    'patrocinadores-label': 'Supported by',
+    'footer-brand-sub': 'The most prestigious tournament in the Mediterranean',
+    'footer-torneos-title': 'Tournaments 2026–2027',
+    'footer-nav-title': 'Navigation',
+    'footer-copy': '© 2026 Valencia Basket Cup · All rights reserved',
+  }
+};
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  const navLinks = document.querySelectorAll('.nav__links a');
+  const labels = ['nav-torneos','nav-galeria','nav-noticias','nav-revista','nav-inscripcion','nav-contacto'];
+  navLinks.forEach((a, i) => { if (labels[i] && t[labels[i]]) a.textContent = t[labels[i]]; });
+
+  const eyebrow = document.querySelector('.hero__eyebrow');
+  if (eyebrow && t['hero-eyebrow']) eyebrow.textContent = t['hero-eyebrow'];
+
+  const heroBtnEl = document.querySelector('.btn--hero');
+  if (heroBtnEl && t['hero-btn']) heroBtnEl.textContent = t['hero-btn'];
+
+  const sectionTag = document.querySelector('.section-header__tag');
+  if (sectionTag && t['torneos-tag']) sectionTag.textContent = t['torneos-tag'];
+
+  const sectionTitle = document.querySelector('.section-header__title');
+  if (sectionTitle && t['torneos-title']) sectionTitle.innerHTML = t['torneos-title'];
+
+  const patLabel = document.querySelector('.patrocinadores__label');
+  if (patLabel && t['patrocinadores-label']) patLabel.textContent = t['patrocinadores-label'];
+
+  const footerSub = document.querySelector('.footer__brand p');
+  if (footerSub && t['footer-brand-sub']) footerSub.innerHTML = 'Valencia Basket Cup<br/>' + t['footer-brand-sub'];
+
+  const footerLinks = document.querySelectorAll('.footer__links h5');
+  if (footerLinks[0] && t['footer-nav-title']) footerLinks[0].textContent = t['footer-nav-title'];
+
+  const footerTorneos = document.querySelector('.footer__torneos h5');
+  if (footerTorneos && t['footer-torneos-title']) footerTorneos.textContent = t['footer-torneos-title'];
+
+  const footerCopy = document.querySelector('.footer__bottom p');
+  if (footerCopy && t['footer-copy']) footerCopy.textContent = t['footer-copy'];
+
+  document.querySelectorAll('.lang-switcher__btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  localStorage.setItem('vbc-lang', lang);
+}
+
+const langBtns = document.querySelectorAll('.lang-switcher__btn');
+langBtns.forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+});
+
+const savedLang = localStorage.getItem('vbc-lang');
+if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
