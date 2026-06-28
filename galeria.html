@@ -247,6 +247,30 @@
 
   <!-- CURSOR PERSONALIZADO -->
   <!-- SELECTOR IDIOMA -->
+  <!-- SUSCRIPCIÓN -->
+  <button class="subscribe-btn" id="subscribeBtn" aria-label="Suscribirse al boletín">✉</button>
+
+  <div class="subscribe-modal" id="subscribeModal">
+    <div class="subscribe-modal__backdrop" id="subscribeBackdrop"></div>
+    <div class="subscribe-modal__box">
+      <button class="subscribe-modal__close" id="subscribeClose">✕</button>
+      <div class="subscribe-modal__icon">✉</div>
+      <h3 class="subscribe-modal__title">Mantente al día</h3>
+      <p class="subscribe-modal__sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
+      <ul class="subscribe-modal__list">
+        <li>Resultados en tiempo real</li>
+        <li>Horarios e información de torneos</li>
+        <li>Novedades y noticias exclusivas</li>
+        <li>Ofertas de inscripción anticipada</li>
+      </ul>
+      <form class="subscribe-modal__form" id="subscribeForm">
+        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="subscribe-modal__submit">Suscribirse</button>
+      </form>
+      <p class="subscribe-modal__legal">Puedes darte de baja en cualquier momento. Respetamos tu privacidad.</p>
+    </div>
+  </div>
+
   <div class="lang-switcher" id="langSwitcher">
     <button class="lang-switcher__btn active" data-lang="es">ES</button>
     <button class="lang-switcher__btn" data-lang="en">EN</button>
