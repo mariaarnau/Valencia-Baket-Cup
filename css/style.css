@@ -2992,11 +2992,11 @@ button.hero__date-pill:hover {
 .chatbot {
   position: fixed;
   bottom: 90px;
-  right: 20px;
+  left: 20px;
   z-index: 9000;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 12px;
 }
 .chatbot__toggle {
@@ -3129,7 +3129,7 @@ button.hero__date-pill:hover {
 }
 .chatbot__send:hover { background: var(--orange-dark); }
 @media (max-width: 480px) {
-  .chatbot { bottom: 80px; right: 12px; }
+  .chatbot { bottom: 80px; left: 12px; }
   .chatbot__window { width: calc(100vw - 24px); }
   #worldMapChart { height: 260px; }
   .worldmap-section, .testimonios { padding: 60px 5% 48px; }
