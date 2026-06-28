@@ -284,6 +284,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const translations = {
   es: {
     /* NAV */
+    'nav-instalaciones': 'Instalaciones',
     'nav-torneos': 'Torneos',
     'nav-galeria': 'Galería',
     'nav-noticias': 'Noticias',
@@ -605,6 +606,7 @@ const translations = {
   },
   en: {
     /* NAV */
+    'nav-instalaciones': 'Facilities',
     'nav-torneos': 'Tournaments',
     'nav-galeria': 'Gallery',
     'nav-noticias': 'News',
