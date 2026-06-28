@@ -217,6 +217,7 @@
     </div>
     <div class="footer__bottom">
       <p data-i18n="footer-copy">© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+      <p style="margin-top:6px;font-size:0.78rem;"><a href="privacidad.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;" data-i18n="footer-privacy">Política de Privacidad</a></p>
     </div>
   </footer>
 
@@ -229,7 +230,11 @@
       <h3 class="subscribe-modal__title" data-i18n="subscribe-title">Mantente al día</h3>
       <p class="subscribe-modal__sub" data-i18n="subscribe-sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
       <form class="subscribe-modal__form" id="subscribeForm">
-        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" required />
+        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" data-i18n-placeholder="subscribe-email-placeholder" required />
+        <label class="subscribe-modal__consent">
+          <input type="checkbox" id="subscribeConsent" required />
+          <span data-i18n-html="subscribe-consent">Acepto recibir comunicaciones de Valencia Basket Cup y que mis datos sean tratados conforme a la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidad</a>.</span>
+        </label>
         <button type="submit" class="subscribe-modal__submit" data-i18n="subscribe-submit">Suscribirse</button>
       </form>
     </div>
@@ -249,6 +254,6 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

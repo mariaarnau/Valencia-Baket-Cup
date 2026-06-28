@@ -349,6 +349,7 @@ const translations = {
     'footer-link-contacto': 'Contacto',
     'footer-contact-title': 'Contacto y Sponsors',
     'footer-copy': '© 2026 Valencia Basket Cup · Todos los derechos reservados',
+    'footer-privacy': 'Política de Privacidad',
     'patrocinadores-label': 'Con el apoyo de',
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Mantente al día',
@@ -359,6 +360,7 @@ const translations = {
     'subscribe-li4': 'Ofertas de inscripción anticipada',
     'subscribe-email-placeholder': 'Tu correo electrónico',
     'subscribe-submit': 'Suscribirse',
+    'subscribe-consent': 'Acepto recibir comunicaciones de Valencia Basket Cup y que mis datos sean tratados conforme a la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidad</a>.',
     'subscribe-legal': 'Puedes darte de baja en cualquier momento. Respetamos tu privacidad.',
     /* INDEX */
     'hero-eyebrow': 'El torneo de baloncesto más prestigioso del Mediterráneo',
@@ -712,6 +714,7 @@ const translations = {
     'footer-link-contacto': 'Contact',
     'footer-contact-title': 'Contact & Sponsors',
     'footer-copy': '© 2026 Valencia Basket Cup · All rights reserved',
+    'footer-privacy': 'Privacy Policy',
     'patrocinadores-label': 'Supported by',
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Stay up to date',
@@ -722,6 +725,7 @@ const translations = {
     'subscribe-li4': 'Early registration offers',
     'subscribe-email-placeholder': 'Your email address',
     'subscribe-submit': 'Subscribe',
+    'subscribe-consent': 'I agree to receive communications from Valencia Basket Cup and for my data to be processed in accordance with the <a href="privacidad.html" target="_blank" style="color:var(--orange)">Privacy Policy</a>.',
     'subscribe-legal': 'You can unsubscribe at any time. We respect your privacy.',
     /* INDEX */
     'hero-eyebrow': 'The most prestigious basketball tournament in the Mediterranean',
@@ -1113,6 +1117,7 @@ const translations = {
     'footer-link-contacto': 'Contact',
     'footer-contact-title': 'Contact et Sponsors',
     'footer-copy': '© 2026 Valencia Basket Cup · Tous droits réservés',
+    'footer-privacy': 'Politique de confidentialité',
     'footer-visit-shop': 'Visit Valencia Shop',
     'patrocinadores-label': 'Avec le soutien de',
     /* SUBSCRIBE MODAL */
@@ -1124,6 +1129,7 @@ const translations = {
     'subscribe-li4': 'Offres d\'inscription anticipée',
     'subscribe-email-placeholder': 'Votre adresse e-mail',
     'subscribe-submit': 'S\'abonner',
+    'subscribe-consent': 'J\'accepte de recevoir des communications de Valencia Basket Cup et que mes données soient traitées conformément à la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Politique de confidentialité</a>.',
     'subscribe-legal': 'Vous pouvez vous désabonner à tout moment. Nous respectons votre vie privée.',
     'subscribe-btn': 'S\'abonner',
     'subscribe-placeholder': 'Votre adresse e-mail',
@@ -1511,6 +1517,7 @@ const translations = {
     'footer-link-contacto': 'Contatto',
     'footer-contact-title': 'Contatto e Sponsor',
     'footer-copy': '© 2026 Valencia Basket Cup · Tutti i diritti riservati',
+    'footer-privacy': 'Informativa sulla privacy',
     'footer-visit-shop': 'Visit Valencia Shop',
     'patrocinadores-label': 'Con il sostegno di',
     /* SUBSCRIBE MODAL */
@@ -1522,6 +1529,7 @@ const translations = {
     'subscribe-li4': 'Offerte di iscrizione anticipata',
     'subscribe-email-placeholder': 'Il tuo indirizzo email',
     'subscribe-submit': 'Iscriviti',
+    'subscribe-consent': 'Accetto di ricevere comunicazioni da Valencia Basket Cup e che i miei dati siano trattati in conformità con la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Politica sulla privacy</a>.',
     'subscribe-legal': 'Puoi annullare l\'iscrizione in qualsiasi momento. Rispettiamo la tua privacy.',
     'subscribe-btn': 'Iscriviti',
     'subscribe-placeholder': 'Il tuo indirizzo email',
@@ -1909,6 +1917,7 @@ const translations = {
     'footer-link-contacto': 'Contacto',
     'footer-contact-title': 'Contacto e Patrocinadores',
     'footer-copy': '© 2026 Valencia Basket Cup · Todos os direitos reservados',
+    'footer-privacy': 'Política de Privacidade',
     'footer-visit-shop': 'Visit Valencia Shop',
     'patrocinadores-label': 'Com o apoio de',
     /* SUBSCRIBE MODAL */
@@ -1920,6 +1929,7 @@ const translations = {
     'subscribe-li4': 'Ofertas de inscrição antecipada',
     'subscribe-email-placeholder': 'O seu endereço de email',
     'subscribe-submit': 'Subscrever',
+    'subscribe-consent': 'Aceito receber comunicações da Valencia Basket Cup e que os meus dados sejam tratados de acordo com a <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidade</a>.',
     'subscribe-legal': 'Pode cancelar a subscrição a qualquer momento. Respeitamos a sua privacidade.',
     'subscribe-btn': 'Subscrever',
     'subscribe-placeholder': 'O seu endereço de email',
