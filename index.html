@@ -624,8 +624,8 @@
       return (chatbotI18n[lang] || chatbotI18n.es).fallback;
     }
 
-    function updateChatbotLang() {
-      var lang = getLang();
+    function updateChatbotLang(lang) {
+      lang = lang || getLang();
       var ui = chatbotI18n[lang] || chatbotI18n.es;
       document.getElementById('chatbotName').textContent = ui.name;
       document.getElementById('chatbotStatus').textContent = ui.status;
