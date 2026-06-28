@@ -1459,7 +1459,7 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .lang-switcher.open .lang-switcher__dropdown {
   opacity: 1;
   transform: translateY(0) scale(1);
-  pointer-events: all;
+  pointer-events: auto;
 }
 .lang-switcher__btn {
   display: flex;
