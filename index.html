@@ -149,6 +149,86 @@
     </div>
   </section>
 
+  <!-- MAPA MUNDIAL -->
+  <section class="worldmap-section" id="worldmap">
+    <div class="section-header reveal">
+      <span class="section-header__tag">Internacional</span>
+      <h2 class="section-header__title">Equipos de <em>todo el mundo</em></h2>
+      <p class="section-header__sub">Más de 28 países han participado en nuestros torneos</p>
+    </div>
+    <div class="worldmap-wrap reveal">
+      <div id="worldMapChart"></div>
+      <div class="worldmap-countries">
+        <div class="worldmap-country"><span class="worldmap-flag">🇪🇸</span>España</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇫🇷</span>Francia</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇩🇪</span>Alemania</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇵🇹</span>Portugal</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇫🇮</span>Finlandia</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇮🇸</span>Islandia</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇺🇸</span>Estados Unidos</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇲🇽</span>México</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇮🇹</span>Italia</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇬🇧</span>Reino Unido</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇳🇱</span>Países Bajos</div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇧🇪</span>Bélgica</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios" id="testimonios">
+    <div class="section-header reveal">
+      <span class="section-header__tag">Opiniones</span>
+      <h2 class="section-header__title">Lo que dicen <em>los equipos</em></h2>
+    </div>
+    <div class="testimonios__grid reveal">
+      <div class="testimonio-card">
+        <div class="testimonio-card__quote">"</div>
+        <p class="testimonio-card__text">Una experiencia única para nuestros jugadores. La organización fue impecable, las instalaciones de La Alqueria son de primer nivel y Valencia es una ciudad que enamora.</p>
+        <div class="testimonio-card__author">
+          <div class="testimonio-card__avatar">JL</div>
+          <div>
+            <div class="testimonio-card__name">Jean-Luc Martin</div>
+            <div class="testimonio-card__club">BC Levallois · <span class="worldmap-flag">🇫🇷</span> Francia</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card testimonio-card--accent">
+        <div class="testimonio-card__quote">"</div>
+        <p class="testimonio-card__text">We've been coming for three years in a row. The level of competition is outstanding and our players grow enormously — both on and off the court.</p>
+        <div class="testimonio-card__author">
+          <div class="testimonio-card__avatar">MR</div>
+          <div>
+            <div class="testimonio-card__name">Michael Reynolds</div>
+            <div class="testimonio-card__club">Chicago Youth Basketball · <span class="worldmap-flag">🇺🇸</span> USA</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="testimonio-card__quote">"</div>
+        <p class="testimonio-card__text">El mejor torneo de baloncesto base en el que hemos participado. Nuestros chicos volvieron a casa con una medalla y recuerdos para toda la vida.</p>
+        <div class="testimonio-card__author">
+          <div class="testimonio-card__avatar">CS</div>
+          <div>
+            <div class="testimonio-card__name">Carlos Sousa</div>
+            <div class="testimonio-card__club">Sporting CP · <span class="worldmap-flag">🇵🇹</span> Portugal</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="testimonio-card__quote">"</div>
+        <p class="testimonio-card__text">Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!</p>
+        <div class="testimonio-card__author">
+          <div class="testimonio-card__avatar">AK</div>
+          <div>
+            <div class="testimonio-card__name">Andreas Klein</div>
+            <div class="testimonio-card__club">Bayern Basketball · <span class="worldmap-flag">🇩🇪</span> Alemania</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PATROCINADORES -->
   <section class="patrocinadores">
     <div class="patrocinadores__inner">
@@ -261,7 +341,148 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
+  <!-- CHATBOT -->
+  <div class="chatbot" id="chatbot">
+    <div class="chatbot__window" id="chatbotWindow">
+      <div class="chatbot__header">
+        <div class="chatbot__header-info">
+          <div class="chatbot__avatar">VBC</div>
+          <div>
+            <div class="chatbot__name">Asistente VBC</div>
+            <div class="chatbot__status">● En línea</div>
+          </div>
+        </div>
+        <button class="chatbot__close" id="chatbotClose">✕</button>
+      </div>
+      <div class="chatbot__messages" id="chatbotMessages">
+        <div class="chatbot__msg chatbot__msg--bot">
+          <span>¡Hola! 👋 Soy el asistente de Valencia Basket Cup. ¿En qué puedo ayudarte?</span>
+        </div>
+        <div class="chatbot__suggestions" id="chatbotSuggestions">
+          <button class="chatbot__chip">¿Cuándo son los torneos?</button>
+          <button class="chatbot__chip">¿Cómo me inscribo?</button>
+          <button class="chatbot__chip">¿Dónde se juega?</button>
+          <button class="chatbot__chip">¿Qué categorías hay?</button>
+          <button class="chatbot__chip">¿Cuánto cuesta?</button>
+          <button class="chatbot__chip">¿Dónde alojarse?</button>
+        </div>
+      </div>
+      <div class="chatbot__input-wrap">
+        <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Escribe tu pregunta..." />
+        <button class="chatbot__send" id="chatbotSend">➤</button>
+      </div>
+    </div>
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Abrir chat">
+      <span class="chatbot__toggle-icon">💬</span>
+      <span class="chatbot__toggle-close" style="display:none">✕</span>
+    </button>
+  </div>
+
   <script src="js/main.js"></script>
+  <!-- MAPA MUNDIAL -->
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script>
+  (function() {
+    var root = am5.Root.new("worldMapChart");
+    root.setThemes([am5themes_Animated.new(root)]);
+    var chart = root.container.children.push(am5map.MapChart.new(root, {
+      panX: "rotateX", panY: "none",
+      projection: am5map.geoNaturalEarth1(),
+      background: am5.Rectangle.new(root, { fill: am5.color(0x0a0a0a) })
+    }));
+    var bgSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_worldLow,
+      exclude: ["AQ"]
+    }));
+    bgSeries.mapPolygons.template.setAll({
+      fill: am5.color(0x1a1a1a),
+      stroke: am5.color(0x333333),
+      strokeWidth: 0.5
+    });
+    var highlightSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_worldLow,
+      include: ["ES","FR","DE","PT","FI","IS","US","MX","IT","GB","NL","BE","CH","AT","SE","NO","DK","PL","GR","HR","RS","TR","AR","BR","CA","AU","JP"]
+    }));
+    highlightSeries.mapPolygons.template.setAll({
+      fill: am5.color(0xFF6B00),
+      fillOpacity: 0.75,
+      stroke: am5.color(0xFF9A3C),
+      strokeWidth: 1,
+      tooltipText: "{name}"
+    });
+    highlightSeries.mapPolygons.template.states.create("hover", {
+      fill: am5.color(0xFF9A3C),
+      fillOpacity: 1
+    });
+    chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+    chart.appear(1000, 100);
+  })();
+  </script>
+  <!-- CHATBOT LOGIC -->
+  <script>
+  (function() {
+    var faq = [
+      { q: ['cuando','torneos','fecha','cuándo','próximos'], a: 'Los próximos torneos son:<br>• <b>VBC</b> — Enero 2027<br>• <b>VIC</b> — Marzo 2027<br>• <b>VSC</b> — Junio 2026<br><a href="torneos.html" style="color:var(--orange)">Ver todos los torneos →</a>' },
+      { q: ['inscribo','inscripción','apunto','registro','cómo'], a: 'Puedes inscribirte en la sección <a href="pagos.html" style="color:var(--orange)">Inscripción</a> o contactarnos directamente:<br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com' },
+      { q: ['donde','dónde','lugar','pabellón','juega','instalaciones'], a: '🏟️ Todos los torneos se celebran en <b>La Alqueria del Basket</b>, las instalaciones oficiales de Valencia Basket, en el corazón de Valencia.' },
+      { q: ['categorías','categorias','edad','edades','divisiones'], a: 'Participan categorías de <b>U10 a U18</b>, tanto masculino como femenino. Cada torneo tiene sus propias divisiones. Consúltanos para más detalles.' },
+      { q: ['cuesta','precio','coste','cuánto','pago','tarifa'], a: 'El precio varía según torneo y categoría. Contáctanos para recibir la tarifa actualizada:<br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418' },
+      { q: ['hotel','alojamiento','hostal','alojarse','dormir','donde quedarse'], a: '🏨 Valencia tiene una gran oferta hotelera. Trabajamos con hoteles colaboradores con tarifas especiales para equipos participantes. Consúltanos al inscribirte.' },
+      { q: ['países','paises','internacional','extranjero','equipos'], a: '🌍 Han participado equipos de más de <b>28 países</b>: Francia, Alemania, EEUU, México, Portugal, Finlandia, Islandia, Italia, Reino Unido y muchos más.' },
+      { q: ['contacto','email','telefono','teléfono'], a: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><a href="contacto.html" style="color:var(--orange)">Ir a contacto →</a>' },
+    ];
+    var toggle = document.getElementById('chatbotToggle');
+    var win = document.getElementById('chatbotWindow');
+    var closeBtn = document.getElementById('chatbotClose');
+    var input = document.getElementById('chatbotInput');
+    var send = document.getElementById('chatbotSend');
+    var messages = document.getElementById('chatbotMessages');
+    var chips = document.querySelectorAll('.chatbot__chip');
+    var open = false;
+    function toggleChat() {
+      open = !open;
+      win.classList.toggle('active', open);
+      toggle.querySelector('.chatbot__toggle-icon').style.display = open ? 'none' : 'block';
+      toggle.querySelector('.chatbot__toggle-close').style.display = open ? 'block' : 'none';
+    }
+    toggle.addEventListener('click', toggleChat);
+    closeBtn.addEventListener('click', function() { open = true; toggleChat(); });
+    function addMsg(text, isUser) {
+      var d = document.createElement('div');
+      d.className = 'chatbot__msg ' + (isUser ? 'chatbot__msg--user' : 'chatbot__msg--bot');
+      d.innerHTML = '<span>' + text + '</span>';
+      messages.appendChild(d);
+      messages.scrollTop = messages.scrollHeight;
+    }
+    function getAnswer(text) {
+      var t = text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+      for (var i = 0; i < faq.length; i++) {
+        for (var j = 0; j < faq[i].q.length; j++) {
+          if (t.indexOf(faq[i].q[j]) > -1) return faq[i].a;
+        }
+      }
+      return 'No estoy seguro de la respuesta. Puedes contactarnos directamente:<br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com';
+    }
+    function handleSend() {
+      var txt = input.value.trim();
+      if (!txt) return;
+      addMsg(txt, true);
+      input.value = '';
+      setTimeout(function() { addMsg(getAnswer(txt), false); }, 400);
+    }
+    send.addEventListener('click', handleSend);
+    input.addEventListener('keydown', function(e) { if (e.key === 'Enter') handleSend(); });
+    chips.forEach(function(c) {
+      c.addEventListener('click', function() {
+        addMsg(c.textContent, true);
+        setTimeout(function() { addMsg(getAnswer(c.textContent), false); }, 400);
+      });
+    });
+  })();
+  </script>
 
   <!-- YOUTUBE API -->
   <script>
