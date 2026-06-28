@@ -380,3 +380,16 @@ langBtns.forEach(btn => {
 
 const savedLang = localStorage.getItem('vbc-lang');
 if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
+
+/* ================================
+   FAQ ACORDEÓN
+================================ */
+document.querySelectorAll('.faq__q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    // close all in same group
+    item.closest('.faq__group').querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
