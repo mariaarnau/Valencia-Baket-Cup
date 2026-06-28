@@ -1804,14 +1804,17 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 
 .subscribe-modal__close {
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 12px;
+  right: 16px;
   background: none;
   border: none;
   color: var(--white-faint);
-  font-size: 20px;
-  cursor: none;
+  font-size: 22px;
+  cursor: pointer;
   transition: color 0.2s;
+  padding: 10px 12px;
+  line-height: 1;
+  z-index: 10;
 }
 .subscribe-modal__close:hover { color: var(--white); }
 
