@@ -385,7 +385,15 @@
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
   <script>
   (function() {
-    var highlighted = {ES:"España",FR:"Francia",DE:"Alemania",PT:"Portugal",FI:"Finlandia",IS:"Islandia",US:"Estados Unidos",MX:"México",IT:"Italia",GB:"Reino Unido",NL:"Países Bajos",BE:"Bélgica",CH:"Suiza",AT:"Austria",SE:"Suecia",NO:"Noruega",DK:"Dinamarca",PL:"Polonia",GR:"Grecia",HR:"Croacia",RS:"Serbia",TR:"Turquía",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Australia",JP:"Japón"};
+    var countryNames = {
+      es: {ES:"España",FR:"Francia",DE:"Alemania",PT:"Portugal",FI:"Finlandia",IS:"Islandia",US:"Estados Unidos",MX:"México",IT:"Italia",GB:"Reino Unido",NL:"Países Bajos",BE:"Bélgica",CH:"Suiza",AT:"Austria",SE:"Suecia",NO:"Noruega",DK:"Dinamarca",PL:"Polonia",GR:"Grecia",HR:"Croacia",RS:"Serbia",TR:"Turquía",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Australia",JP:"Japón"},
+      en: {ES:"Spain",FR:"France",DE:"Germany",PT:"Portugal",FI:"Finland",IS:"Iceland",US:"United States",MX:"Mexico",IT:"Italy",GB:"United Kingdom",NL:"Netherlands",BE:"Belgium",CH:"Switzerland",AT:"Austria",SE:"Sweden",NO:"Norway",DK:"Denmark",PL:"Poland",GR:"Greece",HR:"Croatia",RS:"Serbia",TR:"Turkey",AR:"Argentina",BR:"Brazil",CA:"Canada",AU:"Australia",JP:"Japan"}
+    };
+    function getHighlighted() {
+      var lang = localStorage.getItem('vbc-lang') || 'es';
+      return countryNames[lang] || countryNames.es;
+    }
+    var highlighted = getHighlighted();
     var iso = {"004":"AF","008":"AL","012":"DZ","024":"AO","032":"AR","036":"AU","040":"AT","050":"BD","056":"BE","068":"BO","076":"BR","100":"BG","116":"KH","120":"CM","124":"CA","144":"LK","152":"CL","156":"CN","170":"CO","188":"CR","191":"HR","192":"CU","203":"CZ","208":"DK","218":"EC","818":"EG","231":"ET","246":"FI","250":"FR","276":"DE","288":"GH","300":"GR","320":"GT","332":"HT","340":"HN","348":"HU","356":"IN","360":"ID","364":"IR","368":"IQ","372":"IE","376":"IL","380":"IT","388":"JM","392":"JP","400":"JO","404":"KE","408":"KP","410":"KR","414":"KW","418":"LA","422":"LB","434":"LY","504":"MA","484":"MX","528":"NL","558":"NI","566":"NG","578":"NO","586":"PK","591":"PA","600":"PY","604":"PE","608":"PH","616":"PL","620":"PT","642":"RO","643":"RU","682":"SA","686":"SN","710":"ZA","724":"ES","752":"SE","756":"CH","760":"SY","764":"TH","788":"TN","792":"TR","804":"UA","826":"GB","840":"US","858":"UY","862":"VE","352":"IS","688":"RS"};
 
     var wrap = document.getElementById('worldMapChart');
@@ -430,9 +438,10 @@
           .style('transition','fill 0.2s')
           .on('mouseenter', function(event, d) {
             var cc = iso[String(d.id).padStart(3,'0')];
-            if (!highlighted[cc]) return;
+            var names = getHighlighted();
+            if (!names[cc]) return;
             d3.select(this).attr('fill','#FF9A3C');
-            tooltip.textContent = highlighted[cc];
+            tooltip.textContent = names[cc];
             tooltip.style.opacity = '1';
           })
           .on('mousemove', function(event) {
