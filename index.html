@@ -118,7 +118,7 @@
     <div class="alqueria-video__wrapper">
       <div id="alqueriaYT"></div>
     </div>
-    <div class="alqueria-video__blocker"></div>
+    <div class="alqueria-video__blocker" id="videoBlocker"></div>
     <div class="alqueria-video__overlay">
       <span class="alqueria-video__label" data-i18n="alqueria-label">La Alqueria del Basket · Valencia</span>
     </div>
@@ -289,7 +289,15 @@
           vq: 'hd1080'
         },
         events: {
-          onReady: function(e) { e.target.playVideo(); },
+          onReady: function(e) {
+            e.target.playVideo();
+            var blocker = document.getElementById('videoBlocker');
+            if (blocker) {
+              ['touchstart','touchend','touchmove','click'].forEach(function(ev) {
+                blocker.addEventListener(ev, function(e) { e.preventDefault(); e.stopPropagation(); }, { passive: false });
+              });
+            }
+          },
           onStateChange: function(e) {
             if (e.data === YT.PlayerState.PLAYING) {
               clearInterval(alqueriaTimer);
