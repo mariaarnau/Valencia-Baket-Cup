@@ -282,6 +282,8 @@
           rel: 0,
           showinfo: 0,
           iv_load_policy: 3,
+          fs: 0,
+          playsinline: 1,
           start: alqueriaStart,
           end: alqueriaEnd,
           vq: 'hd1080'
@@ -296,6 +298,9 @@
                   alqueriaPlayer.seekTo(alqueriaStart, true);
                 }
               }, 250);
+            }
+            if (e.data === YT.PlayerState.PAUSED) {
+              alqueriaPlayer.playVideo();
             }
             if (e.data === YT.PlayerState.ENDED) {
               alqueriaPlayer.seekTo(alqueriaStart, true);
