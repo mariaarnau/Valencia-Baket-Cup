@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalaciones · Valencia Basket Cup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__logo">
+      <a href="index.html"><span class="nav__logo-vbc">VBC</span></a>
+      <span class="nav__logo-text">Valencia Basket Cup</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="instalaciones.html" class="nav__active" data-i18n="nav-instalaciones">Instalaciones</a></li>
+      <li><a href="torneos.html" data-i18n="nav-torneos">Torneos</a></li>
+      <li><a href="galeria.html" data-i18n="nav-galeria">Galería</a></li>
+      <li><a href="noticias.html" data-i18n="nav-noticias">Noticias</a></li>
+      <li><a href="revista.html" data-i18n="nav-revista">Revista</a></li>
+      <li><a href="pagos.html" data-i18n="nav-inscripcion">Inscripción</a></li>
+      <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
+    </ul>
+    <div class="nav__sponsors">
+      <a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener"><img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" /></a>
+      <a href="https://roeventos.com" target="_blank" rel="noopener"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" /></a>
+      <a href="https://www.valenciabasket.com/museo-tour" target="_blank" rel="noopener"><img src="Valencia-Basket-Club-2017.png" alt="Valencia Basket Club" class="nav__sponsor-logo nav__sponsor-logo--color" /></a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO VÍDEO -->
+  <div class="inst-hero">
+    <video class="inst-hero__video" autoplay muted loop playsinline>
+      <source src="https://res.cloudinary.com/dcs3qewtk/video/upload/q_auto/alqueria_clip.mp4" type="video/mp4" />
+    </video>
+    <div class="inst-hero__overlay"></div>
+    <div class="inst-hero__content reveal">
+      <span class="inst-hero__tag" data-i18n="inst-hero-tag">Nuestras instalaciones</span>
+      <h1 class="inst-hero__title" data-i18n-html="inst-hero-title">Juega en la casa<br/>de <em>Valencia Basket</em></h1>
+      <p class="inst-hero__sub" data-i18n="inst-hero-sub">El centro de tecnificación de referencia en Europa</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="inst-intro">
+    <div class="inst-intro__inner reveal">
+      <div class="inst-intro__text">
+        <span class="section-header__tag" data-i18n="inst-intro-tag">L'Alqueria del Basket</span>
+        <h2 class="inst-intro__title" data-i18n-html="inst-intro-title">Instalaciones de<br/><em>primer nivel europeo</em></h2>
+        <p data-i18n="inst-intro-p1">L'Alqueria del Basket es el centro de tecnificación oficial de Valencia Basket, uno de los recintos deportivos más modernos y completos de Europa. Un espacio diseñado para el alto rendimiento donde cada torneo se convierte en una experiencia única.</p>
+        <p data-i18n="inst-intro-p2">Con 8 pistas homologadas, vestuarios profesionales, zona médica y áreas de descanso para familias, L'Alqueria ofrece todo lo necesario para que jugadores, entrenadores y familias disfruten al máximo.</p>
+        <a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener" class="instalaciones__cta" data-i18n="instalaciones-cta">Conocer L'Alqueria →</a>
+      </div>
+      <div class="inst-intro__stats">
+        <div class="inst-stat">
+          <span class="inst-stat__num">8</span>
+          <span class="inst-stat__label" data-i18n="inst-stat1">Pistas homologadas</span>
+        </div>
+        <div class="inst-stat">
+          <span class="inst-stat__num">3.500</span>
+          <span class="inst-stat__label" data-i18n="inst-stat2">m² de instalaciones</span>
+        </div>
+        <div class="inst-stat">
+          <span class="inst-stat__num">NBA</span>
+          <span class="inst-stat__label" data-i18n="inst-stat3">Parquet oficial</span>
+        </div>
+        <div class="inst-stat">
+          <span class="inst-stat__num">1ª</span>
+          <span class="inst-stat__label" data-i18n="inst-stat4">División Europa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOS GRID -->
+  <section class="inst-galeria">
+    <div class="inst-galeria__grid">
+      <div class="inst-galeria__item inst-galeria__item--big reveal">
+        <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_8281_qkpbna.jpg" alt="L'Alqueria del Basket" loading="lazy" />
+      </div>
+      <div class="inst-galeria__item reveal">
+        <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_2462_yzcqrg.jpg" alt="Partido VBC" loading="lazy" />
+      </div>
+      <div class="inst-galeria__item reveal">
+        <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_9804_iazqhu.jpg" alt="Partido VIC" loading="lazy" />
+      </div>
+      <div class="inst-galeria__item reveal">
+        <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_7813_vzmwgm.jpg" alt="Acción VSC" loading="lazy" />
+      </div>
+      <div class="inst-galeria__item reveal">
+        <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_2308_oxdgss.jpg" alt="Acción VBC" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CARACTERÍSTICAS -->
+  <section class="inst-features">
+    <div class="inst-features__header reveal">
+      <span class="section-header__tag" data-i18n="inst-feat-tag">Todo lo que necesitas</span>
+      <h2 class="section-header__title" data-i18n-html="inst-feat-title">Una experiencia<br/><em>completa</em></h2>
+    </div>
+    <div class="inst-features__grid">
+      <div class="inst-feature reveal">
+        <div class="inst-feature__icon">🏀</div>
+        <h3 data-i18n="inst-feat1-title">8 Pistas de competición</h3>
+        <p data-i18n="inst-feat1-desc">Todas las pistas cuentan con parquet NBA oficial, iluminación profesional y marcadores electrónicos.</p>
+      </div>
+      <div class="inst-feature reveal">
+        <div class="inst-feature__icon">🏃</div>
+        <h3 data-i18n="inst-feat2-title">Vestuarios profesionales</h3>
+        <p data-i18n="inst-feat2-desc">Equipados al nivel de los mejores clubes europeos, con zonas de calentamiento y sala de musculación.</p>
+      </div>
+      <div class="inst-feature reveal">
+        <div class="inst-feature__icon">⚕️</div>
+        <h3 data-i18n="inst-feat3-title">Centro médico</h3>
+        <p data-i18n="inst-feat3-desc">Servicio médico y de fisioterapia disponible durante todo el torneo para la seguridad de los jugadores.</p>
+      </div>
+      <div class="inst-feature reveal">
+        <div class="inst-feature__icon">👨‍👩‍👧</div>
+        <h3 data-i18n="inst-feat4-title">Zona de familias</h3>
+        <p data-i18n="inst-feat4-desc">Cafetería, zonas de descanso y gradas para que las familias disfruten del torneo con todas las comodidades.</p>
+      </div>
+      <div class="inst-feature reveal">
+        <div class="inst-feature__icon">📍</div>
+        <h3 data-i18n="inst-feat5-title">Ubicación privilegiada</h3>
+        <p data-i18n="inst-feat5-desc">A 10 minutos del centro de Valencia, con fácil acceso en transporte público y amplio aparcamiento.</p>
+      </div>
+      <div class="inst-feature reveal">
+        <div class="inst-feature__icon">🏆</div>
+        <h3 data-i18n="inst-feat6-title">Sede oficial Valencia Basket</h3>
+        <p data-i18n="inst-feat6-desc">El mismo recinto donde se forman los jugadores del Valencia Basket, club de referencia en la EuroLeague.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="inst-cta">
+    <div class="inst-cta__inner reveal">
+      <h2 class="inst-cta__title" data-i18n-html="inst-cta-title">¿Listo para jugar<br/>en <em>L'Alqueria</em>?</h2>
+      <p data-i18n="inst-cta-sub">Inscribe a tu equipo y vive la experiencia de competir en uno de los mejores recintos de Europa.</p>
+      <a href="pagos.html" class="btn btn--hero" data-i18n="inst-cta-btn">Inscribirse ahora</a>
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section class="patrocinadores">
+    <div class="patrocinadores__inner">
+      <span class="patrocinadores__label" data-i18n="patrocinadores-label">Con el apoyo de</span>
+      <div class="patrocinadores__logos">
+        <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
+        <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
+        <div class="patrocinadores__logo"><img src="turismo (1).png" alt="Turisme Comunitat Valenciana" /></div>
+        <div class="patrocinadores__logo"><img src="WhatsApp Image 2026-06-25 at 18.49.15.jpeg" alt="Colaborador" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">VBC</span>
+        <p data-i18n="footer-brand-p">Torneo de baloncesto base a nivel internacional. Queremos que junto a tu equipo seas partícipe del Torneo de referencia en baloncesto base.</p>
+        <div class="footer__brand-links">
+          <a href="https://www.visitvalencia.com" target="_blank" rel="noopener" class="footer__brand-link">Visit Valencia Web</a>
+          <a href="https://www.visitvalencia.com/shop" target="_blank" rel="noopener" class="footer__brand-link" data-i18n="footer-visit-shop">Visit Valencia Shop</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5 data-i18n="footer-news-title">Últimas Noticias</h5>
+        <a href="noticia-1.html" class="footer__news-item" style="display:block;text-decoration:none;">
+          <div class="footer__news-date" data-i18n="footer-news1-date">15 Junio 2026</div>
+          <div class="footer__news-title" data-i18n="footer-news1-title">VBC 2027 abre inscripciones con récord histórico de solicitudes</div>
+        </a>
+        <a href="noticia-3.html" class="footer__news-item" style="display:block;text-decoration:none;">
+          <div class="footer__news-date" data-i18n="footer-news2-date">28 Junio 2026</div>
+          <div class="footer__news-title" data-i18n="footer-news2-title">El CB Castellón se corona campeón de la Valencia Summer Cup 2026</div>
+        </a>
+      </div>
+      <div class="footer__col">
+        <h5 data-i18n="footer-links-title">Links</h5>
+        <ul>
+          <li><a href="index.html" data-i18n="footer-link-inicio">Inicio</a></li>
+          <li><a href="instalaciones.html" data-i18n="nav-instalaciones">Instalaciones</a></li>
+          <li><a href="galeria.html" data-i18n="footer-link-galeria">Galería</a></li>
+          <li><a href="torneos.html" data-i18n="footer-link-torneos">Torneos</a></li>
+          <li><a href="noticias.html" data-i18n="footer-link-noticias">Noticias</a></li>
+          <li><a href="revista.html" data-i18n="footer-link-revista">Revista</a></li>
+          <li><a href="pagos.html" data-i18n="footer-link-inscripcion">Inscripción</a></li>
+          <li><a href="contacto.html" data-i18n="footer-link-contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5 data-i18n="footer-contact-title">Contacto y Sponsors</h5>
+        <div class="footer__contact-item">
+          <div class="footer__contact-icon">📞</div>
+          <a href="tel:+34670386418">+34 670 386 418</a>
+        </div>
+        <div class="footer__contact-item">
+          <div class="footer__contact-icon">✉</div>
+          <a href="mailto:info@valenciabasketcup.com">info@valenciabasketcup.com</a>
+        </div>
+        <ul style="margin-top:20px;">
+          <li><a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener">La Alqueria del Basket →</a></li>
+          <li><a href="https://roeventos.com" target="_blank" rel="noopener">R&O Eventos →</a></li>
+          <li><a href="https://www.valenciabasket.com" target="_blank" rel="noopener">Valencia Basket Club →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p data-i18n="footer-copy">© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <button class="subscribe-btn" id="subscribeBtn" aria-label="Suscribirse al boletín">✉</button>
+  <div class="subscribe-modal" id="subscribeModal">
+    <div class="subscribe-modal__backdrop" id="subscribeBackdrop"></div>
+    <div class="subscribe-modal__box">
+      <button class="subscribe-modal__close" id="subscribeClose">✕</button>
+      <div class="subscribe-modal__icon">✉</div>
+      <h3 class="subscribe-modal__title" data-i18n="subscribe-title">Mantente al día</h3>
+      <p class="subscribe-modal__sub" data-i18n="subscribe-sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
+      <form class="subscribe-modal__form" id="subscribeForm">
+        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="subscribe-modal__submit" data-i18n="subscribe-submit">Suscribirse</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-switcher__btn active" data-lang="es">ES</button>
+    <button class="lang-switcher__btn" data-lang="en">EN</button>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
