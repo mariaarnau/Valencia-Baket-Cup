@@ -355,23 +355,23 @@
         <div class="chatbot__header-info">
           <div class="chatbot__avatar">VBC</div>
           <div>
-            <div class="chatbot__name">Asistente VBC</div>
-            <div class="chatbot__status">● En línea</div>
+            <div class="chatbot__name" id="chatbotName">Asistente VBC</div>
+            <div class="chatbot__status" id="chatbotStatus">● En línea</div>
           </div>
         </div>
         <button class="chatbot__close" id="chatbotClose">✕</button>
       </div>
       <div class="chatbot__messages" id="chatbotMessages">
-        <div class="chatbot__msg chatbot__msg--bot">
+        <div class="chatbot__msg chatbot__msg--bot" id="chatbotWelcomeMsg">
           <span>¡Hola! 👋 Soy el asistente de Valencia Basket Cup. ¿En qué puedo ayudarte?</span>
         </div>
         <div class="chatbot__suggestions" id="chatbotSuggestions">
-          <button class="chatbot__chip">¿Cuándo son los torneos?</button>
-          <button class="chatbot__chip">¿Cómo me inscribo?</button>
-          <button class="chatbot__chip">¿Dónde se juega?</button>
-          <button class="chatbot__chip">¿Qué categorías hay?</button>
-          <button class="chatbot__chip">¿Cuánto cuesta?</button>
-          <button class="chatbot__chip">¿Dónde alojarse?</button>
+          <button class="chatbot__chip" data-intent="fechas">¿Cuándo son los torneos?</button>
+          <button class="chatbot__chip" data-intent="inscripcion">¿Cómo me inscribo?</button>
+          <button class="chatbot__chip" data-intent="instalaciones">¿Dónde se juega?</button>
+          <button class="chatbot__chip" data-intent="categorias">¿Qué categorías hay?</button>
+          <button class="chatbot__chip" data-intent="precio">¿Cuánto cuesta?</button>
+          <button class="chatbot__chip" data-intent="alojamiento">¿Dónde alojarse?</button>
         </div>
       </div>
       <div class="chatbot__input-wrap">
@@ -470,98 +470,177 @@
   <!-- CHATBOT LOGIC -->
   <script>
   (function() {
-    // Cada entrada tiene: patrones de intención (palabras clave) y respuesta
-    var faq = [
-      {
-        intent: 'inscripcion_plazo',
-        patterns: ['hasta que fecha','plazo','limite','límite','cuando puedo inscrib','cuándo puedo inscrib','fecha limite','fecha límite','tiempo tengo','cuando hay que inscrib','cuándo hay que','inscribir','inscripcion','inscripción','apuntarse','apunto','registro','registrar','reservar','plaza'],
-        a: '📋 Puedes inscribirte hasta agotar plazas — se llenan rápido. Te recomendamos hacerlo cuanto antes.<br><br>• <b>VBC</b> 3–5 Enero 2027 → plazas disponibles<br>• <b>VIC</b> 25–28 Marzo 2027 → plazas disponibles<br>• <b>VSC</b> 25–27 Junio 2026 → consultar disponibilidad<br><br><a href="pagos.html" style="color:var(--orange)">Inscribirse ahora →</a>'
+    var chatbotI18n = {
+      es: {
+        name: 'Asistente VBC',
+        status: '● En línea',
+        welcome: '¡Hola! 👋 Soy el asistente de Valencia Basket Cup. ¿En qué puedo ayudarte?',
+        placeholder: 'Escribe tu pregunta...',
+        chips: ['¿Cuándo son los torneos?','¿Cómo me inscribo?','¿Dónde se juega?','¿Qué categorías hay?','¿Cuánto cuesta?','¿Dónde alojarse?'],
+        fallback: '🤔 No he entendido bien tu pregunta. Puedes reformularla o contactarnos directamente:<br><br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com<br><br><a href="contacto.html" style="color:var(--orange)">Ir a contacto →</a>'
       },
-      {
-        intent: 'fechas_torneos',
-        patterns: ['cuando son','cuándo son','proximos','próximos','fechas','calendario','cuando se celebra','cuándo se celebra','que torneos hay','qué torneos hay','este año','proximo año','próximo año'],
-        a: '📅 Próximas ediciones:<br>• <b>VBC</b> — 3 al 5 de Enero 2027<br>• <b>VIC</b> — 25 al 28 de Marzo 2027<br>• <b>VSC</b> — 25 al 27 de Junio 2026<br><br><a href="torneos.html" style="color:var(--orange)">Ver todos los torneos →</a>'
+      en: {
+        name: 'VBC Assistant',
+        status: '● Online',
+        welcome: 'Hi! 👋 I\'m the Valencia Basket Cup assistant. How can I help you?',
+        placeholder: 'Type your question...',
+        chips: ['When are the tournaments?','How do I register?','Where is it played?','What categories are there?','How much does it cost?','Where to stay?'],
+        fallback: '🤔 I didn\'t quite understand your question. Feel free to rephrase it or contact us directly:<br><br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com<br><br><a href="contacto.html" style="color:var(--orange)">Contact form →</a>'
       },
-      {
-        intent: 'precio',
-        patterns: ['cuanto cuesta','cuánto cuesta','precio','coste','costo','tarifa','pago','cuanto es','cuánto es','cuanto vale','cuánto vale','cuanto hay que pagar','presupuesto'],
-        a: '💰 El precio varía según el torneo y categoría. Para recibir las tarifas actualizadas contáctanos:<br><br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418<br><br>Ofrecemos precios especiales para equipos que repiten edición.'
+      fr: {
+        name: 'Assistant VBC',
+        status: '● En ligne',
+        welcome: 'Bonjour ! 👋 Je suis l\'assistant de la Valencia Basket Cup. Comment puis-je vous aider ?',
+        placeholder: 'Écrivez votre question...',
+        chips: ['Quand sont les tournois ?','Comment s\'inscrire ?','Où se joue-t-il ?','Quelles catégories ?','Combien ça coûte ?','Où se loger ?'],
+        fallback: '🤔 Je n\'ai pas bien compris votre question. Reformulez ou contactez-nous directement :<br><br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com<br><br><a href="contacto.html" style="color:var(--orange)">Formulaire de contact →</a>'
       },
-      {
-        intent: 'instalaciones',
-        patterns: ['donde se juega','dónde se juega','donde es','dónde es','instalaciones','pabellon','pabellón','recinto','lugar','alqueria','alquería','sede','cancha','pista'],
-        a: '🏟️ Todos los torneos se celebran en <b>L\'Alqueria del Basket</b>, el centro de tecnificación oficial de Valencia Basket.<br><br>Instalaciones de primer nivel europeo con múltiples pistas, vestuarios profesionales y zona de calentamiento.<br><br>📍 Valencia, España'
+      it: {
+        name: 'Assistente VBC',
+        status: '● Online',
+        welcome: 'Ciao! 👋 Sono l\'assistente della Valencia Basket Cup. Come posso aiutarti?',
+        placeholder: 'Scrivi la tua domanda...',
+        chips: ['Quando sono i tornei?','Come mi iscrivo?','Dove si gioca?','Che categorie ci sono?','Quanto costa?','Dove alloggiare?'],
+        fallback: '🤔 Non ho capito bene la tua domanda. Riformulala o contattaci direttamente:<br><br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com<br><br><a href="contacto.html" style="color:var(--orange)">Modulo di contatto →</a>'
       },
-      {
-        intent: 'categorias',
-        patterns: ['categorias','categorías','que edad','qué edad','edades','sub','u10','u12','u14','u16','u18','benjamin','alevin','infantil','cadete','junior','masculino','femenino','mixto','division','divisiones'],
-        a: '🏀 Participan las siguientes categorías:<br>• U10 · U12 · U14 · U16 · U18<br>• Masculino y Femenino<br><br>Cada torneo puede tener divisiones distintas según nivel competitivo. Consúltanos para saber qué categoría encaja mejor con tu equipo.'
+      pt: {
+        name: 'Assistente VBC',
+        status: '● Online',
+        welcome: 'Olá! 👋 Sou o assistente da Valencia Basket Cup. Em que posso ajudar?',
+        placeholder: 'Escreva a sua pergunta...',
+        chips: ['Quando são os torneios?','Como me inscrevo?','Onde se joga?','Que categorias há?','Quanto custa?','Onde ficar?'],
+        fallback: '🤔 Não percebi bem a sua pergunta. Reformule-a ou contacte-nos diretamente:<br><br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com<br><br><a href="contacto.html" style="color:var(--orange)">Formulário de contacto →</a>'
+      }
+    };
+
+    var faqData = {
+      fechas: {
+        es: '📅 Próximas ediciones:<br>• <b>VBC</b> — 3 al 5 de Enero 2027<br>• <b>VIC</b> — 25 al 28 de Marzo 2027<br>• <b>VSC</b> — 25 al 27 de Junio 2026<br><br><a href="torneos.html" style="color:var(--orange)">Ver todos los torneos →</a>',
+        en: '📅 Upcoming editions:<br>• <b>VBC</b> — January 3–5, 2027<br>• <b>VIC</b> — March 25–28, 2027<br>• <b>VSC</b> — June 25–27, 2026<br><br><a href="torneos.html" style="color:var(--orange)">View all tournaments →</a>',
+        fr: '📅 Prochaines éditions :<br>• <b>VBC</b> — 3 au 5 janvier 2027<br>• <b>VIC</b> — 25 au 28 mars 2027<br>• <b>VSC</b> — 25 au 27 juin 2026<br><br><a href="torneos.html" style="color:var(--orange)">Voir tous les tournois →</a>',
+        it: '📅 Prossime edizioni:<br>• <b>VBC</b> — 3–5 gennaio 2027<br>• <b>VIC</b> — 25–28 marzo 2027<br>• <b>VSC</b> — 25–27 giugno 2026<br><br><a href="torneos.html" style="color:var(--orange)">Vedi tutti i tornei →</a>',
+        pt: '📅 Próximas edições:<br>• <b>VBC</b> — 3 a 5 de janeiro 2027<br>• <b>VIC</b> — 25 a 28 de março 2027<br>• <b>VSC</b> — 25 a 27 de junho 2026<br><br><a href="torneos.html" style="color:var(--orange)">Ver todos os torneios →</a>'
       },
-      {
-        intent: 'alojamiento',
-        patterns: ['hotel','alojamiento','hostal','airbnb','apartamento','donde dormir','dónde dormir','alojarse','hospedaje','dormimos','quedamos','habitaciones'],
-        a: '🏨 Valencia tiene una amplia oferta de alojamiento. Trabajamos con hoteles colaboradores con tarifas especiales para equipos participantes.<br><br>Al inscribirte te facilitamos información de alojamiento recomendado cerca de L\'Alqueria del Basket.'
+      inscripcion: {
+        es: '📋 Puedes inscribirte hasta agotar plazas — se llenan rápido.<br><br>• <b>VBC</b> 3–5 Enero 2027<br>• <b>VIC</b> 25–28 Marzo 2027<br>• <b>VSC</b> 25–27 Junio 2026<br><br><a href="pagos.html" style="color:var(--orange)">Inscribirse ahora →</a>',
+        en: '📋 You can register until spots run out — they fill up fast.<br><br>• <b>VBC</b> Jan 3–5, 2027<br>• <b>VIC</b> Mar 25–28, 2027<br>• <b>VSC</b> Jun 25–27, 2026<br><br><a href="pagos.html" style="color:var(--orange)">Register now →</a>',
+        fr: '📋 Vous pouvez vous inscrire jusqu\'à épuisement des places — elles se remplissent vite.<br><br>• <b>VBC</b> 3–5 janv. 2027<br>• <b>VIC</b> 25–28 mars 2027<br>• <b>VSC</b> 25–27 juin 2026<br><br><a href="pagos.html" style="color:var(--orange)">S\'inscrire maintenant →</a>',
+        it: '📋 Puoi iscriverti fino ad esaurimento posti — si riempiono in fretta.<br><br>• <b>VBC</b> 3–5 gen. 2027<br>• <b>VIC</b> 25–28 mar. 2027<br>• <b>VSC</b> 25–27 giu. 2026<br><br><a href="pagos.html" style="color:var(--orange)">Iscriversi ora →</a>',
+        pt: '📋 Pode inscrever-se até esgotar os lugares — enchem depressa.<br><br>• <b>VBC</b> 3–5 jan. 2027<br>• <b>VIC</b> 25–28 mar. 2027<br>• <b>VSC</b> 25–27 jun. 2026<br><br><a href="pagos.html" style="color:var(--orange)">Inscrever-se agora →</a>'
       },
-      {
-        intent: 'paises_equipos',
-        patterns: ['que paises','qué países','de donde vienen','de dónde vienen','equipos extranjeros','equipos internacionales','internacional','extranjero','nivel','competidores','participantes','quien viene','quién viene'],
-        a: '🌍 Han participado equipos de más de <b>28 países</b>:<br>🇪🇸 España · 🇫🇷 Francia · 🇩🇪 Alemania · 🇵🇹 Portugal · 🇫🇮 Finlandia · 🇮🇸 Islandia · 🇺🇸 EEUU · 🇲🇽 México · 🇮🇹 Italia · 🇬🇧 Reino Unido · 🇳🇱 Países Bajos · y muchos más.<br><br>El nivel competitivo es muy alto e internacional.'
+      instalaciones: {
+        es: '🏟️ Todos los torneos se celebran en <b>L\'Alqueria del Basket</b>, el centro oficial de Valencia Basket.<br><br>Múltiples pistas, vestuarios profesionales y zona de calentamiento.<br><br>📍 Valencia, España',
+        en: '🏟️ All tournaments are held at <b>L\'Alqueria del Basket</b>, the official training centre of Valencia Basket.<br><br>Multiple courts, professional changing rooms and warm-up areas.<br><br>📍 Valencia, Spain',
+        fr: '🏟️ Tous les tournois se déroulent à <b>L\'Alqueria del Basket</b>, le centre officiel du Valencia Basket.<br><br>Plusieurs terrains, vestiaires professionnels et zones d\'échauffement.<br><br>📍 Valence, Espagne',
+        it: '🏟️ Tutti i tornei si svolgono a <b>L\'Alqueria del Basket</b>, il centro ufficiale del Valencia Basket.<br><br>Più campi, spogliatoi professionali e zone di riscaldamento.<br><br>📍 Valencia, Spagna',
+        pt: '🏟️ Todos os torneios realizam-se na <b>L\'Alqueria del Basket</b>, o centro oficial do Valencia Basket.<br><br>Vários campos, balneários profissionais e zonas de aquecimento.<br><br>📍 Valencia, Espanha'
       },
-      {
-        intent: 'contacto',
-        patterns: ['contacto','contactar','hablar','llamar','email','correo','telefono','teléfono','whatsapp','persona','hablar con alguien'],
-        a: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><br>Estamos disponibles de lunes a viernes de 9h a 18h.<br><br><a href="contacto.html" style="color:var(--orange)">Formulario de contacto →</a>'
+      categorias: {
+        es: '🏀 Categorías disponibles:<br>• U10 · U12 · U14 · U16 · U18<br>• Masculino y Femenino<br><br>Cada torneo puede tener divisiones distintas. Consúltanos para saber qué categoría encaja con tu equipo.',
+        en: '🏀 Available categories:<br>• U10 · U12 · U14 · U16 · U18<br>• Male and Female<br><br>Each tournament may have different divisions. Contact us to find the right category for your team.',
+        fr: '🏀 Catégories disponibles :<br>• U10 · U12 · U14 · U16 · U18<br>• Masculin et Féminin<br><br>Chaque tournoi peut avoir des divisions différentes. Contactez-nous pour trouver la bonne catégorie.',
+        it: '🏀 Categorie disponibili:<br>• U10 · U12 · U14 · U16 · U18<br>• Maschile e Femminile<br><br>Ogni torneo può avere divisioni diverse. Contattaci per trovare la categoria giusta per la tua squadra.',
+        pt: '🏀 Categorias disponíveis:<br>• U10 · U12 · U14 · U16 · U18<br>• Masculino e Feminino<br><br>Cada torneio pode ter divisões diferentes. Contacte-nos para saber qual a categoria certa para a sua equipa.'
       },
-      {
-        intent: 'transporte',
-        patterns: ['como llegar','cómo llegar','transporte','aeropuerto','avion','avión','tren','autobus','autobús','metro','como se llega','cómo se llega'],
-        a: '✈️ Valencia tiene aeropuerto internacional con vuelos directos desde toda Europa.<br><br>🚆 AVE desde Madrid en 1h 30min<br>🚇 Metro línea 5 desde el aeropuerto al centro<br>🚗 L\'Alqueria está a 10 min del centro en coche<br><br>¿Necesitas más info? Escríbenos a info@valenciabasketcup.com'
+      precio: {
+        es: '💰 El precio varía según el torneo y categoría. Para tarifas actualizadas contáctanos:<br><br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418<br><br>Ofrecemos precios especiales para equipos que repiten edición.',
+        en: '💰 The price varies by tournament and category. For updated rates contact us:<br><br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418<br><br>We offer special prices for returning teams.',
+        fr: '💰 Le prix varie selon le tournoi et la catégorie. Pour les tarifs actualisés contactez-nous :<br><br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418<br><br>Nous offrons des tarifs spéciaux pour les équipes qui reviennent.',
+        it: '💰 Il prezzo varia in base al torneo e alla categoria. Per le tariffe aggiornate contattaci:<br><br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418<br><br>Offriamo prezzi speciali per le squadre che tornano.',
+        pt: '💰 O preço varia consoante o torneio e a categoria. Para tarifas atualizadas contacte-nos:<br><br>✉ info@valenciabasketcup.com<br>📞 +34 670 386 418<br><br>Oferecemos preços especiais para equipas que voltam.'
       },
-      {
-        intent: 'estadisticas',
-        patterns: ['estadisticas','estadísticas','resultados','marcadores','clasificacion','clasificación','puntos','puntuacion','puntuación','donde ver','partidos','actas','tabla','ranking','ver los partidos','seguir los partidos','como van','cómo van','ver resultado','resultados en directo'],
-        a: '📊 Las estadísticas y resultados de cada torneo se publican en la <b>Revista VBC</b> con reportajes detallados, clasificaciones y datos de cada partido.<br><br>Durante el torneo puedes seguir el desarrollo en nuestras redes sociales y recibir actualizaciones suscribiéndote al boletín.<br><br><a href="revista.html" style="color:var(--orange)">Ver revistas →</a>'
+      alojamiento: {
+        es: '🏨 Trabajamos con hoteles colaboradores con tarifas especiales para equipos participantes.<br><br>Al inscribirte te facilitamos información de alojamiento recomendado cerca de L\'Alqueria del Basket.',
+        en: '🏨 We work with partner hotels offering special rates for participating teams.<br><br>When you register, we provide recommended accommodation information near L\'Alqueria del Basket.',
+        fr: '🏨 Nous travaillons avec des hôtels partenaires offrant des tarifs spéciaux pour les équipes participantes.<br><br>Lors de l\'inscription, nous vous fournirons des informations sur l\'hébergement recommandé près de L\'Alqueria.',
+        it: '🏨 Collaboriamo con hotel partner con tariffe speciali per le squadre partecipanti.<br><br>All\'iscrizione ti forniremo informazioni sull\'alloggio consigliato vicino a L\'Alqueria del Basket.',
+        pt: '🏨 Trabalhamos com hotéis parceiros com tarifas especiais para equipas participantes.<br><br>Ao inscrever-se, fornecemos informações de alojamento recomendado perto da L\'Alqueria del Basket.'
       },
-      {
-        intent: 'Valencia',
-        patterns: ['valencia','ciudad','que ver','qué ver','turismo','playas','gastronomia','gastronomía','paella','visitar'],
-        a: '🌅 Valencia es una ciudad perfecta para combinar deporte y turismo:<br><br>🏖️ Playas a 20 min del centro<br>🍽️ La mejor paella del mundo<br>🎭 Ciudad de las Artes y las Ciencias<br>☀️ 300 días de sol al año<br><br>Muchos equipos amplían la estancia para disfrutar la ciudad.'
+      contacto: {
+        es: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><br>Disponibles lunes a viernes de 9h a 18h.<br><br><a href="contacto.html" style="color:var(--orange)">Formulario de contacto →</a>',
+        en: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><br>Available Monday to Friday, 9am–6pm.<br><br><a href="contacto.html" style="color:var(--orange)">Contact form →</a>',
+        fr: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><br>Disponibles du lundi au vendredi de 9h à 18h.<br><br><a href="contacto.html" style="color:var(--orange)">Formulaire de contact →</a>',
+        it: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><br>Disponibili da lunedì a venerdì dalle 9 alle 18.<br><br><a href="contacto.html" style="color:var(--orange)">Modulo di contatto →</a>',
+        pt: '📞 <b>+34 670 386 418</b><br>✉ <b>info@valenciabasketcup.com</b><br><br>Disponíveis de segunda a sexta das 9h às 18h.<br><br><a href="contacto.html" style="color:var(--orange)">Formulário de contacto →</a>'
       },
+      transporte: {
+        es: '✈️ Valencia tiene aeropuerto internacional con vuelos directos desde toda Europa.<br><br>🚆 AVE desde Madrid en 1h 30min<br>🚇 Metro línea 5 desde el aeropuerto<br>🚗 L\'Alqueria a 10 min del centro<br><br>✉ info@valenciabasketcup.com',
+        en: '✈️ Valencia has an international airport with direct flights from across Europe.<br><br>🚆 High-speed train from Madrid in 1h 30min<br>🚇 Metro line 5 from the airport<br>🚗 L\'Alqueria is 10 min from the city centre<br><br>✉ info@valenciabasketcup.com',
+        fr: '✈️ Valence dispose d\'un aéroport international avec des vols directs depuis toute l\'Europe.<br><br>🚆 Train à grande vitesse depuis Madrid en 1h30<br>🚇 Métro ligne 5 depuis l\'aéroport<br>🚗 L\'Alqueria à 10 min du centre<br><br>✉ info@valenciabasketcup.com',
+        it: '✈️ Valencia ha un aeroporto internazionale con voli diretti da tutta Europa.<br><br>🚆 Alta velocità da Madrid in 1h 30min<br>🚇 Metro linea 5 dall\'aeroporto<br>🚗 L\'Alqueria a 10 min dal centro<br><br>✉ info@valenciabasketcup.com',
+        pt: '✈️ Valencia tem aeroporto internacional com voos diretos de toda a Europa.<br><br>🚆 Comboio de alta velocidade de Madrid em 1h30<br>🚇 Metro linha 5 desde o aeroporto<br>🚗 L\'Alqueria a 10 min do centro<br><br>✉ info@valenciabasketcup.com'
+      },
+      estadisticas: {
+        es: '📊 Las estadísticas se publican en la <b>Revista VBC</b> con reportajes, clasificaciones y datos de cada partido.<br><br>Durante el torneo síguenos en redes sociales.<br><br><a href="revista.html" style="color:var(--orange)">Ver revistas →</a>',
+        en: '📊 Statistics are published in the <b>VBC Magazine</b> with features, standings and match data.<br><br>Follow us on social media during the tournament.<br><br><a href="revista.html" style="color:var(--orange)">View magazines →</a>',
+        fr: '📊 Les statistiques sont publiées dans le <b>Magazine VBC</b> avec reportages, classements et données des matchs.<br><br>Suivez-nous sur les réseaux sociaux pendant le tournoi.<br><br><a href="revista.html" style="color:var(--orange)">Voir les magazines →</a>',
+        it: '📊 Le statistiche sono pubblicate sulla <b>Rivista VBC</b> con reportage, classifiche e dati delle partite.<br><br>Seguici sui social media durante il torneo.<br><br><a href="revista.html" style="color:var(--orange)">Vedi riviste →</a>',
+        pt: '📊 As estatísticas são publicadas na <b>Revista VBC</b> com reportagens, classificações e dados de cada jogo.<br><br>Siga-nos nas redes sociais durante o torneio.<br><br><a href="revista.html" style="color:var(--orange)">Ver revistas →</a>'
+      },
+      ciudad: {
+        es: '🌅 Valencia es perfecta para combinar deporte y turismo:<br><br>🏖️ Playas a 20 min del centro<br>🍽️ La mejor paella del mundo<br>🎭 Ciudad de las Artes y las Ciencias<br>☀️ 300 días de sol al año',
+        en: '🌅 Valencia is perfect for combining sport and tourism:<br><br>🏖️ Beaches 20 min from the centre<br>🍽️ The best paella in the world<br>🎭 City of Arts and Sciences<br>☀️ 300 sunny days a year',
+        fr: '🌅 Valence est parfaite pour combiner sport et tourisme :<br><br>🏖️ Plages à 20 min du centre<br>🍽️ La meilleure paella du monde<br>🎭 Cité des Arts et des Sciences<br>☀️ 300 jours de soleil par an',
+        it: '🌅 Valencia è perfetta per unire sport e turismo:<br><br>🏖️ Spiagge a 20 min dal centro<br>🍽️ La migliore paella del mondo<br>🎭 Città delle Arti e delle Scienze<br>☀️ 300 giorni di sole all\'anno',
+        pt: '🌅 Valencia é perfeita para combinar desporto e turismo:<br><br>🏖️ Praias a 20 min do centro<br>🍽️ A melhor paella do mundo<br>🎭 Cidade das Artes e das Ciências<br>☀️ 300 dias de sol por ano'
+      }
+    };
+
+    var intents = [
+      { key: 'inscripcion', patterns: { es: ['inscrib','apuntarse','registro','registrar','plaza','reservar','plazo','limite','cuando puedo'], en: ['register','sign up','enroll','deadline','spot','registration'], fr: ['inscri','s\'inscrire','enregistrer','délai','place'], it: ['iscri','registrar','posto','scadenza'], pt: ['inscrev','registar','lugar','prazo'] } },
+      { key: 'fechas', patterns: { es: ['cuando son','fechas','calendario','torneos hay','proximo','próximo'], en: ['when','dates','schedule','upcoming','next tournament'], fr: ['quand','dates','calendrier','prochain'], it: ['quando','date','calendario','prossim'], pt: ['quando','datas','calendário','próxim'] } },
+      { key: 'precio', patterns: { es: ['precio','cuanto cuesta','cuánto cuesta','coste','tarifa','pago','cuanto vale'], en: ['price','cost','fee','how much','rate'], fr: ['prix','combien','tarif','coût'], it: ['prezzo','costo','quanto costa','tariffa'], pt: ['preço','custo','quanto custa','tarifa'] } },
+      { key: 'instalaciones', patterns: { es: ['donde se juega','dónde se juega','instalaciones','alqueria','pabellon','sede','pista','cancha'], en: ['where','venue','facility','court','alqueria'], fr: ['où se joue','installation','terrain','alqueria'], it: ['dove si gioca','impianto','campo','alqueria'], pt: ['onde se joga','instalações','campo','alqueria'] } },
+      { key: 'categorias', patterns: { es: ['categorias','categorías','edad','sub','benjamin','alevin','infantil','cadete'], en: ['categor','age','u10','u12','u14','u16','u18','division'], fr: ['catégor','âge','u10','u12','u14','u16','u18'], it: ['categor','età','u10','u12','u14','u16','u18'], pt: ['categor','idade','sub-','u10','u12','u14'] } },
+      { key: 'alojamiento', patterns: { es: ['hotel','alojamiento','dormir','hostal','apartamento','hospedaje'], en: ['hotel','accommodation','stay','lodging','where to sleep'], fr: ['hôtel','hébergement','dormir','logement'], it: ['hotel','alloggio','dormire','soggiorno'], pt: ['hotel','alojamento','dormir','hospedagem'] } },
+      { key: 'contacto', patterns: { es: ['contacto','contactar','llamar','email','correo','telefono','teléfono','hablar'], en: ['contact','call','email','phone','reach'], fr: ['contact','appeler','email','téléphone'], it: ['contatto','chiamare','email','telefono'], pt: ['contacto','ligar','email','telefone'] } },
+      { key: 'transporte', patterns: { es: ['llegar','transporte','aeropuerto','avion','tren','metro'], en: ['get there','transport','airport','plane','train','metro'], fr: ['arriver','transport','aéroport','avion','train'], it: ['arrivare','trasporto','aeroporto','treno','metro'], pt: ['chegar','transporte','aeroporto','avião','comboio'] } },
+      { key: 'estadisticas', patterns: { es: ['estadisticas','resultados','clasificacion','partidos','ranking'], en: ['stats','results','standings','scores','ranking'], fr: ['statistiques','résultats','classement','scores'], it: ['statistiche','risultati','classifiche','punteggi'], pt: ['estatísticas','resultados','classificação','pontuações'] } },
+      { key: 'ciudad', patterns: { es: ['valencia','ciudad','turismo','playas','paella','visitar'], en: ['valencia','city','tourism','beach','paella','visit'], fr: ['valence','ville','tourisme','plage','paella','visiter'], it: ['valencia','città','turismo','spiaggia','paella','visitare'], pt: ['valencia','cidade','turismo','praia','paella','visitar'] } }
     ];
 
-    function normalize(str) {
-      return str.toLowerCase()
-        .normalize('NFD').replace(/[̀-ͯ]/g, '')
-        .replace(/[^a-z0-9 ]/g, ' ');
-    }
+    function getLang() { return localStorage.getItem('vbc-lang') || 'es'; }
 
-    function score(text, patterns) {
-      var stopWords = ['que','hay','los','las','una','uno','con','por','para','como','del','les','sus','mis','nos','son','ser','fue','han','muy','sin','este','esta','cual','cuál','cuando','cuándo','donde','dónde','como','cómo','qué'];
-      var t = normalize(text);
-      var words = t.split(/\s+/).filter(function(w) { return w.length >= 4 && stopWords.indexOf(w) === -1; });
-      var hits = 0;
-      patterns.forEach(function(p) {
-        var pn = normalize(p);
-        if (t.indexOf(pn) > -1) { hits += 5; return; }
-        pn.split(/\s+/).forEach(function(pw) {
-          if (pw.length < 4 || stopWords.indexOf(pw) > -1) return;
-          words.forEach(function(w) {
-            if (w.indexOf(pw) > -1 || pw.indexOf(w) > -1) hits += 1;
-          });
-        });
-      });
-      return hits;
+    function normalize(str) {
+      return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ');
     }
 
     function getAnswer(text) {
+      var lang = getLang();
+      var t = normalize(text);
       var best = null, bestScore = 0;
-      faq.forEach(function(entry) {
-        var s = score(text, entry.patterns);
-        if (s > bestScore) { bestScore = s; best = entry; }
+      intents.forEach(function(intent) {
+        var patterns = intent.patterns[lang] || intent.patterns.es;
+        var hits = 0;
+        patterns.forEach(function(p) {
+          if (t.indexOf(normalize(p)) > -1) hits += 5;
+        });
+        if (hits > bestScore) { bestScore = hits; best = intent.key; }
       });
-      if (best && bestScore >= 2) return best.a;
-      return '🤔 No he entendido bien tu pregunta. Puedes reformularla o contactarnos directamente:<br><br>📞 +34 670 386 418<br>✉ info@valenciabasketcup.com<br><br><a href="contacto.html" style="color:var(--orange)">Ir a contacto →</a>';
+      if (best && bestScore >= 5) {
+        var answers = faqData[best];
+        return answers[lang] || answers.es;
+      }
+      return (chatbotI18n[lang] || chatbotI18n.es).fallback;
     }
+
+    function updateChatbotLang() {
+      var lang = getLang();
+      var ui = chatbotI18n[lang] || chatbotI18n.es;
+      document.getElementById('chatbotName').textContent = ui.name;
+      document.getElementById('chatbotStatus').textContent = ui.status;
+      document.getElementById('chatbotInput').placeholder = ui.placeholder;
+      var chips = document.querySelectorAll('.chatbot__chip');
+      chips.forEach(function(chip, i) {
+        chip.textContent = ui.chips[i] || chip.textContent;
+      });
+      // update welcome message only if it's still the original
+      var welcomeMsg = document.getElementById('chatbotWelcomeMsg');
+      if (welcomeMsg) welcomeMsg.querySelector('span').textContent = ui.welcome;
+    }
+
+    // expose so applyLanguage in main.js can call it
+    window.updateChatbotLang = updateChatbotLang;
 
     var toggle = document.getElementById('chatbotToggle');
     var win = document.getElementById('chatbotWindow');
@@ -600,10 +679,19 @@
     input.addEventListener('keydown', function(e) { if (e.key === 'Enter') handleSend(); });
     chips.forEach(function(c) {
       c.addEventListener('click', function() {
+        var lang = getLang();
+        var ui = chatbotI18n[lang] || chatbotI18n.es;
+        var idx = Array.from(chips).indexOf(c);
+        var intentKeys = ['fechas','inscripcion','instalaciones','categorias','precio','alojamiento'];
+        var intentKey = intentKeys[idx];
+        var answer = faqData[intentKey] ? (faqData[intentKey][lang] || faqData[intentKey].es) : getAnswer(c.textContent);
         addMsg(c.textContent, true);
-        setTimeout(function() { addMsg(getAnswer(c.textContent), false); }, 400);
+        setTimeout(function() { addMsg(answer, false); }, 400);
       });
     });
+
+    // init with saved language
+    updateChatbotLang();
   })();
   </script>
 

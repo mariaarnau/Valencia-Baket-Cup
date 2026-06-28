@@ -2180,6 +2180,7 @@ function applyLanguage(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
   localStorage.setItem('vbc-lang', lang);
+  if (window.updateChatbotLang) window.updateChatbotLang(lang);
 }
 
 const langSwitcher = document.getElementById('langSwitcher');
