@@ -162,26 +162,26 @@ items.forEach((item, i) => {
   });
 });
 
-lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
-lightboxPrev.addEventListener('click', e => {
+if (lightboxPrev) lightboxPrev.addEventListener('click', e => {
   e.stopPropagation();
   currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
   showLightboxItem(currentIndex);
 });
 
-lightboxNext.addEventListener('click', e => {
+if (lightboxNext) lightboxNext.addEventListener('click', e => {
   e.stopPropagation();
   currentIndex = (currentIndex + 1) % visibleItems.length;
   showLightboxItem(currentIndex);
 });
 
 document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
+  if (!lightbox || !lightbox.classList.contains('open')) return;
   if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') lightboxPrev.click();
-  if (e.key === 'ArrowRight') lightboxNext.click();
+  if (e.key === 'ArrowLeft' && lightboxPrev) lightboxPrev.click();
+  if (e.key === 'ArrowRight' && lightboxNext) lightboxNext.click();
 });
 
 /* ================================
