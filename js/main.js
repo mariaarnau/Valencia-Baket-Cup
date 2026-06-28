@@ -382,6 +382,35 @@ const savedLang = localStorage.getItem('vbc-lang');
 if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
 
 /* ================================
+   SUBSCRIBE MODAL
+================================ */
+(function() {
+  const btn = document.getElementById('subscribeBtn');
+  const modal = document.getElementById('subscribeModal');
+  const backdrop = document.getElementById('subscribeBackdrop');
+  const closeBtn = document.getElementById('subscribeClose');
+  const form = document.getElementById('subscribeForm');
+  if (!btn || !modal) return;
+
+  btn.addEventListener('click', () => modal.classList.add('open'));
+  backdrop.addEventListener('click', () => modal.classList.remove('open'));
+  closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = form.querySelector('input[type="email"]').value;
+    form.closest('.subscribe-modal__box').innerHTML = `
+      <div class="subscribe-modal__success">
+        <div style="font-size:48px;margin-bottom:16px;">✓</div>
+        <h4>¡Suscripción confirmada!</h4>
+        <p>Te enviaremos resultados, horarios y novedades de cada torneo a <strong>${email}</strong>.</p>
+      </div>`;
+    setTimeout(() => modal.classList.remove('open'), 3000);
+  });
+})();
+
+/* ================================
    FAQ ACORDEÓN
 ================================ */
 document.querySelectorAll('.faq__q').forEach(btn => {
