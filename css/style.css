@@ -1912,6 +1912,7 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 
 .subscribe-modal__form {
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
@@ -1935,7 +1936,7 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   color: var(--white);
   border: none;
   border-radius: var(--radius);
-  padding: 12px 20px;
+  padding: 14px 20px;
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
@@ -1943,7 +1944,7 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   text-transform: uppercase;
   cursor: none;
   transition: background 0.2s, transform 0.2s;
-  white-space: nowrap;
+  width: 100%;
 }
 .subscribe-modal__submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
 
@@ -1951,7 +1952,7 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin: 14px 0 4px;
+  margin: 6px 0;
   cursor: pointer;
 }
 .subscribe-modal__consent input[type="checkbox"] {
@@ -1994,7 +1995,6 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 
 @media (max-width: 480px) {
-  .subscribe-modal__form { flex-direction: column; }
   .subscribe-modal__box { padding: 36px 24px; }
 }
 
