@@ -172,6 +172,9 @@
         <div class="worldmap-country"><span class="worldmap-flag">🇬🇧</span><span data-i18n="country-gb">Reino Unido</span></div>
         <div class="worldmap-country"><span class="worldmap-flag">🇳🇱</span><span data-i18n="country-nl">Países Bajos</span></div>
         <div class="worldmap-country"><span class="worldmap-flag">🇧🇪</span><span data-i18n="country-be">Bélgica</span></div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇿🇦</span><span data-i18n="country-za">Sudáfrica</span></div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇨🇳</span><span data-i18n="country-cn">China</span></div>
+        <div class="worldmap-country"><span class="worldmap-flag">🇺🇾</span><span data-i18n="country-uy">Uruguay</span></div>
       </div>
     </div>
   </section>
@@ -392,11 +395,11 @@
   <script>
   (function() {
     var countryNames = {
-      es: {ES:"España",FR:"Francia",DE:"Alemania",PT:"Portugal",FI:"Finlandia",IS:"Islandia",US:"Estados Unidos",MX:"México",IT:"Italia",GB:"Reino Unido",NL:"Países Bajos",BE:"Bélgica",CH:"Suiza",AT:"Austria",SE:"Suecia",NO:"Noruega",DK:"Dinamarca",PL:"Polonia",GR:"Grecia",HR:"Croacia",RS:"Serbia",TR:"Turquía",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Australia",JP:"Japón"},
-      en: {ES:"Spain",FR:"France",DE:"Germany",PT:"Portugal",FI:"Finland",IS:"Iceland",US:"United States",MX:"Mexico",IT:"Italy",GB:"United Kingdom",NL:"Netherlands",BE:"Belgium",CH:"Switzerland",AT:"Austria",SE:"Sweden",NO:"Norway",DK:"Denmark",PL:"Poland",GR:"Greece",HR:"Croatia",RS:"Serbia",TR:"Turkey",AR:"Argentina",BR:"Brazil",CA:"Canada",AU:"Australia",JP:"Japan"},
-      fr: {ES:"Espagne",FR:"France",DE:"Allemagne",PT:"Portugal",FI:"Finlande",IS:"Islande",US:"États-Unis",MX:"Mexique",IT:"Italie",GB:"Royaume-Uni",NL:"Pays-Bas",BE:"Belgique",CH:"Suisse",AT:"Autriche",SE:"Suède",NO:"Norvège",DK:"Danemark",PL:"Pologne",GR:"Grèce",HR:"Croatie",RS:"Serbie",TR:"Turquie",AR:"Argentine",BR:"Brésil",CA:"Canada",AU:"Australie",JP:"Japon"},
-      it: {ES:"Spagna",FR:"Francia",DE:"Germania",PT:"Portogallo",FI:"Finlandia",IS:"Islanda",US:"Stati Uniti",MX:"Messico",IT:"Italia",GB:"Regno Unito",NL:"Paesi Bassi",BE:"Belgio",CH:"Svizzera",AT:"Austria",SE:"Svezia",NO:"Norvegia",DK:"Danimarca",PL:"Polonia",GR:"Grecia",HR:"Croazia",RS:"Serbia",TR:"Turchia",AR:"Argentina",BR:"Brasile",CA:"Canada",AU:"Australia",JP:"Giappone"},
-      pt: {ES:"Espanha",FR:"França",DE:"Alemanha",PT:"Portugal",FI:"Finlândia",IS:"Islândia",US:"Estados Unidos",MX:"México",IT:"Itália",GB:"Reino Unido",NL:"Países Baixos",BE:"Bélgica",CH:"Suíça",AT:"Áustria",SE:"Suécia",NO:"Noruega",DK:"Dinamarca",PL:"Polónia",GR:"Grécia",HR:"Croácia",RS:"Sérvia",TR:"Turquia",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Austrália",JP:"Japão"}
+      es: {ES:"España",FR:"Francia",DE:"Alemania",PT:"Portugal",FI:"Finlandia",IS:"Islandia",US:"Estados Unidos",MX:"México",IT:"Italia",GB:"Reino Unido",NL:"Países Bajos",BE:"Bélgica",CH:"Suiza",AT:"Austria",SE:"Suecia",NO:"Noruega",DK:"Dinamarca",PL:"Polonia",GR:"Grecia",HR:"Croacia",RS:"Serbia",TR:"Turquía",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Australia",JP:"Japón",ZA:"Sudáfrica",CN:"China",UY:"Uruguay"},
+      en: {ES:"Spain",FR:"France",DE:"Germany",PT:"Portugal",FI:"Finland",IS:"Iceland",US:"United States",MX:"Mexico",IT:"Italy",GB:"United Kingdom",NL:"Netherlands",BE:"Belgium",CH:"Switzerland",AT:"Austria",SE:"Sweden",NO:"Norway",DK:"Denmark",PL:"Poland",GR:"Greece",HR:"Croatia",RS:"Serbia",TR:"Turkey",AR:"Argentina",BR:"Brazil",CA:"Canada",AU:"Australia",JP:"Japan",ZA:"South Africa",CN:"China",UY:"Uruguay"},
+      fr: {ES:"Espagne",FR:"France",DE:"Allemagne",PT:"Portugal",FI:"Finlande",IS:"Islande",US:"États-Unis",MX:"Mexique",IT:"Italie",GB:"Royaume-Uni",NL:"Pays-Bas",BE:"Belgique",CH:"Suisse",AT:"Autriche",SE:"Suède",NO:"Norvège",DK:"Danemark",PL:"Pologne",GR:"Grèce",HR:"Croatie",RS:"Serbie",TR:"Turquie",AR:"Argentine",BR:"Brésil",CA:"Canada",AU:"Australie",JP:"Japon",ZA:"Afrique du Sud",CN:"Chine",UY:"Uruguay"},
+      it: {ES:"Spagna",FR:"Francia",DE:"Germania",PT:"Portogallo",FI:"Finlandia",IS:"Islanda",US:"Stati Uniti",MX:"Messico",IT:"Italia",GB:"Regno Unito",NL:"Paesi Bassi",BE:"Belgio",CH:"Svizzera",AT:"Austria",SE:"Svezia",NO:"Norvegia",DK:"Danimarca",PL:"Polonia",GR:"Grecia",HR:"Croazia",RS:"Serbia",TR:"Turchia",AR:"Argentina",BR:"Brasile",CA:"Canada",AU:"Australia",JP:"Giappone",ZA:"Sudafrica",CN:"Cina",UY:"Uruguay"},
+      pt: {ES:"Espanha",FR:"França",DE:"Alemanha",PT:"Portugal",FI:"Finlândia",IS:"Islândia",US:"Estados Unidos",MX:"México",IT:"Itália",GB:"Reino Unido",NL:"Países Baixos",BE:"Bélgica",CH:"Suíça",AT:"Áustria",SE:"Suécia",NO:"Noruega",DK:"Dinamarca",PL:"Polónia",GR:"Grécia",HR:"Croácia",RS:"Sérvia",TR:"Turquia",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Austrália",JP:"Japão",ZA:"África do Sul",CN:"China",UY:"Uruguai"}
     };
     function getHighlighted() {
       var lang = localStorage.getItem('vbc-lang') || 'es';

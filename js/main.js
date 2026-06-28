@@ -307,6 +307,9 @@ const translations = {
     'country-gb': 'Reino Unido',
     'country-nl': 'Países Bajos',
     'country-be': 'Bélgica',
+    'country-za': 'Sudáfrica',
+    'country-cn': 'China',
+    'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'testimonios-tag': 'Opiniones',
     'testimonios-title': 'Lo que dicen <em>los equipos</em>',
@@ -652,6 +655,9 @@ const translations = {
     'country-gb': 'United Kingdom',
     'country-nl': 'Netherlands',
     'country-be': 'Belgium',
+    'country-za': 'South Africa',
+    'country-cn': 'China',
+    'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'testimonios-tag': 'Reviews',
     'testimonios-title': 'What the <em>teams say</em>',
@@ -1034,6 +1040,9 @@ const translations = {
     'country-gb': 'Royaume-Uni',
     'country-nl': 'Pays-Bas',
     'country-be': 'Belgique',
+    'country-za': 'Afrique du Sud',
+    'country-cn': 'Chine',
+    'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'testimonios-tag': 'Avis',
     'testimonios-title': 'Ce que disent <em>les équipes</em>',
@@ -1414,6 +1423,9 @@ const translations = {
     'country-gb': 'Regno Unito',
     'country-nl': 'Paesi Bassi',
     'country-be': 'Belgio',
+    'country-za': 'Sudafrica',
+    'country-cn': 'Cina',
+    'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'testimonios-tag': 'Opinioni',
     'testimonios-title': 'Cosa dicono <em>le squadre</em>',
@@ -1794,6 +1806,9 @@ const translations = {
     'country-gb': 'Reino Unido',
     'country-nl': 'Países Baixos',
     'country-be': 'Bélgica',
+    'country-za': 'África do Sul',
+    'country-cn': 'China',
+    'country-uy': 'Uruguai',
     /* TESTIMONIOS */
     'testimonios-tag': 'Opiniões',
     'testimonios-title': 'O que dizem <em>as equipas</em>',
