@@ -380,45 +380,121 @@
 
   <script src="js/main.js"></script>
   <!-- MAPA MUNDIAL -->
-  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
   <script>
   (function() {
-    var root = am5.Root.new("worldMapChart");
-    root.setThemes([am5themes_Animated.new(root)]);
-    var chart = root.container.children.push(am5map.MapChart.new(root, {
-      panX: "rotateX", panY: "none",
-      projection: am5map.geoNaturalEarth1(),
-      background: am5.Rectangle.new(root, { fill: am5.color(0x0a0a0a) })
-    }));
-    var bgSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-      geoJSON: am5geodata_worldLow,
-      exclude: ["AQ"]
-    }));
-    bgSeries.mapPolygons.template.setAll({
-      fill: am5.color(0x1a1a1a),
-      stroke: am5.color(0x333333),
-      strokeWidth: 0.5
-    });
-    var highlightSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-      geoJSON: am5geodata_worldLow,
-      include: ["ES","FR","DE","PT","FI","IS","US","MX","IT","GB","NL","BE","CH","AT","SE","NO","DK","PL","GR","HR","RS","TR","AR","BR","CA","AU","JP"]
-    }));
-    highlightSeries.mapPolygons.template.setAll({
-      fill: am5.color(0xFF6B00),
-      fillOpacity: 0.75,
-      stroke: am5.color(0xFF9A3C),
-      strokeWidth: 1,
-      tooltipText: "{name}"
-    });
-    highlightSeries.mapPolygons.template.states.create("hover", {
-      fill: am5.color(0xFF9A3C),
-      fillOpacity: 1
-    });
-    chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
-    chart.appear(1000, 100);
+    var highlighted = ["ES","FR","DE","PT","FI","IS","US","MX","IT","GB","NL","BE","CH","AT","SE","NO","DK","PL","GR","HR","RS","TR","AR","BR","CA","AU","JP"];
+    var names = {ES:"España",FR:"Francia",DE:"Alemania",PT:"Portugal",FI:"Finlandia",IS:"Islandia",US:"Estados Unidos",MX:"México",IT:"Italia",GB:"Reino Unido",NL:"Países Bajos",BE:"Bélgica",CH:"Suiza",AT:"Austria",SE:"Suecia",NO:"Noruega",DK:"Dinamarca",PL:"Polonia",GR:"Grecia",HR:"Croacia",RS:"Serbia",TR:"Turquía",AR:"Argentina",BR:"Brasil",CA:"Canadá",AU:"Australia",JP:"Japón"};
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      .then(function(r){ return r.json(); })
+      .then(function(world) {
+        var iso = {"004":"AF","008":"AL","012":"DZ","024":"AO","032":"AR","036":"AU","040":"AT","050":"BD","056":"BE","068":"BO","076":"BR","100":"BG","116":"KH","120":"CM","124":"CA","144":"LK","152":"CL","156":"CN","170":"CO","188":"CR","191":"HR","192":"CU","203":"CZ","208":"DK","218":"EC","818":"EG","231":"ET","246":"FI","250":"FR","276":"DE","288":"GH","300":"GR","320":"GT","332":"HT","340":"HN","348":"HU","356":"IN","360":"ID","364":"IR","368":"IQ","372":"IE","376":"IL","380":"IT","388":"JM","392":"JP","400":"JO","404":"KE","408":"KP","410":"KR","414":"KW","418":"LA","422":"LB","434":"LY","504":"MA","484":"MX","528":"NL","558":"NI","566":"NG","578":"NO","586":"PK","591":"PA","600":"PY","604":"PE","608":"PH","616":"PL","620":"PT","630":"PR","642":"RO","643":"RU","682":"SA","686":"SN","694":"SL","706":"SO","710":"ZA","724":"ES","752":"SE","756":"CH","760":"SY","764":"TH","788":"TN","792":"TR","800":"UG","804":"UA","826":"GB","840":"US","858":"UY","862":"VE","704":"VN","887":"YE","716":"ZW","336":"VA","688":"RS","191":"HR","352":"IS","706":"SO"};
+        var reverseIso = {};
+        Object.keys(iso).forEach(function(k){ reverseIso[iso[k]] = k; });
+        var highlightedNums = highlighted.map(function(cc){ return reverseIso[cc]; }).filter(Boolean);
+
+        var svgNS = "http://www.w3.org/2000/svg";
+        var wrap = document.getElementById('worldMapChart');
+        var svg = document.createElementNS(svgNS, "svg");
+        svg.setAttribute("viewBox","0 0 960 500");
+        svg.setAttribute("width","100%");
+        svg.style.display = "block";
+        svg.style.background = "#0d0d0d";
+        svg.style.borderRadius = "12px";
+
+        var projection = function(lon, lat) {
+          var x = (lon + 180) * (960 / 360);
+          var latRad = lat * Math.PI / 180;
+          var mercN = Math.log(Math.tan(Math.PI/4 + latRad/2));
+          var y = 250 - (mercN * 75);
+          return [x, y];
+        };
+
+        var topojson = world;
+        var countries = topojson.objects.countries;
+        var arcs = topojson.arcs;
+
+        function decodeArc(arcIdx) {
+          var reversed = arcIdx < 0;
+          var idx = reversed ? ~arcIdx : arcIdx;
+          var arc = arcs[idx];
+          var coords = [];
+          var x = 0, y = 0;
+          arc.forEach(function(delta) {
+            x += delta[0]; y += delta[1];
+            coords.push([x, y]);
+          });
+          if (reversed) coords.reverse();
+          return coords;
+        }
+
+        var scale = topojson.transform ? topojson.transform.scale : [1,1];
+        var translate = topojson.transform ? topojson.transform.translate : [0,0];
+
+        function toGeo(pt) {
+          return [pt[0]*scale[0]+translate[0], pt[1]*scale[1]+translate[1]];
+        }
+
+        function ringToPath(ring) {
+          var d = "";
+          ring.forEach(function(arcIdx, ai) {
+            var coords = decodeArc(arcIdx);
+            coords.forEach(function(pt, pi) {
+              var geo = toGeo(pt);
+              var px = projection(geo[0], geo[1]);
+              d += (ai===0 && pi===0 ? "M" : "L") + px[0].toFixed(1) + "," + px[1].toFixed(1);
+            });
+          });
+          return d + "Z";
+        }
+
+        var tooltip = document.getElementById('mapTooltip');
+        if (!tooltip) {
+          tooltip = document.createElement('div');
+          tooltip.id = 'mapTooltip';
+          tooltip.style.cssText = 'position:fixed;background:#FF6B00;color:#fff;padding:6px 12px;border-radius:6px;font-size:13px;font-family:Montserrat,sans-serif;pointer-events:none;opacity:0;transition:opacity 0.2s;z-index:9999;';
+          document.body.appendChild(tooltip);
+        }
+
+        countries.geometries.forEach(function(geo) {
+          var numId = geo.id ? String(geo.id).padStart(3,'0') : null;
+          var isHighlighted = numId && highlightedNums.indexOf(numId) > -1;
+          var cc = numId ? iso[numId] : null;
+          var countryName = cc ? (names[cc] || cc) : '';
+
+          var pathEl = document.createElementNS(svgNS, "path");
+          var d = "";
+          if (geo.type === "Polygon") {
+            d = ringToPath(geo.arcs[0]);
+          } else if (geo.type === "MultiPolygon") {
+            geo.arcs.forEach(function(polygon) { d += ringToPath(polygon[0]); });
+          }
+          pathEl.setAttribute("d", d);
+          pathEl.setAttribute("fill", isHighlighted ? "#FF6B00" : "#1e1e1e");
+          pathEl.setAttribute("stroke", "#333");
+          pathEl.setAttribute("stroke-width", "0.5");
+          if (isHighlighted) {
+            pathEl.style.cursor = "pointer";
+            pathEl.style.transition = "fill 0.2s";
+            pathEl.addEventListener('mouseenter', function(e) {
+              pathEl.setAttribute("fill","#FF9A3C");
+              tooltip.textContent = countryName;
+              tooltip.style.opacity = '1';
+            });
+            pathEl.addEventListener('mousemove', function(e) {
+              tooltip.style.left = (e.clientX+12)+'px';
+              tooltip.style.top = (e.clientY-30)+'px';
+            });
+            pathEl.addEventListener('mouseleave', function() {
+              pathEl.setAttribute("fill","#FF6B00");
+              tooltip.style.opacity = '0';
+            });
+          }
+          svg.appendChild(pathEl);
+        });
+
+        wrap.appendChild(svg);
+      })
+      .catch(function(){ document.getElementById('worldMapChart').style.display='none'; });
   })();
   </script>
   <!-- CHATBOT LOGIC -->
