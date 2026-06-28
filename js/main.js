@@ -2154,15 +2154,20 @@ const translations = {
 function applyLanguage(lang) {
   const t = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (!t[el.dataset.i18n]) return;
-    // preserve child elements (e.g. faq__icon span) — only update text nodes
-    const childEls = Array.from(el.childNodes).filter(n => n.nodeType === 1);
-    if (childEls.length) {
-      // remove all text nodes, keep element nodes
-      Array.from(el.childNodes).filter(n => n.nodeType === 3).forEach(n => n.remove());
-      el.insertBefore(document.createTextNode(t[el.dataset.i18n]), el.firstChild);
+    const val = t[el.dataset.i18n];
+    if (!val) return;
+    if (/<[a-z]/i.test(val)) {
+      // value contains HTML tags — use innerHTML
+      el.innerHTML = val;
     } else {
-      el.textContent = t[el.dataset.i18n];
+      // plain text — preserve child elements (e.g. faq__icon span)
+      const childEls = Array.from(el.childNodes).filter(n => n.nodeType === 1);
+      if (childEls.length) {
+        Array.from(el.childNodes).filter(n => n.nodeType === 3).forEach(n => n.remove());
+        el.insertBefore(document.createTextNode(val), el.firstChild);
+      } else {
+        el.textContent = val;
+      }
     }
   });
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
