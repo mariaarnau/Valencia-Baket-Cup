@@ -197,11 +197,14 @@
   </div>
 
   <div class="lang-switcher" id="langSwitcher">
-    <button class="lang-switcher__btn active" data-lang="es">ES</button>
-    <button class="lang-switcher__btn" data-lang="en">EN</button>
-    <button class="lang-switcher__btn" data-lang="fr">FR</button>
-    <button class="lang-switcher__btn" data-lang="it">IT</button>
-    <button class="lang-switcher__btn" data-lang="pt">PT</button>
+    <button class="lang-switcher__toggle" id="langToggle" aria-label="Cambiar idioma">🌐</button>
+    <div class="lang-switcher__dropdown">
+      <button class="lang-switcher__btn active" data-lang="es"><span class="ls-flag">🇪🇸</span><span class="ls-name">Español</span></button>
+      <button class="lang-switcher__btn" data-lang="en"><span class="ls-flag">🇬🇧</span><span class="ls-name">English</span></button>
+      <button class="lang-switcher__btn" data-lang="fr"><span class="ls-flag">🇫🇷</span><span class="ls-name">Français</span></button>
+      <button class="lang-switcher__btn" data-lang="it"><span class="ls-flag">🇮🇹</span><span class="ls-name">Italiano</span></button>
+      <button class="lang-switcher__btn" data-lang="pt"><span class="ls-flag">🇵🇹</span><span class="ls-name">Português</span></button>
+    </div>
   </div>
 
   <div class="cursor" id="cursor"></div>

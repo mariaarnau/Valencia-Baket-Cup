@@ -2177,8 +2177,24 @@ function applyLanguage(lang) {
   localStorage.setItem('vbc-lang', lang);
 }
 
+const langSwitcher = document.getElementById('langSwitcher');
+const langToggle = document.getElementById('langToggle');
 const langBtns = document.querySelectorAll('.lang-switcher__btn');
-langBtns.forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang)));
+
+if (langToggle) {
+  langToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    langSwitcher.classList.toggle('open');
+  });
+  document.addEventListener('click', () => langSwitcher.classList.remove('open'));
+  langSwitcher.querySelector('.lang-switcher__dropdown').addEventListener('click', e => e.stopPropagation());
+}
+
+langBtns.forEach(btn => btn.addEventListener('click', () => {
+  applyLanguage(btn.dataset.lang);
+  langSwitcher.classList.remove('open');
+}));
+
 const savedLang = localStorage.getItem('vbc-lang');
 if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
 
