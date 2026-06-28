@@ -88,101 +88,81 @@ const contadorEl = document.querySelector('.contador__inner');
 if (contadorEl) contadorObserver.observe(contadorEl);
 
 /* ================================
-   GALERÍA FILTROS
+   GALERÍA FILTROS + LIGHTBOX
 ================================ */
-const filters = document.querySelectorAll('.galeria__filter');
-const items = document.querySelectorAll('.galeria__item');
+(function() {
+  const filters = document.querySelectorAll('.galeria__filter');
+  const items = document.querySelectorAll('.galeria__item');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
 
-filters.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filters.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    items.forEach(item => {
-      const show = filter === 'all' || item.dataset.cat === filter;
-      item.style.display = show ? '' : 'none';
-      if (show) {
-        item.style.animation = 'none';
-        item.offsetHeight;
-        item.style.animation = 'fadeIn 0.4s ease forwards';
-      }
+  if (!lightbox) return;
+
+  const style = document.createElement('style');
+  style.textContent = `@keyframes fadeIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}`;
+  document.head.appendChild(style);
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      items.forEach(item => {
+        const show = filter === 'all' || item.dataset.cat === filter;
+        item.style.display = show ? '' : 'none';
+        if (show) { item.style.animation = 'none'; item.offsetHeight; item.style.animation = 'fadeIn 0.4s ease forwards'; }
+      });
     });
   });
-});
 
-const style = document.createElement('style');
-style.textContent = `
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
-}`;
-document.head.appendChild(style);
+  let visibleItems = [];
+  let currentIndex = 0;
 
-/* ================================
-   LIGHTBOX
-================================ */
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxCaption = document.getElementById('lightboxCaption');
-const lightboxClose = document.getElementById('lightboxClose');
-const lightboxPrev = document.getElementById('lightboxPrev');
-const lightboxNext = document.getElementById('lightboxNext');
+  function showLightboxItem(i) {
+    const item = visibleItems[i];
+    if (!item) return;
+    const img = item.querySelector('img');
+    const caption = item.querySelector('.galeria__item-overlay span');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = caption ? caption.textContent : '';
+  }
 
-let visibleItems = [];
-let currentIndex = 0;
+  function openLightbox(index) {
+    visibleItems = [...document.querySelectorAll('.galeria__item:not([style*="display: none"])')];
+    currentIndex = index;
+    showLightboxItem(currentIndex);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
-function openLightbox(index) {
-  visibleItems = [...document.querySelectorAll('.galeria__item:not([style*="display: none"])')];
-  currentIndex = index;
-  showLightboxItem(currentIndex);
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 
-function showLightboxItem(i) {
-  const item = visibleItems[i];
-  if (!item) return;
-  const img = item.querySelector('img');
-  const caption = item.querySelector('.galeria__item-overlay span');
-  lightboxImg.src = img.src;
-  lightboxImg.alt = img.alt;
-  lightboxCaption.textContent = caption ? caption.textContent : '';
-}
-
-function closeLightbox() {
-  lightbox.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-items.forEach((item, i) => {
-  item.addEventListener('click', () => {
-    const visible = [...document.querySelectorAll('.galeria__item:not([style*="display: none"])')];
-    const idx = visible.indexOf(item);
-    openLightbox(idx);
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const visible = [...document.querySelectorAll('.galeria__item:not([style*="display: none"])')];
+      openLightbox(visible.indexOf(item));
+    });
   });
-});
 
-if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-
-if (lightboxPrev) lightboxPrev.addEventListener('click', e => {
-  e.stopPropagation();
-  currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-  showLightboxItem(currentIndex);
-});
-
-if (lightboxNext) lightboxNext.addEventListener('click', e => {
-  e.stopPropagation();
-  currentIndex = (currentIndex + 1) % visibleItems.length;
-  showLightboxItem(currentIndex);
-});
-
-document.addEventListener('keydown', e => {
-  if (!lightbox || !lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft' && lightboxPrev) lightboxPrev.click();
-  if (e.key === 'ArrowRight' && lightboxNext) lightboxNext.click();
-});
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  lightboxPrev.addEventListener('click', e => { e.stopPropagation(); currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(currentIndex); });
+  lightboxNext.addEventListener('click', e => { e.stopPropagation(); currentIndex = (currentIndex + 1) % visibleItems.length; showLightboxItem(currentIndex); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxPrev.click();
+    if (e.key === 'ArrowRight') lightboxNext.click();
+  });
+})();
 
 /* ================================
    PARALLAX HERO
