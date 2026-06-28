@@ -485,16 +485,15 @@
     }
 
     function score(text, patterns) {
+      var stopWords = ['que','hay','los','las','una','uno','con','por','para','como','del','les','sus','mis','nos','son','ser','fue','han','muy','sin','este','esta','cual','cuál','cuando','cuándo','donde','dónde','como','cómo','qué'];
       var t = normalize(text);
-      var words = t.split(/\s+/);
+      var words = t.split(/\s+/).filter(function(w) { return w.length >= 4 && stopWords.indexOf(w) === -1; });
       var hits = 0;
       patterns.forEach(function(p) {
         var pn = normalize(p);
-        // exact phrase match weighted higher
-        if (t.indexOf(pn) > -1) { hits += 3; return; }
-        // word-level partial match
+        if (t.indexOf(pn) > -1) { hits += 5; return; }
         pn.split(/\s+/).forEach(function(pw) {
-          if (pw.length < 3) return;
+          if (pw.length < 4 || stopWords.indexOf(pw) > -1) return;
           words.forEach(function(w) {
             if (w.indexOf(pw) > -1 || pw.indexOf(w) > -1) hits += 1;
           });
