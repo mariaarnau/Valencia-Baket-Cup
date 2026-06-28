@@ -18,12 +18,12 @@
       <span class="nav__logo-text">Valencia Basket Cup</span>
     </div>
     <ul class="nav__links">
-      <li><a href="torneos.html">Torneos</a></li>
-      <li><a href="galeria.html">Galería</a></li>
-      <li><a href="noticias.html">Noticias</a></li>
-      <li><a href="revista.html">Revista</a></li>
-      <li><a href="pagos.html">Inscripción</a></li>
-      <li><a href="contacto.html" class="nav__active">Contacto</a></li>
+      <li><a href="torneos.html" data-i18n="nav-torneos">Torneos</a></li>
+      <li><a href="galeria.html" data-i18n="nav-galeria">Galería</a></li>
+      <li><a href="noticias.html" data-i18n="nav-noticias">Noticias</a></li>
+      <li><a href="revista.html" data-i18n="nav-revista">Revista</a></li>
+      <li><a href="pagos.html" data-i18n="nav-inscripcion">Inscripción</a></li>
+      <li><a href="contacto.html" class="nav__active" data-i18n="nav-contacto">Contacto</a></li>
     </ul>
     <div class="nav__sponsors">
       <a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener"><img src="LOGO ALQUERIA.png" alt="La Alqueria del Basket" class="nav__sponsor-logo" /></a>
@@ -38,8 +38,8 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero__content">
-      <span class="page-hero__tag">Contacto</span>
-      <h1 class="page-hero__title">¿Tienes <em>preguntas?</em></h1>
+      <span class="page-hero__tag" data-i18n="nav-contacto">Contacto</span>
+      <h1 class="page-hero__title" data-i18n-html="contacto-hero-title">¿Tienes <em>preguntas?</em></h1>
     </div>
   </div>
 
@@ -48,47 +48,47 @@
     <div class="contacto__grid">
       <form class="contacto__form reveal" id="contactForm">
         <div class="contacto__field">
-          <label for="nombre">Nombre del club / equipo</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Club Baloncesto Valencia" required />
+          <label for="nombre" data-i18n="contacto-label-nombre">Nombre del club / equipo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Club Baloncesto Valencia" data-i18n-placeholder="contacto-placeholder-nombre" required />
         </div>
         <div class="contacto__field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="contacto@clubvalencia.es" required />
+          <label for="email" data-i18n="contacto-label-email">Email</label>
+          <input type="email" id="email" name="email" placeholder="contacto@clubvalencia.es" data-i18n-placeholder="contacto-placeholder-email" required />
         </div>
         <div class="contacto__field">
-          <label for="torneo">Torneo de interés</label>
+          <label for="torneo" data-i18n="contacto-label-torneo">Torneo de interés</label>
           <select id="torneo" name="torneo">
-            <option value="">Selecciona un torneo...</option>
+            <option value="" data-i18n="contacto-select-placeholder">Selecciona un torneo...</option>
             <option value="vbc">VBC — Valencia Basket Cup (Ene 2027)</option>
             <option value="vic">VIC — Valencia International Cup (Mar 2027)</option>
             <option value="vsc">VSC — Valencia Summer Cup (Jun 2026)</option>
           </select>
         </div>
         <div class="contacto__field">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." rows="4" required></textarea>
+          <label for="mensaje" data-i18n="contacto-label-mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." data-i18n-placeholder="contacto-placeholder-mensaje" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        <button type="submit" class="btn btn--primary" data-i18n="contacto-btn-enviar">Enviar mensaje</button>
       </form>
       <div class="contacto__info reveal">
         <div class="contacto__info-item">
           <div class="contacto__info-icon">📍</div>
           <div>
-            <strong>Ubicación</strong>
-            <p>La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia</p>
+            <strong data-i18n="contacto-ubicacion-label">Ubicación</strong>
+            <p data-i18n-html="contacto-ubicacion-text">La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia</p>
           </div>
         </div>
         <div class="contacto__info-item">
           <div class="contacto__info-icon">📧</div>
           <div>
-            <strong>Email</strong>
+            <strong data-i18n="contacto-email-label">Email</strong>
             <p>info@valenciabasketcup.com</p>
           </div>
         </div>
         <div class="contacto__info-item">
           <div class="contacto__info-icon">📱</div>
           <div>
-            <strong>Redes Sociales</strong>
+            <strong data-i18n="contacto-redes-label">Redes Sociales</strong>
             <div class="contacto__redes">
               <a href="#" class="contacto__red">Instagram</a>
               <a href="#" class="contacto__red">Twitter</a>
@@ -103,7 +103,7 @@
   <!-- PATROCINADORES -->
   <section class="patrocinadores">
     <div class="patrocinadores__inner">
-      <span class="patrocinadores__label">Con el apoyo de</span>
+      <span class="patrocinadores__label" data-i18n="patrocinadores-label">Con el apoyo de</span>
       <div class="patrocinadores__logos">
         <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
         <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
@@ -118,37 +118,37 @@
     <div class="footer__inner">
       <div class="footer__brand">
         <span class="footer__logo">VBC</span>
-        <p>Torneo de baloncesto base a nivel internacional. Queremos que junto a tu equipo seas partícipe del Torneo de referencia en baloncesto base.</p>
+        <p data-i18n="footer-brand-desc">Torneo de baloncesto base a nivel internacional. Queremos que junto a tu equipo seas partícipe del Torneo de referencia en baloncesto base.</p>
         <div class="footer__brand-links">
           <a href="https://www.visitvalencia.com" target="_blank" rel="noopener" class="footer__brand-link">Visit Valencia Web</a>
-          <a href="https://www.visitvalencia.com/shop" target="_blank" rel="noopener" class="footer__brand-link">Visit Valencia Shop</a>
+          <a href="https://www.visitvalencia.com/shop" target="_blank" rel="noopener" class="footer__brand-link" data-i18n="footer-visit-shop">Visit Valencia Shop</a>
         </div>
       </div>
       <div class="footer__col">
-        <h5>Últimas Noticias</h5>
+        <h5 data-i18n="footer-news-title">Últimas Noticias</h5>
         <a href="noticia-1.html" class="footer__news-item" style="display:block;text-decoration:none;">
-          <div class="footer__news-date">15 Junio 2026</div>
-          <div class="footer__news-title">VBC 2027 abre inscripciones con récord histórico de solicitudes</div>
+          <div class="footer__news-date" data-i18n="footer-news1-date">15 Junio 2026</div>
+          <div class="footer__news-title" data-i18n="footer-news1-title">VBC 2027 abre inscripciones con récord histórico de solicitudes</div>
         </a>
         <a href="noticia-3.html" class="footer__news-item" style="display:block;text-decoration:none;">
-          <div class="footer__news-date">28 Junio 2026</div>
-          <div class="footer__news-title">El CB Castellón se corona campeón de la Valencia Summer Cup 2026</div>
+          <div class="footer__news-date" data-i18n="footer-news2-date">28 Junio 2026</div>
+          <div class="footer__news-title" data-i18n="footer-news2-title">El CB Castellón se corona campeón de la Valencia Summer Cup 2026</div>
         </a>
       </div>
       <div class="footer__col">
-        <h5>Links</h5>
+        <h5 data-i18n="footer-links-title">Links</h5>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="torneos.html">Torneos</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="revista.html">Revista</a></li>
-          <li><a href="pagos.html">Inscripción</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="index.html" data-i18n="footer-link-inicio">Inicio</a></li>
+          <li><a href="galeria.html" data-i18n="nav-galeria">Galería</a></li>
+          <li><a href="torneos.html" data-i18n="nav-torneos">Torneos</a></li>
+          <li><a href="noticias.html" data-i18n="nav-noticias">Noticias</a></li>
+          <li><a href="revista.html" data-i18n="nav-revista">Revista</a></li>
+          <li><a href="pagos.html" data-i18n="nav-inscripcion">Inscripción</a></li>
+          <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h5>Contacto y Sponsors</h5>
+        <h5 data-i18n="footer-contact-title">Contacto y Sponsors</h5>
         <div class="footer__contact-item">
           <div class="footer__contact-icon">📞</div>
           <a href="tel:+34670386418">+34 670 386 418</a>
@@ -165,7 +165,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
+      <p data-i18n="footer-copy">© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
     </div>
   </footer>
 
@@ -179,19 +179,19 @@
     <div class="subscribe-modal__box">
       <button class="subscribe-modal__close" id="subscribeClose">✕</button>
       <div class="subscribe-modal__icon">✉</div>
-      <h3 class="subscribe-modal__title">Mantente al día</h3>
-      <p class="subscribe-modal__sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
+      <h3 class="subscribe-modal__title" data-i18n="subscribe-title">Mantente al día</h3>
+      <p class="subscribe-modal__sub" data-i18n="subscribe-sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
       <ul class="subscribe-modal__list">
-        <li>Resultados en tiempo real</li>
-        <li>Horarios e información de torneos</li>
-        <li>Novedades y noticias exclusivas</li>
-        <li>Ofertas de inscripción anticipada</li>
+        <li data-i18n="subscribe-li1">Resultados en tiempo real</li>
+        <li data-i18n="subscribe-li2">Horarios e información de torneos</li>
+        <li data-i18n="subscribe-li3">Novedades y noticias exclusivas</li>
+        <li data-i18n="subscribe-li4">Ofertas de inscripción anticipada</li>
       </ul>
       <form class="subscribe-modal__form" id="subscribeForm">
-        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" required />
-        <button type="submit" class="subscribe-modal__submit">Suscribirse</button>
+        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" data-i18n-placeholder="subscribe-placeholder" required />
+        <button type="submit" class="subscribe-modal__submit" data-i18n="subscribe-btn">Suscribirse</button>
       </form>
-      <p class="subscribe-modal__legal">Puedes darte de baja en cualquier momento. Respetamos tu privacidad.</p>
+      <p class="subscribe-modal__legal" data-i18n="subscribe-legal">Puedes darte de baja en cualquier momento. Respetamos tu privacidad.</p>
     </div>
   </div>
 
