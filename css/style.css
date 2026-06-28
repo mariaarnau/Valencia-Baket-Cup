@@ -1903,11 +1903,15 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   position: relative;
 }
 .subscribe-modal__list li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
-  color: var(--orange);
-  font-weight: 700;
+  top: 6px;
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
+  transform: rotate(-45deg);
 }
 
 .subscribe-modal__form {
