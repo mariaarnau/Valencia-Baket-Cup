@@ -381,20 +381,20 @@ const translations = {
     'faq-group-categorias': 'Categorías y formato',
     'faq-group-instalaciones': 'Instalaciones y acceso',
     'faq-group-alojamiento': 'Alojamiento y logística',
-    'faq-q1': '¿Cómo puedo inscribir a mi equipo?<span class="faq__icon">›</span>',
-    'faq-q2': '¿Cuál es el plazo límite de inscripción?<span class="faq__icon">›</span>',
-    'faq-q3': '¿Puedo cancelar la inscripción y recuperar el importe?<span class="faq__icon">›</span>',
-    'faq-q4': '¿Cuántos jugadores puede tener un equipo?<span class="faq__icon">›</span>',
-    'faq-q5': '¿Qué categorías hay disponibles en cada torneo?<span class="faq__icon">›</span>',
-    'faq-q6': '¿Qué formato de competición se usa?<span class="faq__icon">›</span>',
-    'faq-q7': '¿Existe arbitraje oficial?<span class="faq__icon">›</span>',
-    'faq-q8': '¿Dónde se celebran los torneos?<span class="faq__icon">›</span>',
-    'faq-q9': '¿Pueden asistir familiares y público en general?<span class="faq__icon">›</span>',
-    'faq-q10': '¿Hay aparcamiento disponible?<span class="faq__icon">›</span>',
-    'faq-q11': '¿La organización gestiona el alojamiento?<span class="faq__icon">›</span>',
-    'faq-q12': '¿Qué incluye el precio de inscripción?<span class="faq__icon">›</span>',
-    'faq-q13': '¿Hay actividades complementarias para los equipos?<span class="faq__icon">›</span>',
-    'faq-q14': '¿Puedo contactar con la organización directamente?<span class="faq__icon">›</span>',
+    'faq-q1': '¿Cómo puedo inscribir a mi equipo?',
+    'faq-q2': '¿Cuál es el plazo límite de inscripción?',
+    'faq-q3': '¿Puedo cancelar la inscripción y recuperar el importe?',
+    'faq-q4': '¿Cuántos jugadores puede tener un equipo?',
+    'faq-q5': '¿Qué categorías hay disponibles en cada torneo?',
+    'faq-q6': '¿Qué formato de competición se usa?',
+    'faq-q7': '¿Existe arbitraje oficial?',
+    'faq-q8': '¿Dónde se celebran los torneos?',
+    'faq-q9': '¿Pueden asistir familiares y público en general?',
+    'faq-q10': '¿Hay aparcamiento disponible?',
+    'faq-q11': '¿La organización gestiona el alojamiento?',
+    'faq-q12': '¿Qué incluye el precio de inscripción?',
+    'faq-q13': '¿Hay actividades complementarias para los equipos?',
+    'faq-q14': '¿Puedo contactar con la organización directamente?',
     'faq-a1': 'El proceso de inscripción se realiza a través de la sección <a href="pagos.html">Inscripción</a> de esta web. Debes completar el formulario con los datos del equipo, seleccionar el torneo y la categoría, y realizar el pago mediante transferencia bancaria o tarjeta. Recibirás una confirmación por email en un plazo de 48 horas.',
     'faq-a2': 'Las inscripciones cierran aproximadamente 3 semanas antes del inicio de cada torneo, o antes si se completan las plazas disponibles. Te recomendamos inscribirte con antelación ya que los torneos suelen completarse con rapidez.',
     'faq-a3': 'Las cancelaciones realizadas con más de 30 días de antelación tienen derecho a devolución del 80% del importe. Entre 15 y 30 días antes, el 50%. Con menos de 15 días no hay devolución, aunque el importe puede aplicarse a otra edición.',
@@ -726,20 +726,20 @@ const translations = {
     'faq-group-categorias': 'Categories & format',
     'faq-group-instalaciones': 'Facilities & access',
     'faq-group-alojamiento': 'Accommodation & logistics',
-    'faq-q1': 'How can I register my team?<span class="faq__icon">›</span>',
-    'faq-q2': 'What is the registration deadline?<span class="faq__icon">›</span>',
-    'faq-q3': 'Can I cancel my registration and get a refund?<span class="faq__icon">›</span>',
-    'faq-q4': 'How many players can a team have?<span class="faq__icon">›</span>',
-    'faq-q5': 'What categories are available in each tournament?<span class="faq__icon">›</span>',
-    'faq-q6': 'What competition format is used?<span class="faq__icon">›</span>',
-    'faq-q7': 'Is there official refereeing?<span class="faq__icon">›</span>',
-    'faq-q8': 'Where are the tournaments held?<span class="faq__icon">›</span>',
-    'faq-q9': 'Can families and the general public attend?<span class="faq__icon">›</span>',
-    'faq-q10': 'Is parking available?<span class="faq__icon">›</span>',
-    'faq-q11': 'Does the organization handle accommodation?<span class="faq__icon">›</span>',
-    'faq-q12': 'What does the registration fee include?<span class="faq__icon">›</span>',
-    'faq-q13': 'Are there complementary activities for teams?<span class="faq__icon">›</span>',
-    'faq-q14': 'Can I contact the organization directly?<span class="faq__icon">›</span>',
+    'faq-q1': 'How can I register my team?',
+    'faq-q2': 'What is the registration deadline?',
+    'faq-q3': 'Can I cancel my registration and get a refund?',
+    'faq-q4': 'How many players can a team have?',
+    'faq-q5': 'What categories are available in each tournament?',
+    'faq-q6': 'What competition format is used?',
+    'faq-q7': 'Is there official refereeing?',
+    'faq-q8': 'Where are the tournaments held?',
+    'faq-q9': 'Can families and the general public attend?',
+    'faq-q10': 'Is parking available?',
+    'faq-q11': 'Does the organization handle accommodation?',
+    'faq-q12': 'What does the registration fee include?',
+    'faq-q13': 'Are there complementary activities for teams?',
+    'faq-q14': 'Can I contact the organization directly?',
     'faq-a1': 'The registration process is completed through the <a href="pagos.html">Registration</a> section of this website. You must fill in the form with your team\'s details, select the tournament and category, and make payment by bank transfer or card. You will receive a confirmation email within 48 hours.',
     'faq-a2': 'Registrations close approximately 3 weeks before the start of each tournament, or earlier if available spots are filled. We recommend registering early as tournaments tend to fill up quickly.',
     'faq-a3': 'Cancellations made more than 30 days in advance are entitled to an 80% refund. Between 15 and 30 days before, 50%. With less than 15 days\' notice there is no refund, although the amount can be applied to another edition.',
@@ -1014,7 +1014,16 @@ const translations = {
 function applyLanguage(lang) {
   const t = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (t[el.dataset.i18n]) el.textContent = t[el.dataset.i18n];
+    if (!t[el.dataset.i18n]) return;
+    // preserve child elements (e.g. faq__icon span) — only update text nodes
+    const childEls = Array.from(el.childNodes).filter(n => n.nodeType === 1);
+    if (childEls.length) {
+      // remove all text nodes, keep element nodes
+      Array.from(el.childNodes).filter(n => n.nodeType === 3).forEach(n => n.remove());
+      el.insertBefore(document.createTextNode(t[el.dataset.i18n]), el.firstChild);
+    } else {
+      el.textContent = t[el.dataset.i18n];
+    }
   });
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     if (t[el.dataset.i18nHtml]) el.innerHTML = t[el.dataset.i18nHtml];
