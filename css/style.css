@@ -3389,6 +3389,10 @@ button.hero__date-pill:hover {
   padding: 100px 8%;
   background: #080808;
 }
+.inst-intro--alt {
+  background: #0d0d0d;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
 .inst-intro__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;

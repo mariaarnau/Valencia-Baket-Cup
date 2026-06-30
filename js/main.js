@@ -1050,6 +1050,12 @@ const translations = {
     'inst-cta-title': 'Ready to play<br/>at <em>L\'Alqueria</em>?',
     'inst-cta-sub': 'Register your team and experience competing at one of the finest venues in Europe.',
     'inst-cta-btn': 'Register now',
+    'inst-fonteta-tag': 'Fuente de San Luis Pavilion',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>history of Valencian basketball</em>',
+    'inst-fonteta-p1': 'The Fuente de San Luis Pavilion, popularly known as La Fonteta, was for decades the home of Valencia Basket. A historic venue that has witnessed epic moments in Spanish and European basketball, and which continues to host major competitions today.',
+    'inst-fonteta-p2': 'With a capacity of over 9,000 spectators, La Fonteta offers an unparalleled atmosphere for VBC tournaments, connecting young players with the living history of Valencian basketball.',
+    'inst-fonteta-stat1': 'Spectators',
+    'inst-fonteta-stat2': 'Years of history',
   },
   fr: {
     /* NAV */
@@ -1451,6 +1457,12 @@ const translations = {
     'inst-cta-title': 'Prêt à jouer<br/>à <em>L\'Alqueria</em> ?',
     'inst-cta-sub': 'Inscrivez votre équipe et vivez l\'expérience de concourir dans l\'un des meilleurs complexes d\'Europe.',
     'inst-cta-btn': 'S\'inscrire maintenant',
+    'inst-fonteta-tag': 'Pavillon Fuente de San Luis',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>l\'histoire du basketball valencien</em>',
+    'inst-fonteta-p1': 'Le Pavillon Fuente de San Luis, connu sous le nom de La Fonteta, a été pendant des décennies le domicile du Valencia Basket. Un lieu historique qui a vécu des moments épiques du basketball espagnol et européen.',
+    'inst-fonteta-p2': 'Avec une capacité de plus de 9 000 spectateurs, La Fonteta offre une atmosphère incomparable pour les tournois VBC, reliant les jeunes joueurs à l\'histoire vivante du basketball valencien.',
+    'inst-fonteta-stat1': 'Spectateurs',
+    'inst-fonteta-stat2': 'Ans d\'histoire',
   },
   it: {
     /* NAV */
@@ -1852,6 +1864,12 @@ const translations = {
     'inst-cta-title': 'Pronto a giocare<br/>a <em>L\'Alqueria</em>?',
     'inst-cta-sub': 'Iscriviti con la tua squadra e vivi l\'esperienza di gareggiare in uno dei migliori impianti d\'Europa.',
     'inst-cta-btn': 'Iscriversi ora',
+    'inst-fonteta-tag': 'Padiglione Fuente de San Luis',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>storia del basket valenciano</em>',
+    'inst-fonteta-p1': 'Il Padiglione Fuente de San Luis, conosciuto come La Fonteta, è stato per decenni la casa del Valencia Basket. Una sede storica che ha vissuto momenti epici del basket spagnolo ed europeo.',
+    'inst-fonteta-p2': 'Con una capacità di oltre 9.000 spettatori, La Fonteta offre un\'atmosfera incomparabile per i tornei VBC, collegando i giovani giocatori alla storia viva del basket valenciano.',
+    'inst-fonteta-stat1': 'Spettatori',
+    'inst-fonteta-stat2': 'Anni di storia',
   },
   pt: {
     /* NAV */
@@ -2253,6 +2271,12 @@ const translations = {
     'inst-cta-title': 'Pronto para jogar<br/>na <em>L\'Alqueria</em>?',
     'inst-cta-sub': 'Inscreva a sua equipa e viva a experiência de competir num dos melhores complexos da Europa.',
     'inst-cta-btn': 'Inscrever-se agora',
+    'inst-fonteta-tag': 'Pavilhão Fuente de San Luis',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>história do basquetebol valenciano</em>',
+    'inst-fonteta-p1': 'O Pavilhão Fuente de San Luis, conhecido como La Fonteta, foi durante décadas a casa do Valencia Basket. Um recinto histórico que viveu momentos épicos do basquetebol espanhol e europeu.',
+    'inst-fonteta-p2': 'Com capacidade para mais de 9.000 espectadores, La Fonteta oferece uma atmosfera incomparável para os torneios VBC, conectando os jovens jogadores à história viva do basquetebol valenciano.',
+    'inst-fonteta-stat1': 'Espectadores',
+    'inst-fonteta-stat2': 'Anos de história',
   }
 };
 
