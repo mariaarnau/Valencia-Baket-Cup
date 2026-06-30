@@ -3452,12 +3452,14 @@ button.hero__date-pill:hover {
 }
 .inst-galeria--alt {
   background: #0d0d0d;
+  padding-bottom: 0;
 }
-.inst-galeria__grid--three {
+.inst-galeria__grid.inst-galeria__grid--three {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 360px;
+  grid-auto-rows: 0;
 }
-.inst-galeria__grid--three .inst-galeria__item--big { grid-row: auto; }
+.inst-galeria__grid.inst-galeria__grid--three .inst-galeria__item--big { grid-row: auto; }
 .inst-galeria__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
