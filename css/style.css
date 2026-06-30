@@ -3450,6 +3450,14 @@ button.hero__date-pill:hover {
   padding: 0 8% 80px;
   background: #080808;
 }
+.inst-galeria--alt {
+  background: #0d0d0d;
+}
+.inst-galeria__grid--three {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 360px;
+}
+.inst-galeria__grid--three .inst-galeria__item--big { grid-row: auto; }
 .inst-galeria__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -3547,10 +3555,12 @@ button.hero__date-pill:hover {
   .inst-features__grid { grid-template-columns: 1fr 1fr; }
   .inst-galeria__grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .inst-galeria__item--big { grid-row: auto; grid-column: 1 / 3; }
+  .inst-galeria__grid--three { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
 }
 @media (max-width: 600px) {
   .inst-features__grid { grid-template-columns: 1fr; }
   .inst-galeria__grid { grid-template-columns: 1fr; }
   .inst-galeria__item--big { grid-column: auto; }
+  .inst-galeria__grid--three { grid-template-columns: 1fr; grid-template-rows: auto; }
   .inst-intro__stats { grid-template-columns: 1fr 1fr; }
 }
