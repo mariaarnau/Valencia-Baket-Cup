@@ -625,6 +625,7 @@ const translations = {
     'contacto-ubicacion-label': 'Ubicación',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Teléfono',
     'contacto-redes-label': 'Redes Sociales',
     'pagos-per-equipo': '/ equipo',
     /* NOTICIA-1 SPECIFIC KEYS */
@@ -992,6 +993,7 @@ const translations = {
     'contacto-ubicacion-label': 'Location',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Phone',
     'contacto-redes-label': 'Social Media',
     'pagos-per-equipo': '/ team',
     /* NOTICIA-1 SPECIFIC KEYS */
@@ -1332,6 +1334,7 @@ const translations = {
     'contacto-ubicacion-label': 'Emplacement',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valence',
     'contacto-email-label': 'E-mail',
+    'contacto-telefono-label': 'Téléphone',
     'contacto-redes-label': 'Réseaux sociaux',
     /* ARTICULOS */
     'articulo-back': '← Retour aux actualités',
@@ -1740,6 +1743,7 @@ const translations = {
     'contacto-ubicacion-label': 'Posizione',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Telefono',
     'contacto-redes-label': 'Social Media',
     /* ARTICULOS */
     'articulo-back': '← Torna alle notizie',
@@ -2148,6 +2152,7 @@ const translations = {
     'contacto-ubicacion-label': 'Localização',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Telefone',
     'contacto-redes-label': 'Redes Sociais',
     /* ARTICULOS */
     'articulo-back': '← Voltar às notícias',
