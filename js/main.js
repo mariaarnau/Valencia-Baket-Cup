@@ -48,6 +48,23 @@ navLinks.querySelectorAll('a').forEach(a => {
 });
 
 /* ================================
+   FILTRO DE TORNEOS
+================================ */
+const torneoFiltros = document.querySelectorAll('.torneos__filtro');
+const torneoCards = document.querySelectorAll('.torneo-card');
+torneoFiltros.forEach(btn => {
+  btn.addEventListener('click', () => {
+    torneoFiltros.forEach(b => b.classList.remove('torneos__filtro--active'));
+    btn.classList.add('torneos__filtro--active');
+    const filtro = btn.dataset.filtro;
+    torneoCards.forEach(card => {
+      const match = filtro === 'all' || card.dataset.torneo === filtro;
+      card.classList.toggle('torneo-card--hidden', !match);
+    });
+  });
+});
+
+/* ================================
    SCROLL REVEAL
 ================================ */
 const revealObserver = new IntersectionObserver((entries) => {
@@ -652,6 +669,7 @@ const translations = {
     /* NAV */
     'nav-instalaciones': 'Facilities',
     'nav-torneos': 'Tournaments',
+    'filtro-todos': 'All',
     'nav-galeria': 'Gallery',
     'nav-noticias': 'News',
     'nav-revista': 'Magazine',
@@ -1061,6 +1079,7 @@ const translations = {
     /* NAV */
     'nav-instalaciones': 'Installations',
     'nav-torneos': 'Tournois',
+    'filtro-todos': 'Tous',
     'nav-galeria': 'Galerie',
     'nav-noticias': 'Actualités',
     'nav-revista': 'Magazine',
@@ -1468,6 +1487,7 @@ const translations = {
     /* NAV */
     'nav-instalaciones': 'Impianti',
     'nav-torneos': 'Tornei',
+    'filtro-todos': 'Tutti',
     'nav-galeria': 'Galleria',
     'nav-noticias': 'Notizie',
     'nav-revista': 'Rivista',
@@ -1875,6 +1895,7 @@ const translations = {
     /* NAV */
     'nav-instalaciones': 'Instalações',
     'nav-torneos': 'Torneios',
+    'filtro-todos': 'Todos',
     'nav-galeria': 'Galeria',
     'nav-noticias': 'Notícias',
     'nav-revista': 'Revista',

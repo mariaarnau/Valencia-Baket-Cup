@@ -497,6 +497,40 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   background: var(--black-border);
 }
 
+.torneos__filtros {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.torneos__filtro {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 26px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.torneos__filtro:hover {
+  border-color: var(--orange);
+  color: #fff;
+}
+.torneos__filtro--active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #000;
+}
+.torneo-card--hidden {
+  display: none !important;
+}
+
 .torneo-card {
   background: var(--black-card);
   display: flex;

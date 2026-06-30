@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Torneos · Valencia Basket Cup</title>
+  <meta name="description" content="Calendario de torneos: Valencia Basket Cup (enero), Valencia International Cup (marzo) y Valencia Summer Cup (junio). Consulta fechas, categorías e inscripción." />
+  <link rel="canonical" href="https://valenciabasketcup.com/torneos.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Torneos · Valencia Basket Cup" />
+  <meta property="og:description" content="Calendario de torneos: Valencia Basket Cup (enero), Valencia International Cup (marzo) y Valencia Summer Cup (junio). Consulta fechas, categorías e inscripción." />
+  <meta property="og:url" content="https://valenciabasketcup.com/torneos.html" />
+  <meta property="og:image" content="https://valenciabasketcup.com/Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Torneos · Valencia Basket Cup" />
+  <meta name="twitter:description" content="Calendario de torneos: Valencia Basket Cup (enero), Valencia International Cup (marzo) y Valencia Summer Cup (junio). Consulta fechas, categorías e inscripción." />
+  <meta name="twitter:image" content="https://valenciabasketcup.com/Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
@@ -46,6 +57,12 @@
 
   <!-- TORNEOS -->
   <section class="torneos" id="torneos">
+    <div class="torneos__filtros reveal">
+      <button class="torneos__filtro torneos__filtro--active" data-filtro="all" data-i18n="filtro-todos">Todos</button>
+      <button class="torneos__filtro" data-filtro="vbc">VBC</button>
+      <button class="torneos__filtro" data-filtro="vic">VIC</button>
+      <button class="torneos__filtro" data-filtro="vsc">VSC</button>
+    </div>
     <div class="torneos__grid">
 
       <!-- VBC -->
@@ -285,8 +302,7 @@
           <li><a href="index.html" data-i18n="footer-link-inicio">Inicio</a></li>
           <li><a href="instalaciones.html" data-i18n="footer-link-instalaciones">Instalaciones</a></li>
           <li><a href="galeria.html" data-i18n="footer-link-galeria">Galería</a></li>
-          <li><a href="instalaciones.html" data-i18n="nav-instalaciones">Instalaciones</a></li>
-      <li><a href="torneos.html" data-i18n="footer-link-torneos">Torneos</a></li>
+          <li><a href="torneos.html" data-i18n="footer-link-torneos">Torneos</a></li>
           <li><a href="noticias.html" data-i18n="footer-link-noticias">Noticias</a></li>
           <li><a href="revista.html" data-i18n="footer-link-revista">Revista</a></li>
           <li><a href="pagos.html" data-i18n="footer-link-inscripcion">Inscripción</a></li>
@@ -369,6 +385,6 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>
