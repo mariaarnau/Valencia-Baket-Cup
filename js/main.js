@@ -2380,15 +2380,15 @@ if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
     const email = form.querySelector('input[type="email"]').value;
     const box = form.closest('.subscribe-modal__box');
 
-    // Send to Brevo API
-    fetch('https://api.brevo.com/v3/contacts', {
+    // Send to Brevo via form endpoint (CORS-friendly)
+    const brevoData = new URLSearchParams();
+    brevoData.append('EMAIL', email);
+    brevoData.append('email_address_check', '');
+    brevoData.append('locale', 'es');
+    fetch('https://sibforms.com/serve/MUIFAEpYuq0z7bM9deqnxc_QNo_d7m4L-iBK2jvg47OOcL26k6fWCG037YHwnReK5np_bH-D5auWsiMn7DVxQAbH7Q5RDXvGcdhQKeHjAWRVoxDq90KLB7WQuqallC5oj4twgLo_LGnhPrYOKvCp3U-JsL2r5wogM3JyABwslNqTwUcdGb6CoIC6GcBnaFyxekPXBAfV1ohiZ-kXVQ==', {
       method: 'POST',
-      headers: {
-        'accept': 'application/json',
-        'content-type': 'application/json',
-        'api-key': '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'
-      },
-      body: JSON.stringify({ email: email, listIds: [3], updateEnabled: true })
+      body: brevoData,
+      mode: 'no-cors'
     });
 
     box.innerHTML = `
