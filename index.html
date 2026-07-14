@@ -327,7 +327,11 @@
     </div>
     <div class="footer__bottom">
       <p data-i18n="footer-copy">© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
-      <p style="margin-top:6px;font-size:0.78rem;"><a href="privacidad.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;" data-i18n="footer-privacy">Política de Privacidad</a></p>
+      <p style="margin-top:6px;font-size:0.78rem;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <a href="privacidad.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Política de Privacidad</a>
+        <a href="aviso-legal.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Aviso Legal</a>
+        <a href="cookies.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Política de Cookies</a>
+      </p>
     </div>
   </footer>
 
@@ -790,6 +794,34 @@
     var ytScript = document.createElement('script');
     ytScript.src = 'https://www.youtube.com/iframe_api';
     document.head.appendChild(ytScript);
+  </script>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p class="cookie-banner__text">
+      Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Puedes aceptar todas las cookies o rechazar las no esenciales.
+      <a href="cookies.html">Política de Cookies</a> · <a href="privacidad.html">Privacidad</a>
+    </p>
+    <div class="cookie-banner__btns">
+      <button class="cookie-banner__reject" id="cookieReject">Solo esenciales</button>
+      <button class="cookie-banner__accept" id="cookieAccept">Aceptar todas</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var banner = document.getElementById('cookieBanner');
+      if (!localStorage.getItem('vbc_cookies')) {
+        setTimeout(function() { banner.classList.add('visible'); }, 800);
+      }
+      document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem('vbc_cookies', 'accepted');
+        banner.classList.remove('visible');
+      });
+      document.getElementById('cookieReject').addEventListener('click', function() {
+        localStorage.setItem('vbc_cookies', 'rejected');
+        banner.classList.remove('visible');
+      });
+    })();
   </script>
 </body>
 </html>
