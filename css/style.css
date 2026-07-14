@@ -3607,38 +3607,43 @@ button.hero__date-pill:hover {
 ================================ */
 .cookie-banner {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
   z-index: 9999;
-  background: #111;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 20px 32px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
+  gap: 16px;
+  width: calc(100% - 48px);
+  max-width: 760px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
 }
-.cookie-banner.visible { transform: translateY(0); }
+.cookie-banner.visible { transform: translateX(-50%) translateY(0); opacity: 1; }
 .cookie-banner__text {
   flex: 1;
-  min-width: 260px;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.6;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
 }
 .cookie-banner__text a { color: var(--orange); text-decoration: underline; }
-.cookie-banner__btns { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+.cookie-banner__btns { display: flex; gap: 8px; flex-shrink: 0; }
 .cookie-banner__accept {
   background: var(--orange);
   color: #fff;
   border: none;
-  padding: 10px 22px;
-  border-radius: 4px;
+  padding: 8px 18px;
+  border-radius: 6px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s;
 }
 .cookie-banner__accept:hover { background: var(--orange-dark); }
@@ -3646,16 +3651,17 @@ button.hero__date-pill:hover {
   background: transparent;
   color: rgba(255,255,255,0.4);
   border: 1px solid rgba(255,255,255,0.15);
-  padding: 10px 22px;
-  border-radius: 4px;
+  padding: 8px 18px;
+  border-radius: 6px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   cursor: pointer;
+  white-space: nowrap;
   transition: color 0.2s, border-color 0.2s;
 }
 .cookie-banner__reject:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.35); }
 @media (max-width: 600px) {
-  .cookie-banner { padding: 16px 20px; }
+  .cookie-banner { flex-direction: column; align-items: flex-start; gap: 12px; bottom: 16px; width: calc(100% - 32px); }
   .cookie-banner__btns { width: 100%; }
   .cookie-banner__accept, .cookie-banner__reject { flex: 1; text-align: center; }
 }
