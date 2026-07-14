@@ -2378,7 +2378,18 @@ if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
   form.addEventListener('submit', e => {
     e.preventDefault();
     const email = form.querySelector('input[type="email"]').value;
-    form.closest('.subscribe-modal__box').innerHTML = `
+    const box = form.closest('.subscribe-modal__box');
+
+    // Send to Brevo
+    const data = new FormData();
+    data.append('EMAIL', email);
+    fetch('https://ac79c5c1.sibforms.com/serve/MUIFAEpYuq0z7bM9deqnxc_QNo_d7m4L-iBK2jvg47OOcL26k6fWCG037YHwnReK5np_bH-D5auWsiMn7DVxQAbH7Q5RDXvGcdhQKeHjAWRVoxDq90KLB7WQuqallC5oj4twgLo_LGnhPrYOKvCp3U-JsL2r5wogM3JyABwslNqTwUcdGb6CoIC6GcBnaFyxekPXBAfV1ohiZ-kXVQ==', {
+      method: 'POST',
+      body: data,
+      mode: 'no-cors'
+    });
+
+    box.innerHTML = `
       <div class="subscribe-modal__success">
         <div style="font-size:48px;margin-bottom:16px;">✓</div>
         <h4>¡Suscripción confirmada!</h4>
