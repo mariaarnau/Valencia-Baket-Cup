@@ -2378,6 +2378,8 @@ if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
   form.addEventListener('submit', e => {
     e.preventDefault();
     const email = form.querySelector('input[type="email"]').value;
+    const consent = document.getElementById('subscribeConsent');
+    if (!consent.checked) { consent.focus(); return; }
     const box = form.closest('.subscribe-modal__box');
 
     fetch('/subscribe.php', {
