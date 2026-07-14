@@ -48,6 +48,23 @@ navLinks.querySelectorAll('a').forEach(a => {
 });
 
 /* ================================
+   FILTRO DE TORNEOS
+================================ */
+const torneoFiltros = document.querySelectorAll('.torneos__filtro');
+const torneoCards = document.querySelectorAll('.torneo-card');
+torneoFiltros.forEach(btn => {
+  btn.addEventListener('click', () => {
+    torneoFiltros.forEach(b => b.classList.remove('torneos__filtro--active'));
+    btn.classList.add('torneos__filtro--active');
+    const filtro = btn.dataset.filtro;
+    torneoCards.forEach(card => {
+      const match = filtro === 'all' || card.dataset.torneo === filtro;
+      card.classList.toggle('torneo-card--hidden', !match);
+    });
+  });
+});
+
+/* ================================
    SCROLL REVEAL
 ================================ */
 const revealObserver = new IntersectionObserver((entries) => {
@@ -341,6 +358,7 @@ const translations = {
     'footer-news2-title': 'El CB Castellón se corona campeón de la Valencia Summer Cup 2026',
     'footer-links-title': 'Links',
     'footer-link-inicio': 'Inicio',
+    'footer-link-instalaciones': 'Instalaciones',
     'footer-link-galeria': 'Galería',
     'footer-link-torneos': 'Torneos',
     'footer-link-noticias': 'Noticias',
@@ -607,6 +625,7 @@ const translations = {
     'contacto-ubicacion-label': 'Ubicación',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Teléfono',
     'contacto-redes-label': 'Redes Sociales',
     'pagos-per-equipo': '/ equipo',
     /* NOTICIA-1 SPECIFIC KEYS */
@@ -651,6 +670,7 @@ const translations = {
     /* NAV */
     'nav-instalaciones': 'Facilities',
     'nav-torneos': 'Tournaments',
+    'filtro-todos': 'All',
     'nav-galeria': 'Gallery',
     'nav-noticias': 'News',
     'nav-revista': 'Magazine',
@@ -706,6 +726,7 @@ const translations = {
     'footer-news2-title': 'CB Castellón crowned champion of the Valencia Summer Cup 2026',
     'footer-links-title': 'Links',
     'footer-link-inicio': 'Home',
+    'footer-link-instalaciones': 'Facilities',
     'footer-link-galeria': 'Gallery',
     'footer-link-torneos': 'Tournaments',
     'footer-link-noticias': 'News',
@@ -972,6 +993,7 @@ const translations = {
     'contacto-ubicacion-label': 'Location',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Phone',
     'contacto-redes-label': 'Social Media',
     'pagos-per-equipo': '/ team',
     /* NOTICIA-1 SPECIFIC KEYS */
@@ -1045,14 +1067,21 @@ const translations = {
     'inst-feat5-desc': 'Cafeteria, rest areas and up to 120 spectators per court, so families can experience every match up close.',
     'inst-feat6-title': 'Official Valencia Basket venue',
     'inst-feat6-desc': 'The same facility where Valencia Basket players train and develop — a club that is a key reference in the EuroLeague.',
-    'inst-cta-title': 'Ready to play<br/>at <em>L\'Alqueria</em>?',
-    'inst-cta-sub': 'Register your team and experience competing at one of the finest venues in Europe.',
+    'inst-cta-title': 'Ready to play at<br/><em>L\'Alqueria</em> & <em>La Fonteta</em>?',
+    'inst-cta-sub': 'Register your team and experience competing at two of the most iconic basketball venues in Valencia.',
     'inst-cta-btn': 'Register now',
+    'inst-fonteta-tag': 'Fuente de San Luis Pavilion',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>history of Valencian basketball</em>',
+    'inst-fonteta-p1': 'The Fuente de San Luis Pavilion, popularly known as La Fonteta, was for decades the home of Valencia Basket. A historic venue that has witnessed epic moments in Spanish and European basketball, and which continues to host major competitions today.',
+    'inst-fonteta-p2': 'With a capacity of over 9,000 spectators, La Fonteta offers an unparalleled atmosphere for VBC tournaments, connecting young players with the living history of Valencian basketball.',
+    'inst-fonteta-stat1': 'Spectators',
+    'inst-fonteta-stat2': 'Years of history',
   },
   fr: {
     /* NAV */
     'nav-instalaciones': 'Installations',
     'nav-torneos': 'Tournois',
+    'filtro-todos': 'Tous',
     'nav-galeria': 'Galerie',
     'nav-noticias': 'Actualités',
     'nav-revista': 'Magazine',
@@ -1109,6 +1138,7 @@ const translations = {
     'footer-news2-title': 'Le CB Castellón sacré champion de la Valencia Summer Cup 2026',
     'footer-links-title': 'Liens',
     'footer-link-inicio': 'Accueil',
+    'footer-link-instalaciones': 'Installations',
     'footer-link-galeria': 'Galerie',
     'footer-link-torneos': 'Tournois',
     'footer-link-noticias': 'Actualités',
@@ -1304,6 +1334,7 @@ const translations = {
     'contacto-ubicacion-label': 'Emplacement',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valence',
     'contacto-email-label': 'E-mail',
+    'contacto-telefono-label': 'Téléphone',
     'contacto-redes-label': 'Réseaux sociaux',
     /* ARTICULOS */
     'articulo-back': '← Retour aux actualités',
@@ -1445,14 +1476,21 @@ const translations = {
     'inst-feat5-desc': 'Cafétéria, zones de repos et jusqu\'à 120 spectateurs par terrain.',
     'inst-feat6-title': 'Site officiel du Valencia Basket',
     'inst-feat6-desc': 'Le même complexe où s\'entraînent les joueurs du Valencia Basket, référence en EuroLeague.',
-    'inst-cta-title': 'Prêt à jouer<br/>à <em>L\'Alqueria</em> ?',
-    'inst-cta-sub': 'Inscrivez votre équipe et vivez l\'expérience de concourir dans l\'un des meilleurs complexes d\'Europe.',
+    'inst-cta-title': 'Prêt à jouer à<br/><em>L\'Alqueria</em> & <em>La Fonteta</em> ?',
+    'inst-cta-sub': 'Inscrivez votre équipe et vivez l\'expérience de jouer dans deux des salles les plus emblématiques du basket valencien.',
     'inst-cta-btn': 'S\'inscrire maintenant',
+    'inst-fonteta-tag': 'Pavillon Fuente de San Luis',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>l\'histoire du basketball valencien</em>',
+    'inst-fonteta-p1': 'Le Pavillon Fuente de San Luis, connu sous le nom de La Fonteta, a été pendant des décennies le domicile du Valencia Basket. Un lieu historique qui a vécu des moments épiques du basketball espagnol et européen.',
+    'inst-fonteta-p2': 'Avec une capacité de plus de 9 000 spectateurs, La Fonteta offre une atmosphère incomparable pour les tournois VBC, reliant les jeunes joueurs à l\'histoire vivante du basketball valencien.',
+    'inst-fonteta-stat1': 'Spectateurs',
+    'inst-fonteta-stat2': 'Ans d\'histoire',
   },
   it: {
     /* NAV */
     'nav-instalaciones': 'Impianti',
     'nav-torneos': 'Tornei',
+    'filtro-todos': 'Tutti',
     'nav-galeria': 'Galleria',
     'nav-noticias': 'Notizie',
     'nav-revista': 'Rivista',
@@ -1509,6 +1547,7 @@ const translations = {
     'footer-news2-title': 'Il CB Castellón si incorona campione della Valencia Summer Cup 2026',
     'footer-links-title': 'Link',
     'footer-link-inicio': 'Home',
+    'footer-link-instalaciones': 'Strutture',
     'footer-link-galeria': 'Galleria',
     'footer-link-torneos': 'Tornei',
     'footer-link-noticias': 'Notizie',
@@ -1704,6 +1743,7 @@ const translations = {
     'contacto-ubicacion-label': 'Posizione',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Telefono',
     'contacto-redes-label': 'Social Media',
     /* ARTICULOS */
     'articulo-back': '← Torna alle notizie',
@@ -1845,14 +1885,21 @@ const translations = {
     'inst-feat5-desc': 'Caffetteria, aree di riposo e fino a 120 spettatori per campo.',
     'inst-feat6-title': 'Sede ufficiale del Valencia Basket',
     'inst-feat6-desc': 'Lo stesso impianto dove si allenano i giocatori del Valencia Basket, riferimento in EuroLeague.',
-    'inst-cta-title': 'Pronto a giocare<br/>a <em>L\'Alqueria</em>?',
-    'inst-cta-sub': 'Iscriviti con la tua squadra e vivi l\'esperienza di gareggiare in uno dei migliori impianti d\'Europa.',
+    'inst-cta-title': 'Pronto a giocare a<br/><em>L\'Alqueria</em> & <em>La Fonteta</em>?',
+    'inst-cta-sub': 'Iscriviti con la tua squadra e vivi l\'esperienza di gareggiare nei due impianti più iconici del basket valenciano.',
     'inst-cta-btn': 'Iscriversi ora',
+    'inst-fonteta-tag': 'Padiglione Fuente de San Luis',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>storia del basket valenciano</em>',
+    'inst-fonteta-p1': 'Il Padiglione Fuente de San Luis, conosciuto come La Fonteta, è stato per decenni la casa del Valencia Basket. Una sede storica che ha vissuto momenti epici del basket spagnolo ed europeo.',
+    'inst-fonteta-p2': 'Con una capacità di oltre 9.000 spettatori, La Fonteta offre un\'atmosfera incomparabile per i tornei VBC, collegando i giovani giocatori alla storia viva del basket valenciano.',
+    'inst-fonteta-stat1': 'Spettatori',
+    'inst-fonteta-stat2': 'Anni di storia',
   },
   pt: {
     /* NAV */
     'nav-instalaciones': 'Instalações',
     'nav-torneos': 'Torneios',
+    'filtro-todos': 'Todos',
     'nav-galeria': 'Galeria',
     'nav-noticias': 'Notícias',
     'nav-revista': 'Revista',
@@ -1909,6 +1956,7 @@ const translations = {
     'footer-news2-title': 'O CB Castellón sagra-se campeão da Valencia Summer Cup 2026',
     'footer-links-title': 'Links',
     'footer-link-inicio': 'Início',
+    'footer-link-instalaciones': 'Instalações',
     'footer-link-galeria': 'Galeria',
     'footer-link-torneos': 'Torneios',
     'footer-link-noticias': 'Notícias',
@@ -2104,6 +2152,7 @@ const translations = {
     'contacto-ubicacion-label': 'Localização',
     'contacto-ubicacion-text': 'La Alqueria del Basket<br/>Av. dels Tarongers, s/n<br/>46022 Valencia',
     'contacto-email-label': 'Email',
+    'contacto-telefono-label': 'Telefone',
     'contacto-redes-label': 'Redes Sociais',
     /* ARTICULOS */
     'articulo-back': '← Voltar às notícias',
@@ -2245,9 +2294,15 @@ const translations = {
     'inst-feat5-desc': 'Cafetaria, zonas de descanso e até 120 espectadores por campo.',
     'inst-feat6-title': 'Sede oficial do Valencia Basket',
     'inst-feat6-desc': 'O mesmo complexo onde treinam os jogadores do Valencia Basket, referência na EuroLeague.',
-    'inst-cta-title': 'Pronto para jogar<br/>na <em>L\'Alqueria</em>?',
-    'inst-cta-sub': 'Inscreva a sua equipa e viva a experiência de competir num dos melhores complexos da Europa.',
+    'inst-cta-title': 'Pronto para jogar na<br/><em>L\'Alqueria</em> & <em>La Fonteta</em>?',
+    'inst-cta-sub': 'Inscreva a sua equipa e viva a experiência de competir nos dois recintos mais emblemáticos do basquetebol valenciano.',
     'inst-cta-btn': 'Inscrever-se agora',
+    'inst-fonteta-tag': 'Pavilhão Fuente de San Luis',
+    'inst-fonteta-title': 'La Fonteta,<br/><em>história do basquetebol valenciano</em>',
+    'inst-fonteta-p1': 'O Pavilhão Fuente de San Luis, conhecido como La Fonteta, foi durante décadas a casa do Valencia Basket. Um recinto histórico que viveu momentos épicos do basquetebol espanhol e europeu.',
+    'inst-fonteta-p2': 'Com capacidade para mais de 9.000 espectadores, La Fonteta oferece uma atmosfera incomparável para os torneios VBC, conectando os jovens jogadores à história viva do basquetebol valenciano.',
+    'inst-fonteta-stat1': 'Espectadores',
+    'inst-fonteta-stat2': 'Anos de história',
   }
 };
 
