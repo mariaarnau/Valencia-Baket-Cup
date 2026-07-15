@@ -1,7 +1,8 @@
-# Cache control para CSS y JS — fuerza revalidación en cada visita
-<FilesMatch "\.(css|js)$">
+# Cache control para HTML, CSS y JS — fuerza revalidación en cada visita
+<FilesMatch "\.(html|css|js)$">
   Header set Cache-Control "no-cache, must-revalidate"
   Header set Pragma "no-cache"
+  Header set Expires "0"
 </FilesMatch>
 
 # Imágenes y fuentes — caché larga (no cambian frecuentemente)
