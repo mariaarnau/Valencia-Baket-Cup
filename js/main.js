@@ -354,7 +354,6 @@ const translations = {
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Mantente al día',
     'subscribe-sub': 'Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.',
-    'subscribe-li1': 'Resultados en tiempo real',
     'subscribe-li2': 'Horarios e información de torneos',
     'subscribe-li3': 'Novedades y noticias exclusivas',
     'subscribe-li4': 'Ofertas de inscripción anticipada',
@@ -805,7 +804,6 @@ const translations = {
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Stay up to date',
     'subscribe-sub': 'Receive match results, tournament news and exclusive updates directly in your inbox.',
-    'subscribe-li1': 'Real-time results',
     'subscribe-li2': 'Tournament schedules and information',
     'subscribe-li3': 'Exclusive news and updates',
     'subscribe-li4': 'Early registration offers',
@@ -1294,7 +1292,6 @@ const translations = {
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Restez informé',
     'subscribe-sub': 'Recevez les résultats de chaque journée, les actualités des tournois et des nouvelles exclusives directement dans votre boîte mail.',
-    'subscribe-li1': 'Résultats en temps réel',
     'subscribe-li2': 'Horaires et informations des tournois',
     'subscribe-li3': 'Actualités et nouvelles exclusives',
     'subscribe-li4': 'Offres d\'inscription anticipée',
@@ -1777,7 +1774,6 @@ const translations = {
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Rimani aggiornato',
     'subscribe-sub': 'Ricevi i risultati di ogni giornata, le novità dei tornei e notizie esclusive direttamente nella tua casella di posta.',
-    'subscribe-li1': 'Risultati in tempo reale',
     'subscribe-li2': 'Orari e informazioni sui tornei',
     'subscribe-li3': 'Novità e notizie esclusive',
     'subscribe-li4': 'Offerte di iscrizione anticipata',
@@ -2261,7 +2257,6 @@ const translations = {
     /* SUBSCRIBE MODAL */
     'subscribe-title': 'Mantenha-se informado',
     'subscribe-sub': 'Receba resultados de cada jornada, novidades dos torneios e notícias exclusivas diretamente no seu email.',
-    'subscribe-li1': 'Resultados em tempo real',
     'subscribe-li2': 'Horários e informações dos torneios',
     'subscribe-li3': 'Novidades e notícias exclusivas',
     'subscribe-li4': 'Ofertas de inscrição antecipada',
