@@ -2738,16 +2738,47 @@ if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
   closeBtn.addEventListener('click', () => modal.classList.remove('open'));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const email = form.querySelector('input[type="email"]').value;
-    form.closest('.subscribe-modal__box').innerHTML = `
-      <div class="subscribe-modal__success">
-        <div style="font-size:48px;margin-bottom:16px;">✓</div>
-        <h4>¡Suscripción confirmada!</h4>
-        <p>Te enviaremos resultados, horarios y novedades de cada torneo a <strong>${email}</strong>.</p>
-      </div>`;
-    setTimeout(() => modal.classList.remove('open'), 3000);
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = '...';
+    try {
+      const res = await fetch('/subscribe.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      });
+      if (res.ok || res.status === 204) {
+        form.closest('.subscribe-modal__box').innerHTML = `
+          <div class="subscribe-modal__success">
+            <div style="font-size:48px;margin-bottom:16px;">✓</div>
+            <h4>¡Suscripción confirmada!</h4>
+            <p>Te enviaremos resultados, horarios y novedades de cada torneo a <strong>${email}</strong>.</p>
+          </div>`;
+        setTimeout(() => modal.classList.remove('open'), 3000);
+      } else {
+        const data = await res.json();
+        if (data.code === 'duplicate_parameter') {
+          form.closest('.subscribe-modal__box').innerHTML = `
+            <div class="subscribe-modal__success">
+              <div style="font-size:48px;margin-bottom:16px;">✓</div>
+              <h4>¡Ya estás suscrito!</h4>
+              <p>Este correo ya está en nuestra lista.</p>
+            </div>`;
+          setTimeout(() => modal.classList.remove('open'), 3000);
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Suscribirse';
+          alert('Error al suscribirse. Inténtalo de nuevo.');
+        }
+      }
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = 'Suscribirse';
+      alert('Error de conexión. Inténtalo de nuevo.');
+    }
   });
 })();
 
