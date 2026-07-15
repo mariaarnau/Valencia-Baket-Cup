@@ -1671,16 +1671,18 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 .pagos__card-incluye { flex: 1; margin-bottom: 28px; }
 
 .pagos__incluye-label {
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
-  font-weight: 700;
-  color: var(--orange);
-  text-transform: uppercase;
-  margin: 0 0 24px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255,107,0,0.2);
+  display: block !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.22em !important;
+  font-weight: 700 !important;
+  color: var(--orange) !important;
+  text-transform: uppercase !important;
+  margin: 0 0 20px !important;
+  padding: 8px 12px !important;
+  background: rgba(255,107,0,0.1);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 4px 4px 0;
 }
 .pagos__card-features {
   display: flex;
