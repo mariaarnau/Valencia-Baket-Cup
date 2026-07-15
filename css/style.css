@@ -1590,7 +1590,7 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 .pagos__card {
   background: var(--black-card);
-  padding: 40px 32px;
+  padding: 48px 36px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1668,17 +1668,19 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   color: var(--white-faint);
 }
 
-.pagos__card-incluye { flex: 1; margin-bottom: 24px; }
+.pagos__card-incluye { flex: 1; margin-bottom: 28px; }
 
 .pagos__incluye-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
   font-weight: 700;
   color: var(--orange);
   text-transform: uppercase;
-  font-family: var(--font-body);
-  margin: 0 0 18px;
-  display: block;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,107,0,0.2);
 }
 .pagos__card-features {
   display: flex;
@@ -1690,26 +1692,27 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 .pagos__card-features li {
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--white-muted);
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.72);
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  line-height: 1.5;
-  padding: 9px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  gap: 12px;
+  line-height: 1.55;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  letter-spacing: 0.01em;
 }
 .pagos__card-features li:last-child { border-bottom: none; }
 .pagos__card-features li::before {
   content: '';
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--orange);
   flex-shrink: 0;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 .pagos__card-features--acomp li { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
 
