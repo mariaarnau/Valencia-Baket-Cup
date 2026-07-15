@@ -187,43 +187,50 @@
         </div>
         <div>
           <!-- Carrusel Training Stages -->
-          <div id="ts-carousel" style="position:relative;width:100%;border-radius:16px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
-            <div id="ts-slides" style="display:flex;height:100%;transition:transform 0.5s ease;">
-              <img src="ts-slide-1.jpg" alt="Training Stages" style="min-width:100%;height:100%;object-fit:cover;" />
-              <img src="ts-slide-2.jpg" alt="Training Stages" style="min-width:100%;height:100%;object-fit:cover;" />
-              <img src="ts-slide-3.jpg" alt="Training Stages" style="min-width:100%;height:100%;object-fit:cover;" />
-              <img src="ts-slide-4.jpg" alt="Training Stages" style="min-width:100%;height:100%;object-fit:cover;" />
-              <img src="ts-slide-5.jpg" alt="Training Stages" style="min-width:100%;height:100%;object-fit:cover;" />
-            </div>
-            <button onclick="tsSlide(-1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);border:none;color:#fff;font-size:1.4rem;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:2;">&#8249;</button>
-            <button onclick="tsSlide(1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);border:none;color:#fff;font-size:1.4rem;width:36px;height:36px;border-radius:50%;cursor:pointer;z-index:2;">&#8250;</button>
-            <div id="ts-dots" style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;"></div>
+          <style>
+            #ts-carousel{position:relative;width:100%;padding-top:75%;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);}
+            #ts-carousel img.ts-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s ease;}
+            #ts-carousel img.ts-img.active{opacity:1;}
+            .ts-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.55);border:none;color:#fff;font-size:1.6rem;width:38px;height:38px;border-radius:50%;cursor:pointer;z-index:3;line-height:1;}
+            .ts-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.35);cursor:pointer;display:inline-block;transition:background .3s;}
+            .ts-dot.on{background:#FF6B00;}
+          </style>
+          <div id="ts-carousel">
+            <img class="ts-img active" src="ts-slide-1.jpg" alt="Training Stages" />
+            <img class="ts-img" src="ts-slide-2.jpg" alt="Training Stages" />
+            <img class="ts-img" src="ts-slide-3.jpg" alt="Training Stages" />
+            <img class="ts-img" src="ts-slide-4.jpg" alt="Training Stages" />
+            <img class="ts-img" src="ts-slide-5.jpg" alt="Training Stages" />
+            <button class="ts-btn" style="left:10px;" onclick="tsMove(-1)">&#8249;</button>
+            <button class="ts-btn" style="right:10px;" onclick="tsMove(1)">&#8250;</button>
+            <div id="ts-dots" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:3;"></div>
           </div>
           <script>
-            (function(){
-              var idx=0, slides, dots, total;
-              function init(){
-                slides=document.getElementById('ts-slides');
-                var dotC=document.getElementById('ts-dots');
-                total=slides.children.length;
-                for(var i=0;i<total;i++){
-                  var d=document.createElement('span');
-                  d.style.cssText='width:8px;height:8px;border-radius:50%;background:'+(i===0?'#FF6B00':'rgba(255,255,255,0.4)')+';cursor:pointer;display:inline-block;';
-                  d.setAttribute('data-i',i);
-                  d.onclick=function(){go(+this.getAttribute('data-i'));};
-                  dotC.appendChild(d);
-                }
-                dots=dotC.children;
-                setInterval(function(){go((idx+1)%total);},4000);
+          (function(){
+            var cur=0,imgs,dots,timer;
+            function setup(){
+              imgs=document.querySelectorAll('#ts-carousel .ts-img');
+              var dc=document.getElementById('ts-dots');
+              for(var i=0;i<imgs.length;i++){
+                var d=document.createElement('span');
+                d.className='ts-dot'+(i===0?' on':'');
+                d.setAttribute('data-n',i);
+                d.onclick=function(){go(+this.getAttribute('data-n'));};
+                dc.appendChild(d);
               }
-              function go(n){
-                idx=n;
-                slides.style.transform='translateX(-'+idx*100+'%)';
-                for(var i=0;i<total;i++) dots[i].style.background=i===idx?'#FF6B00':'rgba(255,255,255,0.4)';
-              }
-              window.tsSlide=function(d){go((idx+d+total)%total);};
-              document.addEventListener('DOMContentLoaded',init);
-            })();
+              dots=dc.querySelectorAll('.ts-dot');
+              timer=setInterval(function(){go((cur+1)%imgs.length);},4000);
+            }
+            function go(n){
+              imgs[cur].classList.remove('active');
+              dots[cur].classList.remove('on');
+              cur=n;
+              imgs[cur].classList.add('active');
+              dots[cur].classList.add('on');
+            }
+            window.tsMove=function(d){clearInterval(timer);go((cur+d+imgs.length)%imgs.length);timer=setInterval(function(){go((cur+1)%imgs.length);},4000);};
+            document.addEventListener('DOMContentLoaded',setup);
+          })();
           </script>
         </div>
       </div>
