@@ -144,165 +144,161 @@
         </div>
       </article>
 
-      <!-- TRAINING STAGES -->
-      <article class="torneo-card torneo-card--alt" data-torneo="ts" id="training-stages">
-        <div class="torneo-card__img-wrap">
-          <img src="noticia-training-stages.jpg" alt="Training Stages Valencia" class="torneo-card__img" />
-          <div class="torneo-card__num">04</div>
-        </div>
-        <div class="torneo-card__body">
-          <span class="torneo-card__tag" style="background:var(--orange)">TS</span>
-          <h3 class="torneo-card__name">Training<br/>Stages</h3>
-          <div class="torneo-card__fecha">
-            <div class="torneo-card__fecha-icon">📅</div>
-            <div>
-              <strong data-i18n="ts-fecha">Durante todo el año</strong>
-              <p data-i18n="ts-loc">Valencia · L'Alqueria del Basket</p>
-            </div>
-          </div>
-          <p class="torneo-card__desc" data-i18n="ts-desc">Programa de estancias deportivas personalizadas para clubes internacionales. Entrenamientos en L'Alqueria del Basket, partidos de preparación y una inmersión total en la cultura deportiva valenciana. Equipos de Italia, Dinamarca, Argentina y Finlandia ya han elegido Valencia.</p>
-          <div class="torneo-card__stats">
-            <div class="torneo-card__stat"><span>15+</span><small data-i18n="ts-stat-equipos">Equipos 2026</small></div>
-            <div class="torneo-card__stat"><span>4+</span><small data-i18n="ts-stat-paises">Países</small></div>
-            <div class="torneo-card__stat"><span>Todo</span><small data-i18n="ts-stat-edad">el año</small></div>
-          </div>
-          <div class="torneo-card__btns">
-            <a href="contacto.html" class="btn btn--card" data-i18n="ts-btn-contacto">Contactar</a>
-            <a href="revista-vbc.pdf" target="_blank" class="btn btn--revista">📖 Descargar revista PDF</a>
-          </div>
-        </div>
-        <div class="torneo-card__magazine">
-          <img src="noticia-training-stages.jpg" alt="Training Stages Valencia" />
-        </div>
-      </article>
-
     </div>
   </section>
 
-  <!-- TRAINING STAGES DETALLE -->
-  <section style="background:var(--black-soft,#111);padding:80px 0;">
+  <!-- TRAINING STAGES — sección unificada -->
+  <section style="background:#111;padding:0 0 80px;" id="training-stages">
+
+    <!-- Cabecera de conexión -->
+    <div style="background:var(--orange);padding:0.9rem 2rem;text-align:center;">
+      <span style="color:#fff;font-weight:900;letter-spacing:0.2em;font-size:0.75rem;text-transform:uppercase;" data-i18n="ts-strip">04 · TRAINING STAGES · PROGRAMA INTERNACIONAL</span>
+    </div>
+
     <div style="max-width:1100px;margin:0 auto;padding:0 2rem;">
 
-      <div style="text-align:center;margin-bottom:60px;">
-        <span style="font-size:0.75rem;letter-spacing:0.2em;color:var(--orange);font-weight:700;text-transform:uppercase;">El programa</span>
-        <h2 style="font-size:2.2rem;font-weight:900;margin:0.5rem 0 1rem;">¿Qué son los Valencia Training Stages?</h2>
-        <p style="max-width:680px;margin:0 auto;color:var(--white-muted,#aaa);line-height:1.8;">Una inmersión deportiva y cultural diseñada para clubes, academias y jugadores que aspiran a elevar su nivel en un entorno de excelencia internacional. Entrenamiento, competición y experiencia en Valencia, todo en uno.</p>
+      <!-- Presentación del programa (estilo tarjeta integrada) -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;align-items:center;padding:4rem 0 3rem;">
+        <div>
+          <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:1.2rem;">
+            <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.75rem;padding:0.25rem 0.7rem;border-radius:4px;">TS</span>
+            <span style="font-size:0.7rem;letter-spacing:0.2em;color:rgba(255,255,255,0.4);font-weight:600;text-transform:uppercase;" data-i18n="ts-fecha">Durante todo el año</span>
+          </div>
+          <h2 style="font-size:3.2rem;font-weight:900;color:#fff;line-height:1.05;margin:0 0 0.8rem;">Training<br/>Stages</h2>
+          <p style="color:var(--orange);font-size:0.8rem;letter-spacing:0.12em;font-weight:700;margin:0 0 1.2rem;text-transform:uppercase;" data-i18n="ts-loc">Valencia · L'Alqueria del Basket</p>
+          <p style="color:rgba(255,255,255,0.7);line-height:1.8;margin:0 0 2rem;font-size:0.95rem;" data-i18n="ts-desc">Programa de estancias deportivas personalizadas para clubes internacionales. Entrenamientos en L'Alqueria del Basket, partidos de preparación y una inmersión total en la cultura deportiva valenciana. Equipos de Italia, Dinamarca, Argentina y Finlandia ya han elegido Valencia.</p>
+          <div style="display:flex;gap:2.5rem;margin-bottom:2rem;">
+            <div style="text-align:center;">
+              <div style="font-size:2rem;font-weight:900;color:var(--orange);">15+</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.2rem;" data-i18n="ts-stat-equipos">Equipos 2026</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:2rem;font-weight:900;color:var(--orange);">4+</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.2rem;" data-i18n="ts-stat-paises">Países</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:2rem;font-weight:900;color:var(--orange);">12m</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.2rem;" data-i18n="ts-stat-edad">Al año</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="contacto.html" class="btn btn--primary" data-i18n="ts-btn-contacto">Contactar</a>
+            <a href="revista-vbc.pdf" target="_blank" class="btn btn--outline" data-i18n="ts-btn-revista">📖 Descargar revista PDF</a>
+          </div>
+        </div>
+        <div>
+          <img src="noticia-training-stages.jpg" alt="Training Stages Valencia" style="width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.5);" />
+        </div>
+      </div>
+
+      <!-- Divisor con título de sección -->
+      <div style="border-top:1px solid rgba(255,107,0,0.25);padding-top:4rem;margin-bottom:3rem;text-align:center;">
+        <span style="font-size:0.72rem;letter-spacing:0.22em;color:var(--orange);font-weight:700;text-transform:uppercase;" data-i18n="ts-section-tag">El programa</span>
+        <h3 style="font-size:2rem;font-weight:900;color:#fff;margin:0.5rem 0 1rem;" data-i18n="ts-section-title">¿Qué son los Valencia Training Stages?</h3>
+        <p style="max-width:640px;margin:0 auto;color:rgba(255,255,255,0.55);line-height:1.8;font-size:0.93rem;" data-i18n="ts-section-intro">Una inmersión deportiva y cultural diseñada para clubes, academias y jugadores que aspiran a elevar su nivel en un entorno de excelencia internacional. Entrenamiento, competición y experiencia en Valencia, todo en uno.</p>
       </div>
 
       <!-- 4 PILARES -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-bottom:70px;">
-        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;">
-          <div style="font-size:2rem;margin-bottom:1rem;">🏀</div>
-          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:1rem;">Entrenamiento de élite</h4>
-          <p style="font-size:0.85rem;color:var(--white-muted,#aaa);margin:0;line-height:1.7;">Sesiones dirigidas por técnicos certificados de la Valencia Basket Academy en instalaciones de categoría mundial.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-bottom:4rem;">
+        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:1.8rem;margin-bottom:0.8rem;">🏀</div>
+          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:0.95rem;font-weight:700;" data-i18n="ts-pilar1-title">Entrenamiento de élite</h4>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);margin:0;line-height:1.7;" data-i18n="ts-pilar1-desc">Sesiones dirigidas por técnicos certificados de la Valencia Basket Academy en instalaciones de categoría mundial.</p>
         </div>
-        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;">
-          <div style="font-size:2rem;margin-bottom:1rem;">🏆</div>
-          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:1rem;">Competición real</h4>
-          <p style="font-size:0.85rem;color:var(--white-muted,#aaa);margin:0;line-height:1.7;">Partidos amistosos y encuentros contra los equipos de cantera de Valencia Basket. Una experiencia de alto nivel.</p>
+        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:1.8rem;margin-bottom:0.8rem;">🏆</div>
+          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:0.95rem;font-weight:700;" data-i18n="ts-pilar2-title">Competición real</h4>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);margin:0;line-height:1.7;" data-i18n="ts-pilar2-desc">Partidos amistosos y encuentros contra los equipos de cantera de Valencia Basket. Una experiencia de alto nivel.</p>
         </div>
-        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;">
-          <div style="font-size:2rem;margin-bottom:1rem;">🏛️</div>
-          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:1rem;">Inmersión cultural</h4>
-          <p style="font-size:0.85rem;color:var(--white-muted,#aaa);margin:0;line-height:1.7;">Ciudad de las Artes y las Ciencias, tour histórico de Valencia, gastronomía local y la playa de la Malvarrosa.</p>
+        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:1.8rem;margin-bottom:0.8rem;">🏛️</div>
+          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:0.95rem;font-weight:700;" data-i18n="ts-pilar3-title">Inmersión cultural</h4>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);margin:0;line-height:1.7;" data-i18n="ts-pilar3-desc">Ciudad de las Artes y las Ciencias, tour histórico de Valencia, gastronomía local y la playa de la Malvarrosa.</p>
         </div>
-        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;">
-          <div style="font-size:2rem;margin-bottom:1rem;">🛡️</div>
-          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:1rem;">Soporte total 24/7</h4>
-          <p style="font-size:0.85rem;color:var(--white-muted,#aaa);margin:0;line-height:1.7;">Alojamiento, transporte, seguro médico y un equipo de coordinación dedicado en todo momento.</p>
-        </div>
-      </div>
-
-      <!-- INSTALACIONES -->
-      <div style="background:rgba(255,107,0,0.07);border:1px solid rgba(255,107,0,0.2);border-radius:12px;padding:2.5rem;margin-bottom:70px;">
-        <h3 style="margin:0 0 0.5rem;font-size:1.5rem;">L'Alqueria del Basket</h3>
-        <p style="color:var(--orange);font-size:0.8rem;letter-spacing:0.1em;font-weight:700;margin:0 0 1.2rem;">EL MAYOR CENTRO DE ENTRENAMIENTO DE EUROPA</p>
-        <p style="color:var(--white-muted,#aaa);margin:0 0 2rem;line-height:1.8;">Reconocida por la FIBA como una de las mejores instalaciones de entrenamiento del mundo. Los participantes entrenan en el mismo entorno donde se forman los jugadores del futuro de Valencia Basket.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;text-align:center;">
-          <div><div style="font-size:2.5rem;font-weight:900;color:var(--orange);">13</div><div style="font-size:0.8rem;color:var(--white-muted,#aaa);">Pistas de alto nivel</div></div>
-          <div><div style="font-size:2.5rem;font-weight:900;color:var(--orange);">15K m²</div><div style="font-size:0.8rem;color:var(--white-muted,#aaa);">Espacio exclusivo para baloncesto</div></div>
-          <div><div style="font-size:2.5rem;font-weight:900;color:var(--orange);">100%</div><div style="font-size:0.8rem;color:var(--white-muted,#aaa);">Tecnología deportiva</div></div>
-          <div><div style="font-size:2.5rem;font-weight:900;color:var(--orange);">VBC</div><div style="font-size:0.8rem;color:var(--white-muted,#aaa);">Entorno profesional</div></div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:1.8rem;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:1.8rem;margin-bottom:0.8rem;">🛡️</div>
+          <h4 style="color:var(--orange);margin:0 0 0.5rem;font-size:0.95rem;font-weight:700;" data-i18n="ts-pilar4-title">Soporte total 24/7</h4>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);margin:0;line-height:1.7;" data-i18n="ts-pilar4-desc">Alojamiento, transporte, seguro médico y un equipo de coordinación dedicado en todo momento.</p>
         </div>
       </div>
 
       <!-- PROGRAMA 6 DIAS -->
-      <h3 style="font-size:1.6rem;font-weight:900;margin:0 0 1.5rem;">Programa tipo (6 días)</h3>
-      <div style="display:grid;gap:1rem;margin-bottom:70px;">
-        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;">
-          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.8rem;padding:0.3rem 0.7rem;border-radius:4px;white-space:nowrap;flex-shrink:0;">DÍA 1</span>
-          <div><strong>Llegada y bienvenida</strong> — Recogida en el aeropuerto, check-in, comida de presentación y primera sesión de entrenamiento en L'Alqueria con los técnicos de la Academia.</div>
+      <h3 style="font-size:1.5rem;font-weight:900;color:#fff;margin:0 0 1.2rem;" data-i18n="ts-programa-title">Programa tipo (6 días)</h3>
+      <div style="display:grid;gap:0.8rem;margin-bottom:4rem;">
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;border-left:3px solid var(--orange);">
+          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.75rem;padding:0.25rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" data-i18n="ts-dia1-label">DÍA 1</span>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;"><strong style="color:#fff;" data-i18n="ts-dia1-title">Llegada y bienvenida</strong> — <span data-i18n="ts-dia1-desc">Recogida en el aeropuerto, check-in, comida de presentación y primera sesión de entrenamiento en L'Alqueria con los técnicos de la Academia.</span></div>
         </div>
-        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;">
-          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.8rem;padding:0.3rem 0.7rem;border-radius:4px;white-space:nowrap;flex-shrink:0;">DÍAS 2-3</span>
-          <div><strong>Inmersión deportiva</strong> — Doble sesión diaria (técnica + preparación física), partidos amistosos contra equipos locales de nivel y análisis de vídeo post-partido.</div>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;border-left:3px solid var(--orange);">
+          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.75rem;padding:0.25rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" data-i18n="ts-dias23-label">DÍAS 2-3</span>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;"><strong style="color:#fff;" data-i18n="ts-dias23-title">Inmersión deportiva</strong> — <span data-i18n="ts-dias23-desc">Doble sesión diaria (técnica + preparación física), partidos amistosos contra equipos locales de nivel y análisis de vídeo post-partido.</span></div>
         </div>
-        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;">
-          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.8rem;padding:0.3rem 0.7rem;border-radius:4px;white-space:nowrap;flex-shrink:0;">DÍA 4</span>
-          <div><strong>Cultura y ciudad</strong> — Ciudad de las Artes y las Ciencias, paella tradicional valenciana junto al Turia y tarde libre en la playa de la Malvarrosa.</div>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;border-left:3px solid var(--orange);">
+          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.75rem;padding:0.25rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" data-i18n="ts-dia4-label">DÍA 4</span>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;"><strong style="color:#fff;" data-i18n="ts-dia4-title">Cultura y ciudad</strong> — <span data-i18n="ts-dia4-desc">Ciudad de las Artes y las Ciencias, paella tradicional valenciana junto al Turia y tarde libre en la playa de la Malvarrosa.</span></div>
         </div>
-        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;">
-          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.8rem;padding:0.3rem 0.7rem;border-radius:4px;white-space:nowrap;flex-shrink:0;">DÍA 5</span>
-          <div><strong>Día élite</strong> — Entrenamiento conjunto con la Academia de Valencia Basket y asistencia a un partido oficial de ACB o EuroLeague en el Roig Arena.</div>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;border-left:3px solid var(--orange);">
+          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.75rem;padding:0.25rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" data-i18n="ts-dia5-label">DÍA 5</span>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;"><strong style="color:#fff;" data-i18n="ts-dia5-title">Día élite</strong> — <span data-i18n="ts-dia5-desc">Entrenamiento conjunto con la Academia de Valencia Basket y asistencia a un partido oficial de ACB o EuroLeague en el Roig Arena.</span></div>
         </div>
-        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;">
-          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.8rem;padding:0.3rem 0.7rem;border-radius:4px;white-space:nowrap;flex-shrink:0;">DÍA 6</span>
-          <div><strong>Cierre y regreso</strong> — Desayuno de grupo y traslado al aeropuerto. Cada jugador recibe un informe de rendimiento personalizado, álbum digital y plan de mejora individual.</div>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;background:rgba(255,255,255,0.03);border-radius:8px;padding:1.2rem;border-left:3px solid var(--orange);">
+          <span style="background:var(--orange);color:#fff;font-weight:900;font-size:0.75rem;padding:0.25rem 0.6rem;border-radius:4px;white-space:nowrap;flex-shrink:0;" data-i18n="ts-dia6-label">DÍA 6</span>
+          <div style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;"><strong style="color:#fff;" data-i18n="ts-dia6-title">Cierre y regreso</strong> — <span data-i18n="ts-dia6-desc">Desayuno de grupo y traslado al aeropuerto. Cada jugador recibe un informe de rendimiento personalizado, álbum digital y plan de mejora individual.</span></div>
         </div>
       </div>
 
       <!-- PLANES -->
-      <h3 style="font-size:1.6rem;font-weight:900;margin:0 0 1.5rem;">Planes disponibles</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:70px;">
-        <div style="border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:2rem;">
-          <div style="font-size:0.72rem;letter-spacing:0.15em;color:var(--orange);font-weight:700;margin-bottom:0.5rem;">BASE</div>
-          <div style="font-size:2.2rem;font-weight:900;margin-bottom:1rem;">520€ <small style="font-size:1rem;font-weight:400;color:var(--white-muted,#aaa);">/ persona</small></div>
-          <ul style="margin:0 0 0 1rem;line-height:2.2;font-size:0.85rem;color:var(--white-muted,#aaa);">
-            <li>3 noches · alojamiento hostel</li>
-            <li>Pensión completa</li>
-            <li>2 sesiones en L'Alqueria</li>
-            <li>1 partido amistoso</li>
-            <li>Traslados aeropuerto</li>
-            <li>Seguro médico básico</li>
+      <h3 style="font-size:1.5rem;font-weight:900;color:#fff;margin:0 0 1.2rem;" data-i18n="ts-planes-title">Planes disponibles</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:4rem;">
+        <div style="border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:2rem;">
+          <div style="font-size:0.7rem;letter-spacing:0.18em;color:var(--orange);font-weight:700;margin-bottom:0.5rem;" data-i18n="ts-plan-base-label">BASE</div>
+          <div style="font-size:2rem;font-weight:900;color:#fff;margin-bottom:1rem;">520€ <small style="font-size:0.9rem;font-weight:400;color:rgba(255,255,255,0.4);" data-i18n="ts-plan-unit">/ persona</small></div>
+          <ul style="margin:0 0 0 1rem;line-height:2.1;font-size:0.83rem;color:rgba(255,255,255,0.5);">
+            <li data-i18n="ts-plan-base-li1">3 noches · alojamiento hostel</li>
+            <li data-i18n="ts-plan-base-li2">Pensión completa</li>
+            <li data-i18n="ts-plan-base-li3">2 sesiones en L'Alqueria</li>
+            <li data-i18n="ts-plan-base-li4">1 partido amistoso</li>
+            <li data-i18n="ts-plan-base-li5">Traslados aeropuerto</li>
+            <li data-i18n="ts-plan-base-li6">Seguro médico básico</li>
           </ul>
         </div>
-        <div style="border:2px solid var(--orange);border-radius:10px;padding:2rem;background:rgba(255,107,0,0.06);">
-          <div style="font-size:0.72rem;letter-spacing:0.15em;color:var(--orange);font-weight:700;margin-bottom:0.5rem;">PREMIUM · MÁS POPULAR</div>
-          <div style="font-size:2.2rem;font-weight:900;margin-bottom:1rem;">890€ <small style="font-size:1rem;font-weight:400;color:var(--white-muted,#aaa);">/ persona</small></div>
-          <ul style="margin:0 0 0 1rem;line-height:2.2;font-size:0.85rem;color:var(--white-muted,#aaa);">
-            <li>5 noches · hotel 3 estrellas</li>
-            <li>Pensión completa</li>
-            <li>4 sesiones en L'Alqueria</li>
-            <li>2 partidos amistosos</li>
-            <li>Tour histórico de Valencia</li>
-            <li>Traslados durante toda la estancia</li>
-            <li>Seguro médico completo</li>
+        <div style="border:2px solid var(--orange);border-radius:12px;padding:2rem;background:rgba(255,107,0,0.06);">
+          <div style="font-size:0.7rem;letter-spacing:0.18em;color:var(--orange);font-weight:700;margin-bottom:0.5rem;" data-i18n="ts-plan-premium-label">PREMIUM · MÁS POPULAR</div>
+          <div style="font-size:2rem;font-weight:900;color:#fff;margin-bottom:1rem;">890€ <small style="font-size:0.9rem;font-weight:400;color:rgba(255,255,255,0.4);" data-i18n="ts-plan-unit">/ persona</small></div>
+          <ul style="margin:0 0 0 1rem;line-height:2.1;font-size:0.83rem;color:rgba(255,255,255,0.5);">
+            <li data-i18n="ts-plan-premium-li1">5 noches · hotel 3 estrellas</li>
+            <li data-i18n="ts-plan-premium-li2">Pensión completa</li>
+            <li data-i18n="ts-plan-premium-li3">4 sesiones en L'Alqueria</li>
+            <li data-i18n="ts-plan-premium-li4">2 partidos amistosos</li>
+            <li data-i18n="ts-plan-premium-li5">Tour histórico de Valencia</li>
+            <li data-i18n="ts-plan-premium-li6">Traslados durante toda la estancia</li>
+            <li data-i18n="ts-plan-premium-li7">Seguro médico completo</li>
           </ul>
         </div>
-        <div style="border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:2rem;">
-          <div style="font-size:0.72rem;letter-spacing:0.15em;color:var(--orange);font-weight:700;margin-bottom:0.5rem;">ÉLITE</div>
-          <div style="font-size:2.2rem;font-weight:900;margin-bottom:1rem;">1.350€ <small style="font-size:1rem;font-weight:400;color:var(--white-muted,#aaa);">/ persona</small></div>
-          <ul style="margin:0 0 0 1rem;line-height:2.2;font-size:0.85rem;color:var(--white-muted,#aaa);">
-            <li>7 noches · hotel 4 estrellas</li>
-            <li>Pensión completa VIP</li>
-            <li>5 sesiones personalizadas</li>
-            <li>3 partidos amistosos</li>
-            <li>Ciudad Artes y Ciencias + Tour</li>
-            <li>Entrada partido ACB / EuroLeague</li>
-            <li>Traslados premium + supervisor</li>
+        <div style="border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:2rem;">
+          <div style="font-size:0.7rem;letter-spacing:0.18em;color:var(--orange);font-weight:700;margin-bottom:0.5rem;" data-i18n="ts-plan-elite-label">ÉLITE</div>
+          <div style="font-size:2rem;font-weight:900;color:#fff;margin-bottom:1rem;">1.350€ <small style="font-size:0.9rem;font-weight:400;color:rgba(255,255,255,0.4);" data-i18n="ts-plan-unit">/ persona</small></div>
+          <ul style="margin:0 0 0 1rem;line-height:2.1;font-size:0.83rem;color:rgba(255,255,255,0.5);">
+            <li data-i18n="ts-plan-elite-li1">7 noches · hotel 4 estrellas</li>
+            <li data-i18n="ts-plan-elite-li2">Pensión completa VIP</li>
+            <li data-i18n="ts-plan-elite-li3">5 sesiones personalizadas</li>
+            <li data-i18n="ts-plan-elite-li4">3 partidos amistosos</li>
+            <li data-i18n="ts-plan-elite-li5">Ciudad Artes y Ciencias + Tour</li>
+            <li data-i18n="ts-plan-elite-li6">Entrada partido ACB / EuroLeague</li>
+            <li data-i18n="ts-plan-elite-li7">Traslados premium + supervisor</li>
           </ul>
         </div>
       </div>
 
-      <!-- CTA REVISTA + CONTACTO -->
-      <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);border-radius:12px;padding:2.5rem;text-align:center;">
+      <!-- CTA -->
+      <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:center;background:rgba(255,107,0,0.07);border:1px solid rgba(255,107,0,0.2);border-radius:14px;padding:2.5rem;text-align:center;">
         <div>
-          <h4 style="margin:0 0 0.5rem;font-size:1.2rem;">¿Interesado en participar?</h4>
-          <p style="color:var(--white-muted,#aaa);font-size:0.88rem;margin:0;">Mínimo 15 jugadores · Disponible todo el año · Plazas limitadas</p>
+          <h4 style="margin:0 0 0.4rem;font-size:1.15rem;color:#fff;" data-i18n="ts-cta-title">¿Interesado en participar?</h4>
+          <p style="color:rgba(255,255,255,0.45);font-size:0.85rem;margin:0;" data-i18n="ts-cta-desc">Mínimo 15 jugadores · Disponible todo el año · Plazas limitadas</p>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-          <a href="revista-vbc.pdf" target="_blank" class="btn btn--outline">📖 Descargar revista PDF</a>
-          <a href="contacto.html" class="btn btn--primary">Contactar ahora</a>
+          <a href="revista-vbc.pdf" target="_blank" class="btn btn--outline" data-i18n="ts-cta-pdf">📖 Descargar revista PDF</a>
+          <a href="contacto.html" class="btn btn--primary" data-i18n="ts-cta-contacto">Contactar ahora</a>
         </div>
       </div>
 
@@ -529,6 +525,6 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>
