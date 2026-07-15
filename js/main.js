@@ -212,20 +212,46 @@ if (torneosGrid) {
 ================================ */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type=submit]');
-    btn.textContent = '✓ Mensaje enviado';
-    btn.style.background = '#1a6e1a';
-    btn.style.borderColor = '#1a6e1a';
-    btn.style.color = 'white';
-    setTimeout(() => {
-      btn.textContent = 'Enviar mensaje';
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      btn.style.color = '';
-      contactForm.reset();
-    }, 3500);
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '...';
+    try {
+      const res = await fetch('/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre:  contactForm.querySelector('#nombre').value,
+          email:   contactForm.querySelector('#email').value,
+          torneo:  contactForm.querySelector('#torneo')?.value || '',
+          mensaje: contactForm.querySelector('#mensaje').value
+        })
+      });
+      if (res.ok) {
+        btn.textContent = '✓ Mensaje enviado';
+        btn.style.background = '#1a6e1a';
+        btn.style.borderColor = '#1a6e1a';
+        btn.style.color = 'white';
+        contactForm.reset();
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 3500);
+      } else {
+        btn.textContent = original;
+        btn.disabled = false;
+        alert('Error al enviar. Inténtalo de nuevo o escríbenos a info@valenciabasketcup.com');
+      }
+    } catch {
+      btn.textContent = original;
+      btn.disabled = false;
+      alert('Error de conexión. Inténtalo de nuevo.');
+    }
   });
 }
 
