@@ -36,10 +36,39 @@
     </button>
   </nav>
 
+  <style>
+    .hero__slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      animation: heroSlide 30s infinite;
+    }
+    .hero__slide:nth-child(1) { animation-delay: 0s; }
+    .hero__slide:nth-child(2) { animation-delay: 6s; }
+    .hero__slide:nth-child(3) { animation-delay: 12s; }
+    .hero__slide:nth-child(4) { animation-delay: 18s; }
+    .hero__slide:nth-child(5) { animation-delay: 24s; }
+    @keyframes heroSlide {
+      0%   { opacity: 0; }
+      4%   { opacity: 1; }
+      17%  { opacity: 1; }
+      21%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+  </style>
+
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero__bg">
-      <img src="Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" alt="La Alqueria del Basket" class="hero__img" />
+      <img src="hero-slide-4.jpg" alt="Equipos Valencia Basket Cup" class="hero__slide" />
+      <img src="hero-slide-5.jpg" alt="Campeonas Valencia International Cup" class="hero__slide" />
+      <img src="hero-slide-1.jpg" alt="Partido Valencia Basket Cup" class="hero__slide" />
+      <img src="hero-slide-2.jpg" alt="Trofeos Valencia Basket Cup" class="hero__slide" />
+      <img src="hero-slide-3.jpg" alt="Desfile de equipos Valencia Basket Cup" class="hero__slide" />
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
@@ -129,17 +158,17 @@
   <section class="contador">
     <div class="contador__inner reveal">
       <div class="contador__item">
-        <span class="contador__num" data-target="5000">0</span>
+        <span class="contador__num" data-target="12000">0</span>
         <span class="contador__label" data-i18n="contador-jugadores">Jugadores</span>
       </div>
       <div class="contador__divider"></div>
       <div class="contador__item">
-        <span class="contador__num" data-target="320">0</span>
+        <span class="contador__num" data-target="1400">0</span>
         <span class="contador__label" data-i18n="contador-equipos">Equipos</span>
       </div>
       <div class="contador__divider"></div>
       <div class="contador__item">
-        <span class="contador__num" data-target="12">0</span>
+        <span class="contador__num" data-target="19">0</span>
         <span class="contador__label" data-i18n="contador-ediciones">Ediciones</span>
       </div>
       <div class="contador__divider"></div>
@@ -203,45 +232,45 @@
     <div class="testimonios__grid reveal">
       <div class="testimonio-card">
         <div class="testimonio-card__quote">"</div>
-        <p class="testimonio-card__text" data-i18n="testimonio1-text">Una experiencia única para nuestros jugadores. La organización fue impecable, las instalaciones de La Alqueria son de primer nivel y Valencia es una ciudad que enamora.</p>
+        <p class="testimonio-card__text" data-i18n="testimonio1-text">Una experiencia increíble para todo el equipo. Valencia nos conquistó desde el primer momento, tanto por la calidad de la organización como por el nivel de los rivales.</p>
         <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar">JL</div>
+          <div class="testimonio-card__avatar">GR</div>
           <div>
-            <div class="testimonio-card__name">Jean-Luc Martin</div>
-            <div class="testimonio-card__club">BC Levallois · <span class="worldmap-flag">🇫🇷</span> <span data-i18n="country-fr">Francia</span></div>
+            <div class="testimonio-card__name">Gonzalo Romao</div>
+            <div class="testimonio-card__club">Ampa IEL Lisboa · <span class="worldmap-flag">🇵🇹</span> <span data-i18n="country-pt">Portugal</span></div>
           </div>
         </div>
       </div>
       <div class="testimonio-card testimonio-card--accent">
         <div class="testimonio-card__quote">"</div>
-        <p class="testimonio-card__text" data-i18n="testimonio2-text">We've been coming for three years in a row. The level of competition is outstanding and our players grow enormously — both on and off the court.</p>
+        <p class="testimonio-card__text" data-i18n="testimonio2-text">El nivel de competición es muy alto y la organización es impecable. Nuestros jugadores viven el baloncesto de una manera diferente aquí. Un torneo de referencia en Europa.</p>
         <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar">MR</div>
+          <div class="testimonio-card__avatar">MK</div>
           <div>
-            <div class="testimonio-card__name">Michael Reynolds</div>
-            <div class="testimonio-card__club">Chicago Youth Basketball · <span class="worldmap-flag">🇺🇸</span> USA</div>
+            <div class="testimonio-card__name">Mando Kabeya</div>
+            <div class="testimonio-card__club">Grind Zone Basketball · <span class="worldmap-flag">🇧🇪</span> <span data-i18n="country-be">Bélgica</span></div>
           </div>
         </div>
       </div>
       <div class="testimonio-card">
         <div class="testimonio-card__quote">"</div>
-        <p class="testimonio-card__text" data-i18n="testimonio3-text">El mejor torneo de baloncesto base en el que hemos participado. Nuestros chicos volvieron a casa con una medalla y recuerdos para toda la vida.</p>
+        <p class="testimonio-card__text" data-i18n="testimonio3-text">Nunca habíamos vivido algo así. Las instalaciones son espectaculares y el ambiente entre los equipos es único. Una experiencia que no olvidaremos.</p>
         <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar">CS</div>
+          <div class="testimonio-card__avatar">MJ</div>
           <div>
-            <div class="testimonio-card__name">Carlos Sousa</div>
-            <div class="testimonio-card__club">Sporting CP · <span class="worldmap-flag">🇵🇹</span> <span data-i18n="country-pt">Portugal</span></div>
+            <div class="testimonio-card__name">Maria José Ferrandis Millán</div>
+            <div class="testimonio-card__club">Drogheda Wolves Basketball Club · <span class="worldmap-flag">🇮🇪</span> Irlanda</div>
           </div>
         </div>
       </div>
       <div class="testimonio-card">
         <div class="testimonio-card__quote">"</div>
-        <p class="testimonio-card__text" data-i18n="testimonio4-text">Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!</p>
+        <p class="testimonio-card__text" data-i18n="testimonio4-text">Venir desde Argentina vale la pena. El torneo tiene un nivel altísimo y Valencia es una ciudad que lo da todo. Fue una de las mejores experiencias deportivas de nuestro equipo.</p>
         <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar">AK</div>
+          <div class="testimonio-card__avatar">GD</div>
           <div>
-            <div class="testimonio-card__name">Andreas Klein</div>
-            <div class="testimonio-card__club">Bayern Basketball · <span class="worldmap-flag">🇩🇪</span> <span data-i18n="country-de">Alemania</span></div>
+            <div class="testimonio-card__name">Gaby Darras</div>
+            <div class="testimonio-card__club">Sport Magic · <span class="worldmap-flag">🇦🇷</span> <span data-i18n="country-ar">Argentina</span></div>
           </div>
         </div>
       </div>

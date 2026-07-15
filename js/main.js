@@ -328,10 +328,10 @@ const translations = {
     /* TESTIMONIOS */
     'testimonios-tag': 'Opiniones',
     'testimonios-title': 'Lo que dicen <em>los equipos</em>',
-    'testimonio1-text': 'Una experiencia única para nuestros jugadores. La organización fue impecable, las instalaciones de La Alqueria son de primer nivel y Valencia es una ciudad que enamora.',
-    'testimonio2-text': 'Llevamos tres años seguidos viniendo. El nivel de competición es extraordinario y nuestros jugadores crecen enormemente, tanto dentro como fuera de la cancha.',
-    'testimonio3-text': 'El mejor torneo de baloncesto base en el que hemos participado. Nuestros chicos volvieron a casa con una medalla y recuerdos para toda la vida.',
-    'testimonio4-text': 'Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!',
+    'testimonio1-text': 'Una experiencia increíble para todo el equipo. Valencia nos conquistó desde el primer momento, tanto por la calidad de la organización como por el nivel de los rivales.',
+    'testimonio2-text': 'El nivel de competición es muy alto y la organización es impecable. Nuestros jugadores viven el baloncesto de una manera diferente aquí. Un torneo de referencia en Europa.',
+    'testimonio3-text': 'Nunca habíamos vivido algo así. Las instalaciones son espectaculares y el ambiente entre los equipos es único. Una experiencia que no olvidaremos.',
+    'testimonio4-text': 'Venir desde Argentina vale la pena. El torneo tiene un nivel altísimo y Valencia es una ciudad que lo da todo. Fue una de las mejores experiencias deportivas de nuestro equipo.',
     /* FOOTER */
     'footer-brand-p': 'Torneo de baloncesto base a nivel internacional. Queremos que junto a tu equipo seas partícipe del Torneo de referencia en baloncesto base.',
     'footer-news-title': 'Últimas Noticias',
@@ -693,10 +693,10 @@ const translations = {
     /* TESTIMONIOS */
     'testimonios-tag': 'Reviews',
     'testimonios-title': 'What the <em>teams say</em>',
-    'testimonio1-text': 'A unique experience for our players. The organisation was flawless, the facilities at La Alqueria are world-class and Valencia is a city you fall in love with.',
-    'testimonio2-text': "We've been coming for three years in a row. The level of competition is outstanding and our players grow enormously — both on and off the court.",
-    'testimonio3-text': 'The best youth basketball tournament we have ever taken part in. Our kids came home with a medal and memories for life.',
-    'testimonio4-text': 'Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!',
+    'testimonio1-text': 'An incredible experience for the whole team. Valencia won us over from the first moment, both for the quality of the organisation and the level of the opponents.',
+    'testimonio2-text': 'The level of competition is very high and the organisation is impeccable. Our players experience basketball in a different way here. A benchmark tournament in Europe.',
+    'testimonio3-text': 'We had never experienced anything like this. The facilities are spectacular and the atmosphere between the teams is unique. An experience we will never forget.',
+    'testimonio4-text': 'Coming from Argentina is worth it. The tournament has a very high level and Valencia is a city that gives everything. It was one of the best sporting experiences for our team.',
     /* FOOTER */
     'footer-brand-p': 'International youth basketball tournament. We want your team to be part of the reference tournament in youth basketball.',
     'footer-news-title': 'Latest News',
@@ -1095,10 +1095,10 @@ const translations = {
     /* TESTIMONIOS */
     'testimonios-tag': 'Avis',
     'testimonios-title': 'Ce que disent <em>les équipes</em>',
-    'testimonio1-text': 'Une expérience unique pour nos joueurs. L\'organisation était impeccable, les installations de La Alqueria sont de premier niveau et Valence est une ville dont on tombe amoureux.',
-    'testimonio2-text': 'Cela fait trois ans que nous venons. Le niveau de compétition est extraordinaire et nos joueurs progressent énormément, aussi bien sur le terrain qu\'en dehors.',
-    'testimonio3-text': 'Le meilleur tournoi de basket jeunes auquel nous ayons participé. Nos jeunes sont rentrés avec une médaille et des souvenirs pour la vie.',
-    'testimonio4-text': 'Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!',
+    'testimonio1-text': 'Une expérience incroyable pour toute l\'équipe. Valence nous a conquis dès le premier instant, tant par la qualité de l\'organisation que par le niveau des adversaires.',
+    'testimonio2-text': 'Le niveau de compétition est très élevé et l\'organisation est impeccable. Nos joueurs vivent le basket d\'une façon différente ici. Un tournoi de référence en Europe.',
+    'testimonio3-text': 'Nous n\'avions jamais vécu quelque chose comme ça. Les installations sont spectaculaires et l\'ambiance entre les équipes est unique. Une expérience que nous n\'oublierons pas.',
+    'testimonio4-text': 'Venir depuis l\'Argentine en vaut la peine. Le tournoi a un très haut niveau et Valence est une ville qui donne tout. Ce fut l\'une des meilleures expériences sportives de notre équipe.',
     /* FOOTER */
     'footer-brand-p': 'Tournoi de basket jeunes à niveau international. Nous voulons que votre équipe participe au tournoi de référence en basket jeunes.',
     'footer-brand-desc': 'Tournoi de basket jeunes à niveau international. Nous voulons que votre équipe participe au tournoi de référence en basket jeunes.',
@@ -1495,10 +1495,10 @@ const translations = {
     /* TESTIMONIOS */
     'testimonios-tag': 'Opinioni',
     'testimonios-title': 'Cosa dicono <em>le squadre</em>',
-    'testimonio1-text': 'Un\'esperienza unica per i nostri giocatori. L\'organizzazione è stata impeccabile, le strutture di La Alqueria sono di primo livello e Valencia è una città di cui ci si innamora.',
-    'testimonio2-text': 'Veniamo da tre anni consecutivi. Il livello di competizione è straordinario e i nostri giocatori crescono enormemente, sia in campo che fuori.',
-    'testimonio3-text': 'Il miglior torneo di basket giovanile a cui abbiamo partecipato. I nostri ragazzi sono tornati a casa con una medaglia e ricordi per tutta la vita.',
-    'testimonio4-text': 'Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!',
+    'testimonio1-text': 'Un\'esperienza incredibile per tutta la squadra. Valencia ci ha conquistati fin dal primo momento, sia per la qualità dell\'organizzazione che per il livello degli avversari.',
+    'testimonio2-text': 'Il livello di competizione è molto alto e l\'organizzazione è impeccabile. I nostri giocatori vivono il basket in modo diverso qui. Un torneo di riferimento in Europa.',
+    'testimonio3-text': 'Non avevamo mai vissuto niente del genere. Le strutture sono spettacolari e l\'atmosfera tra le squadre è unica. Un\'esperienza che non dimenticheremo.',
+    'testimonio4-text': 'Venire dall\'Argentina vale la pena. Il torneo ha un livello molto alto e Valencia è una città che dà tutto. È stata una delle migliori esperienze sportive della nostra squadra.',
     /* FOOTER */
     'footer-brand-p': 'Torneo di basket giovanile a livello internazionale. Vogliamo che la tua squadra sia protagonista del torneo di riferimento nel basket giovanile.',
     'footer-brand-desc': 'Torneo di basket giovanile a livello internazionale. Vogliamo che la tua squadra sia protagonista del torneo di riferimento nel basket giovanile.',
@@ -1895,10 +1895,10 @@ const translations = {
     /* TESTIMONIOS */
     'testimonios-tag': 'Opiniões',
     'testimonios-title': 'O que dizem <em>as equipas</em>',
-    'testimonio1-text': 'Uma experiência única para os nossos jogadores. A organização foi impecável, as instalações da La Alqueria são de primeiro nível e Valencia é uma cidade de que nos apaixonamos.',
-    'testimonio2-text': 'Já vimos três anos seguidos. O nível de competição é extraordinário e os nossos jogadores crescem imenso, tanto dentro como fora do campo.',
-    'testimonio3-text': 'O melhor torneio de basquetebol jovem em que participámos. Os nossos jovens voltaram a casa com uma medalha e memórias para toda a vida.',
-    'testimonio4-text': 'Hervorragende Organisation, weltklasse Einrichtungen und ein unvergessliches Erlebnis für unsere U16-Mannschaft. Wir kommen definitiv wieder!',
+    'testimonio1-text': 'Uma experiência incrível para toda a equipa. Valencia conquistou-nos desde o primeiro momento, tanto pela qualidade da organização como pelo nível dos adversários.',
+    'testimonio2-text': 'O nível de competição é muito alto e a organização é impecável. Os nossos jogadores vivem o basquetebol de uma forma diferente aqui. Um torneio de referência na Europa.',
+    'testimonio3-text': 'Nunca tínhamos vivido algo assim. As instalações são espetaculares e o ambiente entre as equipas é único. Uma experiência que não esqueceremos.',
+    'testimonio4-text': 'Vir desde a Argentina vale a pena. O torneio tem um nível muito alto e Valencia é uma cidade que dá tudo. Foi uma das melhores experiências desportivas da nossa equipa.',
     /* FOOTER */
     'footer-brand-p': 'Torneio de basquetebol jovem a nível internacional. Queremos que a sua equipa faça parte do Torneio de referência no basquetebol jovem.',
     'footer-brand-desc': 'Torneio de basquetebol jovem a nível internacional. Queremos que a sua equipa faça parte do Torneio de referência no basquetebol jovem.',
