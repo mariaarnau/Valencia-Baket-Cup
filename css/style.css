@@ -2855,3 +2855,91 @@ button.hero__date-pill:hover {
   .slideshow__prev,
   .slideshow__next { width: 36px; height: 36px; font-size: 1.4rem; }
 }
+
+/* ================================
+   VIDEO REEL
+================================ */
+.video-reel {
+  background: var(--black-soft);
+  padding: 100px 6% 100px;
+  overflow: hidden;
+}
+.video-reel__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.video-reel__text {
+  flex: 1;
+}
+.video-reel__tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 18px;
+}
+.video-reel__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.video-reel__title em {
+  font-style: italic;
+  color: var(--orange);
+}
+.video-reel__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--white-muted);
+  max-width: 380px;
+}
+
+/* Phone frame */
+.video-reel__phone {
+  flex-shrink: 0;
+}
+.video-reel__phone-frame {
+  width: 240px;
+  aspect-ratio: 9 / 16;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 3px solid var(--black-border);
+  box-shadow:
+    0 0 0 1px rgba(255,107,0,0.15),
+    0 30px 80px rgba(0,0,0,0.7),
+    0 0 60px rgba(255,107,0,0.08);
+  position: relative;
+  background: #000;
+}
+.video-reel__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-reel {
+    padding: 70px 5%;
+  }
+  .video-reel__inner {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+  .video-reel__desc {
+    max-width: 100%;
+  }
+  .video-reel__phone-frame {
+    width: 200px;
+  }
+}
