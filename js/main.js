@@ -2410,3 +2410,29 @@ document.querySelectorAll('.faq__q').forEach(btn => {
     if (!isOpen) item.classList.add('open');
   });
 });
+
+/* ================================
+   TORNEO REEL (video vertical)
+================================ */
+(() => {
+  const video = document.getElementById('torneoReelVideo');
+  const soundBtn = document.getElementById('torneoReelSound');
+  if (!video || !soundBtn) return;
+
+  soundBtn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    soundBtn.classList.toggle('is-on', !video.muted);
+    if (!video.muted) video.play();
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.4 });
+  observer.observe(video);
+})();
