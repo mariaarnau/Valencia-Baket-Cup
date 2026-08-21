@@ -799,28 +799,6 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   max-width: 440px;
   margin: 20px 0 32px;
 }
-.torneo-reel__stats {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 36px;
-}
-.torneo-reel__stats li {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-  color: var(--white-faint);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.torneo-reel__stats li span {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: var(--orange-light);
-  font-weight: 700;
-  letter-spacing: 0;
-}
 .torneo-reel__stage {
   position: relative;
   width: 300px;
@@ -900,8 +878,6 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   }
   .torneo-reel__copy .section-header__title { text-align: center; }
   .torneo-reel__text { margin-left: auto; margin-right: auto; }
-  .torneo-reel__stats { justify-content: center; }
-  .torneo-reel__stats li { align-items: center; }
 }
 @media (max-width: 560px) {
   .torneo-reel { padding: 64px 5%; }
