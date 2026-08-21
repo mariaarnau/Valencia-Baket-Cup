@@ -189,12 +189,28 @@ if (contadorEl) contadorObserver.observe(contadorEl);
 /* ================================
    PARALLAX HERO
 ================================ */
-const heroImg = document.querySelector('.hero__img');
+const heroImgs = document.querySelectorAll('.hero__img');
 window.addEventListener('scroll', () => {
-  if (!heroImg) return;
+  if (!heroImgs.length) return;
   const scrollY = window.scrollY;
-  heroImg.style.transform = `scale(1) translateY(${scrollY * 0.25}px)`;
+  heroImgs.forEach(img => {
+    img.style.transform = `scale(1) translateY(${scrollY * 0.25}px)`;
+  });
 }, { passive: true });
+
+/* ================================
+   HERO SLIDESHOW (crossfade)
+================================ */
+(() => {
+  const slides = document.querySelectorAll('.hero__img');
+  if (slides.length < 2) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  }, 5000);
+})();
 
 /* ================================
    TORNEO CARDS STAGGER
