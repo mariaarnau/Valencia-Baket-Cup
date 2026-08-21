@@ -376,20 +376,12 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   inset: 0;
 }
 .hero__img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0;
-  transform: scale(1.08);
-  transition: opacity 1.4s ease;
-  animation: heroZoom 9s ease-out forwards;
-}
-.hero__img.is-active {
-  opacity: 1;
-  z-index: 1;
+  transform: scale(1.05);
+  animation: heroZoom 8s ease-out forwards;
 }
 @keyframes heroZoom {
   to { transform: scale(1); }
@@ -771,77 +763,6 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--orange-light);
-}
-
-/* ================================
-   TORNEO REEL (video vertical)
-================================ */
-.torneo-reel {
-  background: var(--black);
-  padding: 90px 5% 100px;
-  position: relative;
-  overflow: hidden;
-}
-.torneo-reel__stage {
-  position: relative;
-  width: 320px;
-  max-width: 80vw;
-  margin: 0 auto;
-}
-.torneo-reel__glow {
-  position: absolute;
-  inset: -60px;
-  background: radial-gradient(circle at 50% 40%, var(--orange-glow), transparent 70%);
-  filter: blur(10px);
-  z-index: 0;
-  pointer-events: none;
-}
-.torneo-reel__frame {
-  position: relative;
-  z-index: 1;
-  aspect-ratio: 9 / 16;
-  width: 100%;
-  border-radius: 28px;
-  overflow: hidden;
-  background: #000;
-  border: 2px solid var(--black-border);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 107, 0, 0.15);
-}
-.torneo-reel__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.torneo-reel__sound {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(10, 10, 10, 0.55);
-  backdrop-filter: blur(6px);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-}
-.torneo-reel__sound:hover {
-  background: var(--orange);
-  border-color: var(--orange);
-  transform: scale(1.06);
-}
-.torneo-reel__sound.is-on {
-  background: var(--orange);
-  border-color: var(--orange);
-}
-@media (max-width: 560px) {
-  .torneo-reel { padding: 64px 5% 72px; }
-  .torneo-reel__stage { width: 260px; }
 }
 
 /* ================================

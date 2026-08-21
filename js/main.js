@@ -189,28 +189,12 @@ if (contadorEl) contadorObserver.observe(contadorEl);
 /* ================================
    PARALLAX HERO
 ================================ */
-const heroImgs = document.querySelectorAll('.hero__img');
+const heroImg = document.querySelector('.hero__img');
 window.addEventListener('scroll', () => {
-  if (!heroImgs.length) return;
+  if (!heroImg) return;
   const scrollY = window.scrollY;
-  heroImgs.forEach(img => {
-    img.style.transform = `scale(1) translateY(${scrollY * 0.25}px)`;
-  });
+  heroImg.style.transform = `scale(1) translateY(${scrollY * 0.25}px)`;
 }, { passive: true });
-
-/* ================================
-   HERO SLIDESHOW (crossfade)
-================================ */
-(() => {
-  const slides = document.querySelectorAll('.hero__img');
-  if (slides.length < 2) return;
-  let current = 0;
-  setInterval(() => {
-    slides[current].classList.remove('is-active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('is-active');
-  }, 5000);
-})();
 
 /* ================================
    TORNEO CARDS STAGGER
@@ -2426,29 +2410,3 @@ document.querySelectorAll('.faq__q').forEach(btn => {
     if (!isOpen) item.classList.add('open');
   });
 });
-
-/* ================================
-   TORNEO REEL (video vertical)
-================================ */
-(() => {
-  const video = document.getElementById('torneoReelVideo');
-  const soundBtn = document.getElementById('torneoReelSound');
-  if (!video || !soundBtn) return;
-
-  soundBtn.addEventListener('click', () => {
-    video.muted = !video.muted;
-    soundBtn.classList.toggle('is-on', !video.muted);
-    if (!video.muted) video.play();
-  });
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
-    });
-  }, { threshold: 0.4 });
-  observer.observe(video);
-})();
