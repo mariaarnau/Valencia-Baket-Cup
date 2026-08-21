@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=12" />
 </head>
 <body>
 
@@ -50,7 +50,11 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero__bg">
-      <img src="Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" alt="L'Alqueria del Basket" class="hero__img" />
+      <img src="hero-slide-1.jpg" alt="Valencia Basket Cup" class="hero__img is-active" />
+      <img src="hero-slide-2.jpg" alt="Valencia Basket Cup" class="hero__img" />
+      <img src="hero-slide-3.jpg" alt="Valencia Basket Cup" class="hero__img" />
+      <img src="hero-slide-4.jpg" alt="Valencia Basket Cup" class="hero__img" />
+      <img src="hero-slide-5.jpg" alt="Valencia Basket Cup" class="hero__img" />
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
@@ -157,6 +161,42 @@
       <div class="contador__item">
         <span class="contador__num" data-target="28">0</span>
         <span class="contador__label" data-i18n="contador-paises">Países</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO TORNEO (reel vertical) -->
+  <section class="torneo-reel">
+    <div class="torneo-reel__inner">
+      <div class="torneo-reel__copy reveal">
+        <span class="section-header__tag">Revive el ambiente</span>
+        <h2 class="section-header__title">Así se vive el <em>Valencia Basket Cup</em></h2>
+        <p class="torneo-reel__text">Equipos de todo el mundo, gradas llenas y la energía de la Ciudad de las Artes y las Ciencias. Un torneo, tres competiciones, una sola pasión por el baloncesto.</p>
+        <ul class="torneo-reel__stats">
+          <li><span>320+</span>Equipos</li>
+          <li><span>28</span>Países</li>
+          <li><span>5.000+</span>Jugadores</li>
+        </ul>
+        <a href="torneos.html" class="btn btn--primary">Descubre los torneos</a>
+      </div>
+      <div class="torneo-reel__stage reveal">
+        <div class="torneo-reel__glow"></div>
+        <div class="torneo-reel__frame">
+          <video
+            class="torneo-reel__video"
+            id="torneoReelVideo"
+            src="VIDEO TORNEO.mp4"
+            playsinline
+            autoplay
+            muted
+            loop
+            preload="metadata"
+          ></video>
+          <span class="torneo-reel__badge">VBC 2026</span>
+          <button class="torneo-reel__sound" id="torneoReelSound" type="button" aria-label="Activar sonido">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -425,7 +465,7 @@
     </button>
   </div>
 
-  <script src="js/main.js?v=10"></script>
+  <script src="js/main.js?v=12"></script>
   <!-- MAPA MUNDIAL -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>

@@ -376,12 +376,20 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   inset: 0;
 }
 .hero__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.05);
-  animation: heroZoom 8s ease-out forwards;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 1.4s ease;
+  animation: heroZoom 9s ease-out forwards;
+}
+.hero__img.is-active {
+  opacity: 1;
+  z-index: 1;
 }
 @keyframes heroZoom {
   to { transform: scale(1); }
@@ -763,6 +771,141 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--orange-light);
+}
+
+/* ================================
+   TORNEO REEL (video vertical)
+================================ */
+.torneo-reel {
+  background: var(--black);
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.torneo-reel__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: center;
+}
+.torneo-reel__copy .section-header__tag { display: inline-block; }
+.torneo-reel__copy .section-header__title { margin-top: 18px; text-align: left; }
+.torneo-reel__text {
+  color: var(--white-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 20px 0 32px;
+}
+.torneo-reel__stats {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+}
+.torneo-reel__stats li {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: var(--white-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.torneo-reel__stats li span {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--orange-light);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.torneo-reel__stage {
+  position: relative;
+  width: 300px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+.torneo-reel__glow {
+  position: absolute;
+  inset: -50px;
+  background: radial-gradient(circle at 50% 40%, var(--orange-glow), transparent 70%);
+  filter: blur(10px);
+  z-index: 0;
+  pointer-events: none;
+}
+.torneo-reel__frame {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #000;
+  border: 2px solid var(--black-border);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 107, 0, 0.15);
+}
+.torneo-reel__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.torneo-reel__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--orange);
+  color: var(--black);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  z-index: 2;
+}
+.torneo-reel__sound {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  z-index: 2;
+}
+.torneo-reel__sound:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  transform: scale(1.06);
+}
+.torneo-reel__sound.is-on {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+@media (max-width: 900px) {
+  .torneo-reel__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .torneo-reel__copy .section-header__title { text-align: center; }
+  .torneo-reel__text { margin-left: auto; margin-right: auto; }
+  .torneo-reel__stats { justify-content: center; }
+  .torneo-reel__stats li { align-items: center; }
+}
+@media (max-width: 560px) {
+  .torneo-reel { padding: 64px 5%; }
+  .torneo-reel__stage { width: 240px; }
 }
 
 /* ================================
