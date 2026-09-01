@@ -58,7 +58,7 @@
   <!-- CONTACTO -->
   <section class="contacto" id="contacto">
     <div class="contacto__grid">
-      <form class="contacto__form reveal" id="contactForm">
+      <form class="contacto__form reveal" id="contactForm" action="https://formspree.io/info@valenciabasketcup.com" method="POST">
         <div class="contacto__field">
           <label for="nombre" data-i18n="contacto-label-nombre">Nombre del club / equipo</label>
           <input type="text" id="nombre" name="nombre" placeholder="Club Baloncesto Valencia" data-i18n-placeholder="contacto-placeholder-nombre" required />
@@ -80,7 +80,9 @@
           <label for="mensaje" data-i18n="contacto-label-mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." data-i18n-placeholder="contacto-placeholder-mensaje" rows="4" required></textarea>
         </div>
+        <input type="hidden" name="_subject" value="Nuevo contacto · Valencia Basket Cup" />
         <button type="submit" class="btn btn--primary" data-i18n="contacto-btn-enviar">Enviar mensaje</button>
+        <p class="contacto__form-error" id="contactFormError" style="display:none;color:#c0392b;margin-top:10px;font-size:14px;"></p>
       </form>
       <div class="contacto__info reveal">
         <div class="contacto__info-item">
@@ -234,6 +236,6 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=10"></script>
+  <script src="js/main.js?v=11"></script>
 </body>
 </html>
