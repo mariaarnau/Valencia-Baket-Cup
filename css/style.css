@@ -717,6 +717,30 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 
 /* ================================
+   REEL VERTICAL
+================================ */
+.reel-video {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 40px 5%;
+}
+.reel-video__player {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+@media (max-width: 600px) {
+  .reel-video__player {
+    max-width: 300px;
+  }
+}
+
+/* ================================
    CONTADOR
 ================================ */
 .contador {
