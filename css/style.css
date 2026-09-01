@@ -721,9 +721,12 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 ================================ */
 .reel-video {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 60px;
   background: #000;
-  padding: 40px 5%;
+  padding: 60px 5%;
+  flex-wrap: wrap;
 }
 .reel-video__player {
   width: 100%;
@@ -733,6 +736,40 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   object-fit: cover;
   border-radius: 8px;
   display: block;
+}
+.reel-video__text {
+  max-width: 420px;
+  text-align: left;
+}
+.reel-video__tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.reel-video__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+}
+.reel-video__title em {
+  color: var(--orange);
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .reel-video {
+    flex-direction: column;
+    text-align: center;
+  }
+  .reel-video__text {
+    text-align: center;
+  }
 }
 @media (max-width: 600px) {
   .reel-video__player {
