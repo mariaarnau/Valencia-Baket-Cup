@@ -1,7 +1,7 @@
 // Modo mantenimiento: muestra un overlay a pantalla completa mientras se editan cambios en la web.
 // Para desactivarlo, pon MAINTENANCE_MODE en false.
 (function () {
-  var MAINTENANCE_MODE = true;
+  var MAINTENANCE_MODE = false;
 
   if (!MAINTENANCE_MODE) return;
 
