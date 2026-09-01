@@ -351,7 +351,7 @@ const translations = {
     'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'reel-tag': 'Vive la experiencia',
-    'reel-title': 'Así se vive la experiencia <em>Valencia Basket Cup</em>',
+    'reel-title': 'Así se vive la experiencia <em>Valencia International Cup</em>',
     'testimonios-tag': 'Testimonios',
     'testimonios-title': 'Lo que dicen <em>los equipos</em>',
     'testimonio1-text': 'Un tournoi exceptionnel pour nos jeunes joueurs. L\'organisation était impeccable et l\'ambiance à Valence restera gravée dans nos mémoires.',
@@ -720,7 +720,7 @@ const translations = {
     'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'reel-tag': 'Live the experience',
-    'reel-title': 'This is what living the <em>Valencia Basket Cup</em> experience feels like',
+    'reel-title': 'This is what living the <em>Valencia International Cup</em> experience feels like',
     'testimonios-tag': 'Testimonials',
     'testimonios-title': 'What the <em>teams say</em>',
     'testimonio1-text': 'Un tournoi exceptionnel pour nos jeunes joueurs. L\'organisation était impeccable et l\'ambiance à Valence restera gravée dans nos mémoires.',
@@ -1132,7 +1132,7 @@ const translations = {
     'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'reel-tag': 'Vivez l\'expérience',
-    'reel-title': 'Voici comment se vit l\'expérience <em>Valencia Basket Cup</em>',
+    'reel-title': 'Voici comment se vit l\'expérience <em>Valencia International Cup</em>',
     'testimonios-tag': 'Témoignages',
     'testimonios-title': 'Ce que disent <em>les équipes</em>',
     'testimonio1-text': 'Un tournoi exceptionnel pour nos jeunes joueurs. L\'organisation était impeccable et l\'ambiance à Valence restera gravée dans nos mémoires.',
@@ -1542,7 +1542,7 @@ const translations = {
     'country-uy': 'Uruguay',
     /* TESTIMONIOS */
     'reel-tag': 'Vivi l\'esperienza',
-    'reel-title': 'Così si vive l\'esperienza <em>Valencia Basket Cup</em>',
+    'reel-title': 'Così si vive l\'esperienza <em>Valencia International Cup</em>',
     'testimonios-tag': 'Testimonianze',
     'testimonios-title': 'Cosa dicono <em>le squadre</em>',
     'testimonio1-text': 'Un tournoi exceptionnel pour nos jeunes joueurs. L\'organisation était impeccable et l\'ambiance à Valence restera gravée dans nos mémoires.',
@@ -1952,7 +1952,7 @@ const translations = {
     'country-uy': 'Uruguai',
     /* TESTIMONIOS */
     'reel-tag': 'Viva a experiência',
-    'reel-title': 'É assim que se vive a experiência <em>Valencia Basket Cup</em>',
+    'reel-title': 'É assim que se vive a experiência <em>Valencia International Cup</em>',
     'testimonios-tag': 'Testemunhos',
     'testimonios-title': 'O que dizem <em>as equipas</em>',
     'testimonio1-text': 'Un tournoi exceptionnel pour nos jeunes joueurs. L\'organisation était impeccable et l\'ambiance à Valence restera gravée dans nos mémoires.',
