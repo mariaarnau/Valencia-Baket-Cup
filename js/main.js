@@ -256,6 +256,13 @@ function openPDF(fileId) {
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
+function openLocalPDF(path) {
+  const modal = document.getElementById('pdfModal');
+  const frame = document.getElementById('pdfFrame');
+  frame.src = path;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 function closePDF() {
   const modal = document.getElementById('pdfModal');
   const frame = document.getElementById('pdfFrame');
