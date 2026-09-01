@@ -48,7 +48,11 @@
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero__bg">
-      <img src="Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" alt="L'Alqueria del Basket" class="hero__img" />
+      <img src="hero-slide-1.jpg" alt="Valencia Basket Cup" class="hero__img hero__slide hero__slide--active" />
+      <img src="hero-slide-2.jpg" alt="Valencia Basket Cup" class="hero__img hero__slide" />
+      <img src="hero-slide-3.jpg" alt="Valencia Basket Cup" class="hero__img hero__slide" />
+      <img src="hero-slide-4.jpg" alt="Valencia Basket Cup" class="hero__img hero__slide" />
+      <img src="hero-slide-5.jpg" alt="Valencia Basket Cup" class="hero__img hero__slide" />
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
@@ -717,6 +721,20 @@
 
     // init with saved language
     updateChatbotLang();
+  })();
+  </script>
+
+  <!-- HERO SLIDESHOW -->
+  <script>
+  (function() {
+    var slides = document.querySelectorAll('.hero__slide');
+    if (slides.length < 2) return;
+    var current = 0;
+    setInterval(function() {
+      slides[current].classList.remove('hero__slide--active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('hero__slide--active');
+    }, 5000);
   })();
   </script>
 

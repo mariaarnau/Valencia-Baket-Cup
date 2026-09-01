@@ -380,7 +380,16 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
   transform: scale(1.05);
+  transition: opacity 1.6s ease;
+}
+.hero__slide--active {
+  opacity: 1;
   animation: heroZoom 8s ease-out forwards;
 }
 @keyframes heroZoom {
