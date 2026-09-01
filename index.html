@@ -34,6 +34,7 @@
     </div>
     <ul class="nav__links">
       <li><a href="torneos.html" data-i18n="nav-torneos">Torneos</a></li>
+      <li><a href="training-stages.html" data-i18n="nav-training">Training Stages</a></li>
       <li><a href="galeria.html" data-i18n="nav-galeria">Galería</a></li>
       <li><a href="noticias.html" data-i18n="nav-noticias">Noticias</a></li>
       <li><a href="revista.html" data-i18n="nav-revista">Revista</a></li>
@@ -307,6 +308,7 @@
           <li><a href="index.html" data-i18n="footer-link-inicio">Inicio</a></li>
           <li><a href="galeria.html" data-i18n="footer-link-galeria">Galería</a></li>
           <li><a href="torneos.html" data-i18n="footer-link-torneos">Torneos</a></li>
+          <li><a href="training-stages.html" data-i18n="footer-link-training">Training Stages</a></li>
           <li><a href="noticias.html" data-i18n="footer-link-noticias">Noticias</a></li>
           <li><a href="revista.html" data-i18n="footer-link-revista">Revista</a></li>
           <li><a href="pagos.html" data-i18n="footer-link-inscripcion">Inscripción</a></li>
@@ -338,6 +340,26 @@
       </p>
     </div>
   </footer>
+
+  <!-- ANUNCIO TRAINING STAGES -->
+  <div class="ts-announce" id="tsAnnounce">
+    <div class="ts-announce__backdrop" id="tsAnnounceBackdrop"></div>
+    <div class="ts-announce__box">
+      <button class="ts-announce__close" id="tsAnnounceClose" aria-label="Cerrar">✕</button>
+      <div class="ts-announce__img-wrap">
+        <img src="training-stages-grupo.jpg" alt="Training Stages en Valencia" />
+        <span class="ts-announce__badge" data-i18n="ts-banner-badge">Nuevo</span>
+      </div>
+      <div class="ts-announce__content">
+        <h3 class="ts-announce__title" data-i18n="ts-banner-headline">🏀 Entrena en Valencia todo el año</h3>
+        <p class="ts-announce__sub" data-i18n-html="ts-banner-sub">Training Stages: la experiencia deportiva y cultural para clubes internacionales en L'Alqueria del Basket.</p>
+        <div class="ts-announce__btns">
+          <a href="training-stages.html" class="btn btn--primary" data-i18n="ts-banner-btn1">Descubre el programa</a>
+          <a href="training-stages.html#ts-quote" class="btn btn--card" data-i18n="ts-banner-btn2">Pedir información</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- MODAL PDF -->
   <div class="pdf-modal" id="pdfModal">
@@ -429,7 +451,7 @@
     </button>
   </div>
 
-  <script src="js/main.js?v=11"></script>
+  <script src="js/main.js?v=12"></script>
   <!-- MAPA MUNDIAL -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
@@ -764,6 +786,27 @@
       <button class="cookie-banner__accept" id="cookieAccept">Aceptar todas</button>
     </div>
   </div>
+  <script>
+    (function() {
+      var announce = document.getElementById('tsAnnounce');
+      if (!announce) return;
+      if (!localStorage.getItem('ts_banner_seen')) {
+        setTimeout(function() { announce.classList.add('open'); }, 1200);
+      }
+      function closeAnnounce() {
+        announce.classList.remove('open');
+        localStorage.setItem('ts_banner_seen', '1');
+      }
+      document.getElementById('tsAnnounceClose').addEventListener('click', closeAnnounce);
+      document.getElementById('tsAnnounceBackdrop').addEventListener('click', closeAnnounce);
+      announce.querySelectorAll('.ts-announce__btns a').forEach(function(a) {
+        a.addEventListener('click', function() { localStorage.setItem('ts_banner_seen', '1'); });
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && announce.classList.contains('open')) closeAnnounce();
+      });
+    })();
+  </script>
   <script>
     (function() {
       var banner = document.getElementById('cookieBanner');

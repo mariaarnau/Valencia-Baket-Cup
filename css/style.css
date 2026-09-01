@@ -2044,6 +2044,119 @@ body:has(a:hover, button:hover, .galeria__item:hover) .cursor-follower {
 }
 
 /* ================================
+   ANUNCIO TRAINING STAGES (home)
+================================ */
+.ts-announce {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999998;
+}
+.ts-announce.open { display: block; }
+
+.ts-announce__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(4px);
+}
+
+.ts-announce__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: min(520px, 92vw);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-announce__img-wrap {
+  position: relative;
+  height: 170px;
+  flex-shrink: 0;
+}
+.ts-announce__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ts-announce__img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--black-card) 0%, rgba(0,0,0,0) 55%);
+}
+.ts-announce__badge {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.ts-announce__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: rgba(10,10,10,0.55);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 10;
+}
+.ts-announce__close:hover { background: rgba(10,10,10,0.85); }
+
+.ts-announce__content {
+  padding: 24px 28px 28px;
+  overflow-y: auto;
+}
+.ts-announce__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.ts-announce__sub {
+  font-size: 0.9rem;
+  color: var(--white-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.ts-announce__btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ts-announce__btns .btn { flex: 1; text-align: center; justify-content: center; white-space: nowrap; }
+
+@media (max-width: 480px) {
+  .ts-announce__content { padding: 20px 20px 24px; }
+  .ts-announce__title { font-size: 1.3rem; }
+  .ts-announce__btns { flex-direction: column; }
+}
+
+/* ================================
    CONTACTO
 ================================ */
 .contacto {
