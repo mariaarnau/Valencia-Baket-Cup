@@ -249,7 +249,14 @@ if (contactForm) {
 /* ================================
    PDF MODAL
 ================================ */
+function isMobileDevice() {
+  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
 function openPDF(fileId) {
+  if (isMobileDevice()) {
+    window.open(`https://drive.google.com/file/d/${fileId}/view`, '_blank');
+    return;
+  }
   const modal = document.getElementById('pdfModal');
   const frame = document.getElementById('pdfFrame');
   frame.src = `https://drive.google.com/file/d/${fileId}/preview`;
@@ -257,6 +264,10 @@ function openPDF(fileId) {
   document.body.style.overflow = 'hidden';
 }
 function openLocalPDF(path) {
+  if (isMobileDevice()) {
+    window.open(path, '_blank');
+    return;
+  }
   const modal = document.getElementById('pdfModal');
   const frame = document.getElementById('pdfFrame');
   frame.src = path;
