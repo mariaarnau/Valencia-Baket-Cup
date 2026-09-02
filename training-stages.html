@@ -31,12 +31,7 @@
     "name": "Training Stages",
     "description": "International basketball training stage program in Valencia, Spain, combining elite training at L'Alqueria del Basket, friendly matches and cultural immersion.",
     "provider": { "@type": "Organization", "name": "R&O Eventos Deportivos", "telephone": "+34670386418", "email": "e.arnau@roeventos.com" },
-    "areaServed": { "@type": "City", "name": "Valencia, Spain" },
-    "offers": [
-      { "@type": "Offer", "name": "Base", "price": "520", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Premium", "price": "890", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Élite", "price": "1350", "priceCurrency": "EUR" }
-    ]
+    "areaServed": { "@type": "City", "name": "Valencia, Spain" }
   }
   </script>
   <style>
@@ -92,20 +87,6 @@
     .ts-day__title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
     .ts-day__desc { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; color: var(--white-faint); line-height: 1.7; }
 
-    .ts-plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
-    .ts-plan { position: relative; background: var(--black-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 34px 28px; display: flex; flex-direction: column; }
-    .ts-plan--popular { border-color: var(--gold); }
-    .ts-plan__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--black); font-family: var(--font-body); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; white-space: nowrap; }
-    .ts-plan__name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
-    .ts-plan__nights { font-family: var(--font-body); font-size: 0.78rem; color: var(--white-faint); margin-bottom: 20px; }
-    .ts-plan__price { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 2px; }
-    .ts-plan__price small { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white-faint); }
-    .ts-plan__divider { height: 1px; background: rgba(255,255,255,0.08); margin: 22px 0; }
-    .ts-plan__list { list-style: none; padding: 0; margin: 0 0 28px; flex-grow: 1; }
-    .ts-plan__list li { display: flex; gap: 9px; align-items: flex-start; font-family: var(--font-body); font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.8); line-height: 1.55; margin-bottom: 11px; }
-    .ts-plan__list li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
-    .ts-price-note { text-align: center; font-family: var(--font-body); font-size: 0.82rem; color: var(--white-faint); max-width: 640px; margin: 32px auto 0; line-height: 1.7; }
-
     .ts-included { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px 40px; }
     .ts-included__cat h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--orange); margin-bottom: 14px; }
     .ts-included__cat ul { list-style: none; padding: 0; margin: 0; }
@@ -143,7 +124,6 @@
       .ts-proof__grid img { height: 220px; }
       .ts-section { padding: 64px 24px; }
       .ts-pillars, .ts-stats { grid-template-columns: repeat(2, 1fr); }
-      .ts-plans { grid-template-columns: 1fr; }
       .ts-included, .ts-terms { grid-template-columns: 1fr; gap: 32px; }
       .ts-quote { grid-template-columns: 1fr; gap: 40px; }
       .ts-quote__form { grid-template-columns: 1fr; }
@@ -193,7 +173,7 @@
       </div>
       <div class="ts-hero__btns">
         <a href="#ts-quote" class="btn btn--hero" data-i18n="ts-btn-presupuesto">Pide tu presupuesto</a>
-        <a href="#ts-plans" class="btn btn--card" data-i18n="ts-btn-planes">Ver planes y precios</a>
+        <a href="#ts-programa" class="btn btn--card" data-i18n="ts-btn-planes">Ver el programa</a>
       </div>
     </div>
   </div>
@@ -211,7 +191,7 @@
   </section>
 
   <!-- PROGRAMA -->
-  <section class="ts-section">
+  <section class="ts-section" id="ts-programa">
     <div class="ts-section__inner">
       <span class="ts-section__tag" data-i18n="ts-prog-tag">El programa</span>
       <h2 class="ts-section__title" data-i18n-html="ts-prog-title">Una inmersión deportiva y cultural para clubes que quieren <em>dar el salto</em></h2>
@@ -263,7 +243,7 @@
     <div class="ts-section__inner">
       <span class="ts-section__tag" data-i18n="ts-it-tag">Ejemplo de planning</span>
       <h2 class="ts-section__title" data-i18n-html="ts-it-title">Así es una estancia de <em>7 noches</em></h2>
-      <p class="ts-section__lead" data-i18n="ts-it-lead">Cada stage se adapta en duración e intensidad — este es el programa Élite completo.</p>
+      <p class="ts-section__lead" data-i18n="ts-it-lead">Cada stage se adapta en duración e intensidad — este es un ejemplo de programa completo de 7 noches.</p>
       <div class="ts-days">
         <div class="ts-day reveal">
           <span class="ts-day__num">01</span>
@@ -289,70 +269,12 @@
     </div>
   </section>
 
-  <!-- PRECIOS -->
-  <section class="ts-section ts-section--alt" id="ts-plans">
-    <div class="ts-section__inner">
-      <span class="ts-section__tag" data-i18n="ts-price-tag">Inversión</span>
-      <h2 class="ts-section__title" data-i18n-html="ts-price-title">Elige la experiencia que encaja con tu <em>club</em></h2>
-      <p class="ts-section__lead" data-i18n="ts-price-lead">Tres planes de referencia para empezar a hablar — cada grupo termina con un presupuesto a medida.</p>
-      <div class="ts-plans">
-        <div class="ts-plan reveal">
-          <span class="ts-plan__name">Base</span>
-          <span class="ts-plan__nights" data-i18n="ts-plan-base-nights">3 noches · hostal o similar</span>
-          <div class="ts-plan__price">520€ <small data-i18n="ts-price-suffix">/ persona, desde</small></div>
-          <div class="ts-plan__divider"></div>
-          <ul class="ts-plan__list">
-            <li data-i18n="ts-plan-base-f1">Pensión completa</li>
-            <li data-i18n-html="ts-plan-base-f2">2 sesiones de entrenamiento en L'Alqueria</li>
-            <li data-i18n="ts-plan-base-f3">1 partido amistoso</li>
-            <li data-i18n="ts-plan-base-f4">Traslados aeropuerto ↔ alojamiento</li>
-            <li data-i18n="ts-plan-base-f5">Seguro médico básico</li>
-            <li data-i18n="ts-plan-base-f6">Supervisor durante el programa</li>
-          </ul>
-          <a href="#ts-quote" class="btn btn--card ts-plan-cta" data-plan="Base" data-i18n="ts-plan-cta">Pedir este plan</a>
-        </div>
-        <div class="ts-plan ts-plan--popular reveal">
-          <span class="ts-plan__badge" data-i18n="ts-plan-popular">Más popular</span>
-          <span class="ts-plan__name">Premium</span>
-          <span class="ts-plan__nights" data-i18n="ts-plan-premium-nights">5 noches · hotel 3★</span>
-          <div class="ts-plan__price">890€ <small data-i18n="ts-price-suffix">/ persona, desde</small></div>
-          <div class="ts-plan__divider"></div>
-          <ul class="ts-plan__list">
-            <li data-i18n="ts-plan-base-f1">Pensión completa</li>
-            <li data-i18n="ts-plan-premium-f2">4 sesiones de entrenamiento</li>
-            <li data-i18n="ts-plan-premium-f3">2 partidos amistosos</li>
-            <li data-i18n="ts-plan-premium-f4">City tour histórico de Valencia</li>
-            <li data-i18n="ts-plan-premium-f5">Traslados durante toda la estancia</li>
-            <li data-i18n="ts-plan-premium-f6">Seguro médico completo + supervisor</li>
-          </ul>
-          <a href="#ts-quote" class="btn btn--primary ts-plan-cta" data-plan="Premium" data-i18n="ts-plan-cta">Pedir este plan</a>
-        </div>
-        <div class="ts-plan reveal">
-          <span class="ts-plan__name">Élite</span>
-          <span class="ts-plan__nights" data-i18n="ts-plan-elite-nights">7 noches · hotel 4★</span>
-          <div class="ts-plan__price">1.350€ <small data-i18n="ts-price-suffix">/ persona, desde</small></div>
-          <div class="ts-plan__divider"></div>
-          <ul class="ts-plan__list">
-            <li data-i18n="ts-plan-elite-f1">Pensión completa VIP</li>
-            <li data-i18n="ts-plan-elite-f2">5 sesiones de entrenamiento personalizadas</li>
-            <li data-i18n="ts-plan-elite-f3">3 partidos amistosos</li>
-            <li data-i18n="ts-plan-elite-f4">Ciudad de las Artes y las Ciencias + city tour</li>
-            <li data-i18n="ts-plan-elite-f5">Entrada a partido ACB / Euroliga en el Roig Arena</li>
-            <li data-i18n="ts-plan-elite-f6">Traslados premium + supervisor dedicado</li>
-          </ul>
-          <a href="#ts-quote" class="btn btn--card ts-plan-cta" data-plan="Élite" data-i18n="ts-plan-cta">Pedir este plan</a>
-        </div>
-      </div>
-      <p class="ts-price-note" data-i18n="ts-price-note">Estos son precios de referencia orientativos, no tarifas cerradas. Tenemos convenios con hoteles en Valencia y negociamos descuentos por grupo, así que el presupuesto final depende del tamaño del grupo, las fechas y el alojamiento elegido. Mínimo 15 jugadores · descuentos desde 25 · programas totalmente a medida desde 30.</p>
-    </div>
-  </section>
-
   <!-- INCLUYE -->
-  <section class="ts-section">
+  <section class="ts-section ts-section--alt">
     <div class="ts-section__inner">
       <span class="ts-section__tag" data-i18n="ts-inc-tag">Qué incluye</span>
       <h2 class="ts-section__title" data-i18n-html="ts-inc-title">Un programa sin complicaciones — <em>tú solo piensa en jugar</em></h2>
-      <p class="ts-section__lead" data-i18n="ts-inc-lead">Los seis pilares que sostienen los tres planes; los niveles superiores amplían cada uno de ellos.</p>
+      <p class="ts-section__lead" data-i18n="ts-inc-lead">Los seis pilares que sostienen cada Training Stage; los adaptamos a la duración y al nivel de tu grupo.</p>
       <div class="ts-included">
         <div class="ts-included__cat">
           <h4 data-i18n="ts-inc-cat1">Alojamiento</h4>
@@ -407,7 +329,7 @@
   </section>
 
   <!-- CONDICIONES -->
-  <section class="ts-section ts-section--alt">
+  <section class="ts-section">
     <div class="ts-section__inner">
       <span class="ts-section__tag" data-i18n="ts-terms-tag">Condiciones</span>
       <h2 class="ts-section__title" data-i18n-html="ts-terms-title">Transparencia y confianza en <em>cada paso</em></h2>
@@ -454,8 +376,8 @@
             <div class="faq__a"><p data-i18n="ts-faq-a1">Garantizamos la experiencia completa a partir de 15 jugadores. Desde 25 hay descuentos especiales, y desde 30 se puede pedir un calendario totalmente a medida.</p></div>
           </div>
           <div class="faq__item">
-            <button class="faq__q" data-i18n="ts-faq-q2">¿El precio es fijo?<span class="faq__icon">›</span></button>
-            <div class="faq__a"><p data-i18n="ts-faq-a2">No. Los tres planes son precios de referencia para empezar. El presupuesto final depende del tamaño del grupo, las fechas exactas y las tarifas negociadas con hoteles de Valencia.</p></div>
+            <button class="faq__q" data-i18n="ts-faq-q2">¿Cuánto cuesta?<span class="faq__icon">›</span></button>
+            <div class="faq__a"><p data-i18n="ts-faq-a2">Preparamos un presupuesto a medida para cada grupo. Depende del número de jugadores, las fechas, la duración de la estancia y el alojamiento elegido. Trabajamos con tarifas negociadas con hoteles de Valencia y descuentos por grupo.</p></div>
           </div>
         </div>
         <div class="faq__col">
@@ -506,12 +428,12 @@
             <input type="number" id="ts-size" name="group_size" min="1" required />
           </div>
           <div class="ts-quote__field">
-            <label for="ts-plan" data-i18n="ts-form-plan">Plan de interés</label>
-            <select id="ts-plan" name="plan">
-              <option value="Base" data-i18n="ts-form-plan-base">Base — 3 noches</option>
-              <option value="Premium" selected data-i18n="ts-form-plan-premium">Premium — 5 noches</option>
-              <option value="Élite" data-i18n="ts-form-plan-elite">Élite — 7 noches</option>
-              <option value="A medida" data-i18n="ts-form-plan-custom">A medida / aún no lo sé</option>
+            <label for="ts-duracion" data-i18n="ts-form-plan">Duración aproximada</label>
+            <select id="ts-duracion" name="duracion">
+              <option value="3 noches" data-i18n="ts-form-plan-base">3 noches</option>
+              <option value="5 noches" selected data-i18n="ts-form-plan-premium">5 noches</option>
+              <option value="7 noches" data-i18n="ts-form-plan-elite">7 noches</option>
+              <option value="Otra" data-i18n="ts-form-plan-custom">Otra / aún no lo sé</option>
             </select>
           </div>
           <div class="ts-quote__field ts-quote__field--full">
@@ -646,15 +568,8 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=14"></script>
+  <script src="js/main.js?v=15"></script>
   <script>
-    document.querySelectorAll('.ts-plan-cta').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var select = document.getElementById('ts-plan');
-        if (select) select.value = btn.dataset.plan === 'Élite' ? 'Élite' : btn.dataset.plan;
-      });
-    });
-
     (function () {
       var form = document.getElementById('quoteForm');
       if (!form) return;
