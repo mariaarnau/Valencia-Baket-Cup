@@ -3223,8 +3223,9 @@ document.querySelectorAll('.faq__q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.parentElement;
     const isOpen = item.classList.contains('open');
-    // close all in same group
-    item.closest('.faq__group').querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+    // close all in same group (pages without .faq__group fall back to .faq__col)
+    const scope = item.closest('.faq__group, .faq__col');
+    if (scope) scope.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
   });
 });
