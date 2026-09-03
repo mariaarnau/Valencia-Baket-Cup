@@ -229,20 +229,43 @@ if (torneosGrid) {
 ================================ */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+  const contactFormError = document.getElementById('contactFormError');
+  const contactBtnDefaultText = 'Enviar mensaje';
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type=submit]');
-    btn.textContent = '✓ Mensaje enviado';
-    btn.style.background = '#1a6e1a';
-    btn.style.borderColor = '#1a6e1a';
-    btn.style.color = 'white';
-    setTimeout(() => {
-      btn.textContent = 'Enviar mensaje';
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      btn.style.color = '';
-      contactForm.reset();
-    }, 3500);
+    if (contactFormError) contactFormError.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    })
+      .then(response => {
+        if (!response.ok) throw new Error('send-failed');
+        btn.textContent = '✓ Mensaje enviado';
+        btn.style.background = '#1a6e1a';
+        btn.style.borderColor = '#1a6e1a';
+        btn.style.color = 'white';
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = contactBtnDefaultText;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          btn.style.color = '';
+          contactForm.reset();
+        }, 3500);
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = contactBtnDefaultText;
+        if (contactFormError) {
+          contactFormError.textContent = 'No se pudo enviar el mensaje. Escríbenos directamente a info@valenciabasketcup.com o al +34 670 386 418.';
+          contactFormError.style.display = 'block';
+        }
+      });
   });
 }
 
