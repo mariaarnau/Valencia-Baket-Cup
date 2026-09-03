@@ -19,7 +19,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$apiKey = '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';
+require __DIR__ . '/brevo-config.php';
 $listId = 3;
 
 $data = json_encode([
