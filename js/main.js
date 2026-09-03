@@ -570,17 +570,6 @@ const translations = {
     'footer-copy': '© 2026 Valencia Basket Cup · Todos los derechos reservados',
     'footer-privacy': 'Política de Privacidad',
     'patrocinadores-label': 'Con el apoyo de',
-    /* SUBSCRIBE MODAL */
-    'subscribe-title': 'Mantente al día',
-    'subscribe-sub': 'Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.',
-    'subscribe-li1': 'Resultados en tiempo real',
-    'subscribe-li2': 'Horarios e información de torneos',
-    'subscribe-li3': 'Novedades y noticias exclusivas',
-    'subscribe-li4': 'Ofertas de inscripción anticipada',
-    'subscribe-email-placeholder': 'Tu correo electrónico',
-    'subscribe-submit': 'Suscribirse',
-    'subscribe-consent': 'Acepto recibir comunicaciones de Valencia Basket Cup y que mis datos sean tratados conforme a la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidad</a>.',
-    'subscribe-legal': 'Puedes darte de baja en cualquier momento. Respetamos tu privacidad.',
     /* INDEX */
     'hero-eyebrow': 'El torneo de baloncesto más prestigioso del Mediterráneo',
     'hero-btn': 'Descubre los torneos',
@@ -812,8 +801,6 @@ const translations = {
     /* ALIASES — keys used in HTML */
     'footer-brand-desc': 'Torneo de baloncesto base a nivel internacional. Queremos que junto a tu equipo seas partícipe del Torneo de referencia en baloncesto base.',
     'footer-visit-shop': 'Visit Valencia Shop',
-    'subscribe-btn': 'Suscribirse',
-    'subscribe-placeholder': 'Tu correo electrónico',
     'articulo-btn-inscribirse': 'Inscribirse ahora',
     'articulo-sidebar-torneos-title': 'Próximos torneos',
     'articulo-sidebar-vbc-fecha': '3 — 5 Enero 2027',
@@ -1098,17 +1085,6 @@ const translations = {
     'footer-copy': '© 2026 Valencia Basket Cup · All rights reserved',
     'footer-privacy': 'Privacy Policy',
     'patrocinadores-label': 'Supported by',
-    /* SUBSCRIBE MODAL */
-    'subscribe-title': 'Stay up to date',
-    'subscribe-sub': 'Receive match results, tournament news and exclusive updates directly in your inbox.',
-    'subscribe-li1': 'Real-time results',
-    'subscribe-li2': 'Tournament schedules and information',
-    'subscribe-li3': 'Exclusive news and updates',
-    'subscribe-li4': 'Early registration offers',
-    'subscribe-email-placeholder': 'Your email address',
-    'subscribe-submit': 'Subscribe',
-    'subscribe-consent': 'I agree to receive communications from Valencia Basket Cup and for my data to be processed in accordance with the <a href="privacidad.html" target="_blank" style="color:var(--orange)">Privacy Policy</a>.',
-    'subscribe-legal': 'You can unsubscribe at any time. We respect your privacy.',
     /* INDEX */
     'hero-eyebrow': 'The most prestigious basketball tournament in the Mediterranean',
     'hero-btn': 'Discover the tournaments',
@@ -1340,8 +1316,6 @@ const translations = {
     /* ALIASES — keys used in HTML */
     'footer-brand-desc': 'International youth basketball tournament. We want your team to be part of the reference tournament in youth basketball.',
     'footer-visit-shop': 'Visit Valencia Shop',
-    'subscribe-btn': 'Subscribe',
-    'subscribe-placeholder': 'Your email address',
     'articulo-btn-inscribirse': 'Register now',
     'articulo-sidebar-torneos-title': 'Upcoming tournaments',
     'articulo-sidebar-vbc-fecha': 'January 3 — 5, 2027',
@@ -1671,19 +1645,6 @@ const translations = {
     'footer-privacy': 'Politique de confidentialité',
     'footer-visit-shop': 'Visit Valencia Shop',
     'patrocinadores-label': 'Avec le soutien de',
-    /* SUBSCRIBE MODAL */
-    'subscribe-title': 'Restez informé',
-    'subscribe-sub': 'Recevez les résultats de chaque journée, les actualités des tournois et des nouvelles exclusives directement dans votre boîte mail.',
-    'subscribe-li1': 'Résultats en temps réel',
-    'subscribe-li2': 'Horaires et informations des tournois',
-    'subscribe-li3': 'Actualités et nouvelles exclusives',
-    'subscribe-li4': 'Offres d\'inscription anticipée',
-    'subscribe-email-placeholder': 'Votre adresse e-mail',
-    'subscribe-submit': 'S\'abonner',
-    'subscribe-consent': 'J\'accepte de recevoir des communications de Valencia Basket Cup et que mes données soient traitées conformément à la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Politique de confidentialité</a>.',
-    'subscribe-legal': 'Vous pouvez vous désabonner à tout moment. Nous respectons votre vie privée.',
-    'subscribe-btn': 'S\'abonner',
-    'subscribe-placeholder': 'Votre adresse e-mail',
     /* INDEX */
     'hero-eyebrow': 'Le tournoi de basket le plus prestigieux de la Méditerranée',
     'hero-btn': 'Découvrir les tournois',
@@ -2240,19 +2201,6 @@ const translations = {
     'footer-privacy': 'Informativa sulla privacy',
     'footer-visit-shop': 'Visit Valencia Shop',
     'patrocinadores-label': 'Con il sostegno di',
-    /* SUBSCRIBE MODAL */
-    'subscribe-title': 'Rimani aggiornato',
-    'subscribe-sub': 'Ricevi i risultati di ogni giornata, le novità dei tornei e notizie esclusive direttamente nella tua casella di posta.',
-    'subscribe-li1': 'Risultati in tempo reale',
-    'subscribe-li2': 'Orari e informazioni sui tornei',
-    'subscribe-li3': 'Novità e notizie esclusive',
-    'subscribe-li4': 'Offerte di iscrizione anticipata',
-    'subscribe-email-placeholder': 'Il tuo indirizzo email',
-    'subscribe-submit': 'Iscriviti',
-    'subscribe-consent': 'Accetto di ricevere comunicazioni da Valencia Basket Cup e che i miei dati siano trattati in conformità con la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Politica sulla privacy</a>.',
-    'subscribe-legal': 'Puoi annullare l\'iscrizione in qualsiasi momento. Rispettiamo la tua privacy.',
-    'subscribe-btn': 'Iscriviti',
-    'subscribe-placeholder': 'Il tuo indirizzo email',
     /* INDEX */
     'hero-eyebrow': 'Il torneo di basket più prestigioso del Mediterraneo',
     'hero-btn': 'Scopri i tornei',
@@ -2809,19 +2757,6 @@ const translations = {
     'footer-privacy': 'Política de Privacidade',
     'footer-visit-shop': 'Visit Valencia Shop',
     'patrocinadores-label': 'Com o apoio de',
-    /* SUBSCRIBE MODAL */
-    'subscribe-title': 'Mantenha-se informado',
-    'subscribe-sub': 'Receba resultados de cada jornada, novidades dos torneios e notícias exclusivas diretamente no seu email.',
-    'subscribe-li1': 'Resultados em tempo real',
-    'subscribe-li2': 'Horários e informações dos torneios',
-    'subscribe-li3': 'Novidades e notícias exclusivas',
-    'subscribe-li4': 'Ofertas de inscrição antecipada',
-    'subscribe-email-placeholder': 'O seu endereço de email',
-    'subscribe-submit': 'Subscrever',
-    'subscribe-consent': 'Aceito receber comunicações da Valencia Basket Cup e que os meus dados sejam tratados de acordo com a <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidade</a>.',
-    'subscribe-legal': 'Pode cancelar a subscrição a qualquer momento. Respeitamos a sua privacidade.',
-    'subscribe-btn': 'Subscrever',
-    'subscribe-placeholder': 'O seu endereço de email',
     /* INDEX */
     'hero-eyebrow': 'O torneio de basquetebol mais prestigioso do Mediterrâneo',
     'hero-btn': 'Descubra os torneios',
@@ -3199,45 +3134,6 @@ langBtns.forEach(btn => btn.addEventListener('click', () => {
 
 const savedLang = localStorage.getItem('vbc-lang');
 if (savedLang && savedLang !== 'es') applyLanguage(savedLang);
-
-/* ================================
-   SUBSCRIBE MODAL
-================================ */
-(function() {
-  const btn = document.getElementById('subscribeBtn');
-  const modal = document.getElementById('subscribeModal');
-  const backdrop = document.getElementById('subscribeBackdrop');
-  const closeBtn = document.getElementById('subscribeClose');
-  const form = document.getElementById('subscribeForm');
-  if (!btn || !modal) return;
-
-  btn.addEventListener('click', () => modal.classList.add('open'));
-  backdrop.addEventListener('click', () => modal.classList.remove('open'));
-  closeBtn.addEventListener('click', () => modal.classList.remove('open'));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const email = form.querySelector('input[type="email"]').value;
-    const consent = document.getElementById('subscribeConsent');
-    if (!consent.checked) { consent.focus(); return; }
-    const box = form.closest('.subscribe-modal__box');
-
-    fetch('/subscribe.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email })
-    });
-
-    box.innerHTML = `
-      <div class="subscribe-modal__success">
-        <div style="font-size:48px;margin-bottom:16px;">✓</div>
-        <h4>¡Suscripción confirmada!</h4>
-        <p>Te enviaremos resultados, horarios y novedades de cada torneo a <strong>${email}</strong>.</p>
-      </div>`;
-    setTimeout(() => modal.classList.remove('open'), 3000);
-  });
-})();
 
 /* ================================
    FAQ ACORDEÓN
