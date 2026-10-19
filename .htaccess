@@ -1,3 +1,14 @@
+# Forzar HTTPS y dominio canónico sin www (301)
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://valenciabasketcup.com%{REQUEST_URI} [L,R=301]
+
+# Bloquear config.php
+<Files "config.php">
+  Require all denied
+</Files>
+
 # Cache control para HTML, CSS y JS — fuerza revalidación en cada visita
 <FilesMatch "\.(html|css|js)$">
   Header set Cache-Control "no-cache, must-revalidate"

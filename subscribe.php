@@ -1,6 +1,11 @@
 <?php
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
+$allowedOrigins = ['https://valenciabasketcup.com', 'https://www.valenciabasketcup.com'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowedOrigins, true)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+    header('Vary: Origin');
+}
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
@@ -19,8 +24,20 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$apiKey = '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';
+// La clave NO debe estar en el repositorio: se lee de la variable de entorno
+// BREVO_API_KEY o de config.php (ver config.example.php), que está en .gitignore.
+$apiKey = getenv('BREVO_API_KEY') ?: '';
 $listId = 3;
+if ($apiKey === '' && file_exists(__DIR__ . '/config.php')) {
+    $config = include __DIR__ . '/config.php';
+    $apiKey = $config['BREVO_API_KEY'] ?? '';
+    $listId = $config['BREVO_LIST_ID'] ?? $listId;
+}
+if ($apiKey === '') {
+    http_response_code(500);
+    echo json_encode(['error' => 'Server not configured']);
+    exit;
+}
 
 $data = json_encode([
     'email' => $email,

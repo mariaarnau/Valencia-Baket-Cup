@@ -3665,3 +3665,32 @@ button.hero__date-pill:hover {
   .cookie-banner__btns { width: 100%; }
   .cookie-banner__accept, .cookie-banner__reject { flex: 1; text-align: center; }
 }
+
+/* ================================
+   CTA INSCRIPCIÓN + WHATSAPP
+================================ */
+.nav__links a.nav__cta {
+  background: var(--orange);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+}
+.nav__links a.nav__cta::after { display: none; }
+.nav__links a.nav__cta:hover { color: #fff; filter: brightness(1.1); }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9000;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  transition: transform 0.2s;
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+.whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
