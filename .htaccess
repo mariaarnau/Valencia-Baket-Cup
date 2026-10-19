@@ -1,6 +1,7 @@
 # Forzar HTTPS y dominio canónico sin www (301)
 RewriteEngine On
-RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://valenciabasketcup.com%{REQUEST_URI} [L,R=301]
 
