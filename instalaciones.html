@@ -3,22 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instalaciones · Valencia Basket Cup</title>
-  <meta name="description" content="Descubre L'Alqueria del Basket y el pabellón Fuente de San Luis, las sedes oficiales de los torneos Valencia Basket Cup." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <title>Instalaciones y sedes · Valencia International Cup 2027</title>
+  <meta name="description" content="Conoce las 6 sedes de la Valencia International Cup 2027: Fuente de San Luis, Godella, El Vedat, El Cabañal, Malva-Rosa y Paterna. 15 pistas y la experiencia Roig Arena." />
   <link rel="canonical" href="https://valenciabasketcup.com/instalaciones.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Instalaciones · Valencia Basket Cup" />
-  <meta property="og:description" content="Descubre L'Alqueria del Basket y el pabellón Fuente de San Luis, las sedes oficiales de los torneos Valencia Basket Cup." />
+  <meta property="og:title" content="Instalaciones y sedes · Valencia International Cup 2027" />
+  <meta property="og:description" content="6 sedes, 15 pistas y un gran escenario central: descubre dónde se juega la Valencia International Cup 2027." />
   <meta property="og:url" content="https://valenciabasketcup.com/instalaciones.html" />
-  <meta property="og:image" content="https://valenciabasketcup.com/Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" />
+  <meta property="og:image" content="https://valenciabasketcup.com/sede-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Instalaciones · Valencia Basket Cup" />
-  <meta name="twitter:description" content="Descubre L'Alqueria del Basket y el pabellón Fuente de San Luis, las sedes oficiales de los torneos Valencia Basket Cup." />
-  <meta name="twitter:image" content="https://valenciabasketcup.com/Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" />
+  <meta name="twitter:title" content="Instalaciones y sedes · Valencia International Cup 2027" />
+  <meta name="twitter:description" content="6 sedes, 15 pistas y un gran escenario central: descubre dónde se juega la Valencia International Cup 2027." />
+  <meta name="twitter:image" content="https://valenciabasketcup.com/sede-hero.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
+  <style>
+    .sd-hero { position: relative; height: 88vh; min-height: 580px; display: flex; align-items: flex-end; overflow: hidden; }
+    .sd-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transform: scale(1.04); animation: sdZoom 18s ease-out forwards; }
+    @keyframes sdZoom { to { transform: scale(1); } }
+    .sd-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.6) 48%, rgba(10,10,10,0.2) 100%); }
+    .sd-hero__content { position: relative; z-index: 2; padding: 60px 80px 72px; max-width: 1060px; }
+    .sd-hero__eyebrow { display: inline-block; color: var(--orange); font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 2px solid var(--orange); }
+    .sd-hero__title { font-family: var(--font-display); font-size: clamp(2.8rem, 6.2vw, 5.2rem); font-weight: 900; color: #fff; line-height: 1.02; margin-bottom: 16px; }
+    .sd-hero__title em { color: var(--orange); font-style: italic; }
+    .sd-hero__tagline { font-family: var(--font-italic); font-style: italic; font-size: 1.3rem; color: rgba(255,255,255,0.78); margin-bottom: 30px; max-width: 640px; line-height: 1.5; }
+    .sd-hero__meta { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 34px; }
+    .sd-hero__meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .sd-hero__meta-label { font-family: var(--font-body); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .sd-hero__meta-value { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: #fff; }
+    .sd-hero__btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .sd-btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.4); }
+    .sd-btn-ghost::before { background: #fff; }
+    .sd-btn-ghost:hover { color: var(--black); border-color: #fff; }
+
+    .sd-section { padding: 96px 80px; }
+    .sd-section--alt { background: var(--black-soft); }
+    .sd-inner { max-width: 1180px; margin: 0 auto; }
+    .sd-tag { display: block; font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; text-align: center; }
+    .sd-title { font-family: var(--font-display); font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 800; color: #fff; text-align: center; margin: 0 auto 18px; line-height: 1.2; max-width: 760px; }
+    .sd-title em { color: var(--orange); font-style: italic; }
+    .sd-lead { font-family: var(--font-body); font-weight: 300; font-size: 1rem; color: var(--white-muted); text-align: center; max-width: 680px; margin: 0 auto 52px; line-height: 1.75; }
+
+    .sd-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
+    .sd-stat { padding: 34px 20px; background: var(--black-card); text-align: center; transition: background 0.3s ease; }
+    .sd-stat:hover { background: #1c1c1c; }
+    .sd-stat span { display: block; font-family: var(--font-display); font-size: 2.6rem; font-weight: 900; color: var(--orange); margin-bottom: 8px; line-height: 1; }
+    .sd-stat small { font-family: var(--font-body); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+    .sd-venue { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; margin-bottom: 96px; }
+    .sd-venue:last-child { margin-bottom: 0; }
+    .sd-venue--rev .sd-venue__media { order: 2; }
+    .sd-venue__media { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .sd-venue__photo { overflow: hidden; border-radius: 4px; background: var(--black-card); position: relative; }
+    .sd-venue__photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .sd-venue__photo:hover img { transform: scale(1.06); }
+    .sd-venue__photo--main { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+    .sd-venue__photo--sm { aspect-ratio: 4 / 3; }
+    .sd-venue__photo--main::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 -80px 80px -60px rgba(0,0,0,0.55); pointer-events: none; }
+    .sd-venue__num { font-family: var(--font-display); font-size: 4.2rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,107,0,0.55); margin-bottom: 6px; }
+    .sd-venue__badge { display: inline-block; background: var(--orange); color: var(--black); font-family: var(--font-body); font-size: 0.64rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 5px 12px; border-radius: 2px; margin-bottom: 14px; }
+    .sd-venue__loc { display: block; font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white-faint); margin-bottom: 8px; }
+    .sd-venue__name { font-family: var(--font-display); font-size: clamp(1.7rem, 2.8vw, 2.3rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 12px; }
+    .sd-venue__kicker { font-family: var(--font-body); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+    .sd-venue__desc { font-family: var(--font-body); font-size: 0.92rem; font-weight: 300; color: var(--white-muted); line-height: 1.8; margin-bottom: 28px; }
+    .sd-venue__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+    .sd-fact { background: var(--black-card); padding: 18px 14px; text-align: center; }
+    .sd-section--alt .sd-fact { background: #1a1a1a; }
+    .sd-fact strong { display: block; font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 6px; }
+    .sd-fact small { font-family: var(--font-body); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); }
+
+    .sd-roig { position: relative; overflow: hidden; }
+    .sd-roig__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+    .sd-roig__overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.74) 50%, rgba(10,10,10,0.92) 100%); }
+    .sd-roig .sd-inner { position: relative; z-index: 2; }
+    .sd-roig__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+    .sd-roig__card { background: rgba(22,22,22,0.88); border: 1px solid rgba(255,255,255,0.1); border-left: 3px solid var(--orange); border-radius: 4px; padding: 30px 30px; backdrop-filter: blur(3px); }
+    .sd-roig__card small { display: block; font-family: var(--font-body); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+    .sd-roig__card h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .sd-roig__card p { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; color: var(--white-muted); line-height: 1.75; }
+    .sd-roig__note { text-align: center; font-family: var(--font-body); font-size: 0.74rem; color: var(--white-faint); line-height: 1.7; max-width: 760px; margin: 0 auto; }
+
+    .sd-cta { text-align: center; }
+    .sd-cta__btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
+    .sd-cta__org { font-family: var(--font-body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white-faint); margin-bottom: 8px; }
+    .sd-cta__contact a { color: var(--orange); font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; }
+    .sd-cta__contact a:hover { color: var(--orange-light); }
+    .sd-disclaimer { margin-top: 44px; font-family: var(--font-body); font-size: 0.72rem; color: rgba(255,255,255,0.35); font-style: italic; }
+
+    @media (max-width: 1000px) {
+      .sd-hero { height: auto; min-height: 560px; }
+      .sd-hero__content { padding: 120px 24px 48px; }
+      .sd-hero__meta { gap: 24px; }
+      .sd-section { padding: 64px 24px; }
+      .sd-stats { grid-template-columns: repeat(2, 1fr); }
+      .sd-venue { grid-template-columns: 1fr; gap: 28px; margin-bottom: 72px; }
+      .sd-venue--rev .sd-venue__media { order: 0; }
+      .sd-roig__cards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .sd-venue__num { font-size: 3.2rem; }
+      .sd-fact strong { font-size: 1.2rem; }
+      .sd-fact { padding: 14px 8px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,8 +122,9 @@
       <span class="nav__logo-text">Valencia Basket Cup</span>
     </div>
     <ul class="nav__links">
-      <li><a href="instalaciones.html" class="nav__active" data-i18n="nav-instalaciones">Instalaciones</a></li>
       <li><a href="torneos.html" data-i18n="nav-torneos">Torneos</a></li>
+      <li><a href="training-stages.html" data-i18n="nav-training">Training Stages</a></li>
+      <li><a href="instalaciones.html" class="nav__active" data-i18n="nav-instalaciones">Instalaciones</a></li>
       <li><a href="galeria.html" data-i18n="nav-galeria">Galería</a></li>
       <li><a href="noticias.html" data-i18n="nav-noticias">Noticias</a></li>
       <li><a href="revista.html" data-i18n="nav-revista">Revista</a></li>
@@ -38,181 +132,169 @@
       <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
     </ul>
     <div class="nav__sponsors">
-      <a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener"><img src="LOGO ALQUERIA.png" alt="L'Alqueria del Basket" class="nav__sponsor-logo" /></a>
       <a href="https://roeventos.com" target="_blank" rel="noopener"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" /></a>
-      <a href="https://www.valenciabasket.com/museo-tour" target="_blank" rel="noopener"><img src="Valencia-Basket-Club-2017.png" alt="Valencia Basket Club" class="nav__sponsor-logo nav__sponsor-logo--color" /></a>
     </div>
     <button class="nav__burger" id="burger" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- HERO VÍDEO -->
-  <div class="inst-hero">
-    <video class="inst-hero__video" autoplay muted loop playsinline>
-      <source src="https://res.cloudinary.com/dcs3qewtk/video/upload/q_auto/alqueria_clip.mp4" type="video/mp4" />
-    </video>
-    <div class="inst-hero__overlay"></div>
-    <div class="inst-hero__content reveal">
-      <span class="inst-hero__tag" data-i18n="inst-hero-tag">Nuestras instalaciones</span>
-      <h1 class="inst-hero__title" data-i18n-html="inst-hero-title">Juega en la casa<br/>de <em>Valencia Basket</em></h1>
-      <p class="inst-hero__sub" data-i18n="inst-hero-sub">El centro de tecnificación de referencia en Europa</p>
+  <!-- HERO -->
+  <div class="sd-hero">
+    <img src="sede-hero.jpg" alt="Equipos desfilando en la Fuente de San Luis durante la Valencia International Cup" class="sd-hero__img" />
+    <div class="sd-hero__overlay"></div>
+    <div class="sd-hero__content">
+      <span class="sd-hero__eyebrow">VIC 2027 · Official Venues</span>
+      <h1 class="sd-hero__title" data-i18n-html="sd-hero-title">Una red de sedes.<br><em>Un mismo torneo.</em></h1>
+      <p class="sd-hero__tagline" data-i18n="sd-hero-tagline">Seis sedes, quince pistas y un gran escenario central para vivir la Valencia International Cup.</p>
+      <div class="sd-hero__meta">
+        <div class="sd-hero__meta-item"><span class="sd-hero__meta-label" data-i18n="sd-meta1-l">Sedes</span><span class="sd-hero__meta-value">6</span></div>
+        <div class="sd-hero__meta-item"><span class="sd-hero__meta-label" data-i18n="sd-meta2-l">Pistas VIC</span><span class="sd-hero__meta-value">15</span></div>
+        <div class="sd-hero__meta-item"><span class="sd-hero__meta-label" data-i18n="sd-meta3-l">Escenario central</span><span class="sd-hero__meta-value">Fuente de San Luis</span></div>
+      </div>
+      <div class="sd-hero__btns">
+        <a href="#sedes" class="btn btn--hero" data-i18n="sd-btn-sedes">Descubre las sedes</a>
+        <a href="pagos.html" class="btn sd-btn-ghost" data-i18n="sd-btn-inscribe">Inscribe a tu equipo</a>
+      </div>
     </div>
   </div>
 
-  <!-- INTRO -->
-  <section class="inst-intro">
-    <div class="inst-intro__inner reveal">
-      <div class="inst-intro__text">
-        <span class="section-header__tag" data-i18n="inst-intro-tag">L'Alqueria del Basket</span>
-        <h2 class="inst-intro__title" data-i18n-html="inst-intro-title">Instalaciones de<br/><em>primer nivel europeo</em></h2>
-        <p data-i18n="inst-intro-p1">L'Alqueria del Basket es el centro de tecnificación oficial de Valencia Basket, uno de los recintos deportivos más modernos y completos de Europa. Un espacio pensado para el alto rendimiento donde la luz natural, el diseño innovador y las mejores instalaciones se combinan para crear una experiencia única.</p>
-        <p data-i18n="inst-intro-p2">Con 13 pistas en total — 9 cubiertas con parquet de última generación y 4 exteriores — permite disputar hasta 13 partidos de forma simultánea. Cada pista interior cuenta con capacidad para 120 espectadores, videomarcador propio, canastas regulables y paredes acolchadas.</p>
-        <a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener" class="instalaciones__cta" data-i18n="instalaciones-cta">Conocer L'Alqueria →</a>
+  <!-- NUEVO MODELO -->
+  <section class="sd-section">
+    <div class="sd-inner">
+      <span class="sd-tag" data-i18n="sd-intro-tag">Nuevo modelo 2027</span>
+      <h2 class="sd-title" data-i18n-html="sd-intro-title">Un torneo, <em>varias sedes</em></h2>
+      <p class="sd-lead" data-i18n="sd-intro-lead">La Valencia International Cup 2027 evoluciona hacia un modelo de competición distribuido en diferentes sedes, manteniendo un gran escenario central y sumando pabellones preparados para concentrar partidos, equipos y público durante toda la jornada.</p>
+      <div class="sd-stats">
+        <div class="sd-stat reveal"><span>6</span><small data-i18n="sd-st1">Sedes en este dossier</small></div>
+        <div class="sd-stat reveal"><span>15</span><small data-i18n="sd-st2">Pistas VIC representadas</small></div>
+        <div class="sd-stat reveal"><span>1</span><small data-i18n="sd-st3">Main venue</small></div>
+        <div class="sd-stat reveal"><span data-i18n="sd-st4-v">8.000</span><small data-i18n="sd-st4">Espectadores en la sede central</small></div>
       </div>
-      <div class="inst-intro__stats">
-        <div class="inst-stat">
-          <span class="inst-stat__num">9</span>
-          <span class="inst-stat__label" data-i18n="inst-stat1">Pistas cubiertas</span>
+    </div>
+  </section>
+
+  <!-- SEDES -->
+  <section class="sd-section sd-section--alt" id="sedes">
+    <div class="sd-inner">
+      <span class="sd-tag" data-i18n="sd-venues-tag">Las sedes</span>
+      <h2 class="sd-title" data-i18n-html="sd-venues-title">Conoce los <em>pabellones</em> de la VIC 2027</h2>
+      <p class="sd-lead" data-i18n="sd-venues-lead">Seis instalaciones de baloncesto repartidas por Valencia y su área metropolitana, pensadas para vivir cada partido de cerca.</p>
+      <div class="sd-venue reveal">
+        <div class="sd-venue__media"><div class="sd-venue__photo sd-venue__photo--main"><img src="sede-fuente-san-luis.jpg" alt="Interior de la Fuente de San Luis, el pabellón central de la VIC" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-fuente-san-luis-2.jpg" alt="Grada de la Fuente de San Luis llena de equipos" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-fuente-san-luis-3.jpg" alt="Marcador de la Fuente de San Luis con la imagen de la VIC" loading="lazy" /></div></div>
+        <div class="sd-venue__text">
+          <div class="sd-venue__num">01</div>
+          <span class="sd-venue__badge" data-i18n="sd-badge-main">Escenario central</span>
+          <span class="sd-venue__loc"><span data-i18n="sd-c-valencia">Valencia</span></span>
+          <h3 class="sd-venue__name">Fuente de San Luis</h3>
+          <p class="sd-venue__kicker" data-i18n="sd-v1-k">El gran escenario de la VIC</p>
+          <p class="sd-venue__desc" data-i18n="sd-v1-d">Uno de los grandes escenarios del baloncesto valenciano y una sede ligada a la historia de la Valencia International Cup. Un pabellón para vivir los momentos más especiales del torneo con ambiente de gran competición.</p>
+          <div class="sd-venue__facts"><div class="sd-fact"><strong >1</strong><small data-i18n="sd-l-pista-central">Pista central</small></div><div class="sd-fact"><strong data-i18n="sd-v1-n1">8.000</strong><small data-i18n="sd-l-espect">Espectadores</small></div><div class="sd-fact"><strong data-i18n="sd-c-valencia">Valencia</strong><small data-i18n="sd-l-ciudad">Ciudad</small></div></div>
         </div>
-        <div class="inst-stat">
-          <span class="inst-stat__num">4</span>
-          <span class="inst-stat__label" data-i18n="inst-stat2">Pistas exteriores</span>
+      </div>
+      <div class="sd-venue sd-venue--rev reveal">
+        <div class="sd-venue__media"><div class="sd-venue__photo sd-venue__photo--main"><img src="sede-godella.jpg" alt="Pabellón Municipal de Godella con público en la grada" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-godella-2.jpg" alt="Pista del Pabellón de Godella" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-godella-3.jpg" alt="Grada del Pabellón de Godella" loading="lazy" /></div></div>
+        <div class="sd-venue__text">
+          <div class="sd-venue__num">02</div>
+          
+          <span class="sd-venue__loc">Godella · <span data-i18n="sd-c-valencia">Valencia</span></span>
+          <h3 class="sd-venue__name">Pabellón Municipal de Godella</h3>
+          <p class="sd-venue__kicker" data-i18n="sd-v2-k">Tradición y ambiente de competición</p>
+          <p class="sd-venue__desc" data-i18n="sd-v2-d">Una sede con fuerte tradición de baloncesto en el área de Valencia. Su grada próxima a la pista y su configuración permiten crear un ambiente intenso y cercano durante las jornadas de competición.</p>
+          <div class="sd-venue__facts"><div class="sd-fact"><strong >3</strong><small data-i18n="sd-l-pistas">Pistas VIC 2027</small></div><div class="sd-fact"><strong data-i18n="sd-v2-n">1.500</strong><small data-i18n="sd-l-aforo">Aforo</small></div><div class="sd-fact"><strong data-i18n="sd-c-godella">Godella</strong><small data-i18n="sd-l-ubic">Ubicación</small></div></div>
         </div>
-        <div class="inst-stat">
-          <span class="inst-stat__num">13</span>
-          <span class="inst-stat__label" data-i18n="inst-stat3">Partidos simultáneos</span>
+      </div>
+      <div class="sd-venue reveal">
+        <div class="sd-venue__media"><div class="sd-venue__photo sd-venue__photo--main"><img src="sede-vedat.jpg" alt="Pabellón El Vedat de Torrent, instalación multipista" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm" style="grid-column:1 / -1;aspect-ratio:16 / 7;"><img src="sede-vedat-2.jpg" alt="Pista del Pabellón El Vedat" loading="lazy" /></div></div>
+        <div class="sd-venue__text">
+          <div class="sd-venue__num">03</div>
+          
+          <span class="sd-venue__loc">Torrent · <span data-i18n="sd-c-valencia">Valencia</span></span>
+          <h3 class="sd-venue__name">Pabellón El Vedat</h3>
+          <p class="sd-venue__kicker" data-i18n="sd-v3-k">Amplitud y capacidad para competir</p>
+          <p class="sd-venue__desc" data-i18n="sd-v3-d">Una instalación de gran formato que permite concentrar diferentes partidos en un mismo espacio. Su amplitud, gradas y configuración multipista la convierten en uno de los principales núcleos operativos del nuevo modelo VIC 2027.</p>
+          <div class="sd-venue__facts"><div class="sd-fact"><strong >3</strong><small data-i18n="sd-l-pistas">Pistas VIC 2027</small></div><div class="sd-fact"><strong data-i18n="sd-v3-n">500</strong><small data-i18n="sd-l-aforo">Aforo</small></div><div class="sd-fact"><strong data-i18n="sd-c-torrent">Torrent</strong><small data-i18n="sd-l-ubic">Ubicación</small></div></div>
         </div>
-        <div class="inst-stat">
-          <span class="inst-stat__num">120</span>
-          <span class="inst-stat__label" data-i18n="inst-stat4">Espectadores por pista</span>
+      </div>
+      <div class="sd-venue sd-venue--rev reveal">
+        <div class="sd-venue__media"><div class="sd-venue__photo sd-venue__photo--main"><img src="sede-cabanal.jpg" alt="Partido en el Polideportivo El Cabañal" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-cabanal-2.jpg" alt="Pista del Polideportivo El Cabañal" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-cabanal-3.jpg" alt="Otra pista del Polideportivo El Cabañal" loading="lazy" /></div></div>
+        <div class="sd-venue__text">
+          <div class="sd-venue__num">04</div>
+          
+          <span class="sd-venue__loc"><span data-i18n="sd-c-valencia">Valencia</span></span>
+          <h3 class="sd-venue__name">Polideportivo El Cabañal</h3>
+          <p class="sd-venue__kicker" data-i18n="sd-v4-k">3 pistas. Un mismo escenario.</p>
+          <p class="sd-venue__desc" data-i18n="sd-v4-d">Una sede versátil e integrada en la ciudad de Valencia, preparada para concentrar varios partidos y equipos en un mismo espacio. Su configuración favorece una dinámica de torneo continua durante toda la jornada.</p>
+          <div class="sd-venue__facts"><div class="sd-fact"><strong >3</strong><small data-i18n="sd-l-pistas">Pistas VIC 2027</small></div><div class="sd-fact"><strong data-i18n="sd-v4-n">1.300</strong><small data-i18n="sd-l-aforo">Aforo</small></div><div class="sd-fact"><strong data-i18n="sd-c-valencia">Valencia</strong><small data-i18n="sd-l-ciudad">Ciudad</small></div></div>
+        </div>
+      </div>
+      <div class="sd-venue reveal">
+        <div class="sd-venue__media"><div class="sd-venue__photo sd-venue__photo--main"><img src="sede-malvarosa.jpg" alt="Partido con público en el Pavelló Malva-Rosa" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm" style="grid-column:1 / -1;aspect-ratio:16 / 7;"><img src="sede-malvarosa-2.jpg" alt="Fachada del Pavelló Malva-Rosa" loading="lazy" /></div></div>
+        <div class="sd-venue__text">
+          <div class="sd-venue__num">05</div>
+          
+          <span class="sd-venue__loc"><span data-i18n="sd-c-valencia">Valencia</span></span>
+          <h3 class="sd-venue__name">Pavelló Malva-Rosa</h3>
+          <p class="sd-venue__kicker" data-i18n="sd-v5-k">Baloncesto y competición en Valencia</p>
+          <p class="sd-venue__desc" data-i18n="sd-v5-d">Una sede preparada para vivir el baloncesto de cerca, con gradas junto a la pista y una ubicación plenamente urbana. Un punto de competición que combina funcionalidad, proximidad del público y presencia dentro de la ciudad de Valencia.</p>
+          <div class="sd-venue__facts"><div class="sd-fact"><strong >2</strong><small data-i18n="sd-l-pistas">Pistas VIC 2027</small></div><div class="sd-fact"><strong data-i18n="sd-v5-n">250</strong><small data-i18n="sd-l-aforo">Aforo</small></div><div class="sd-fact"><strong data-i18n="sd-c-valencia">Valencia</strong><small data-i18n="sd-l-ciudad">Ciudad</small></div></div>
+        </div>
+      </div>
+      <div class="sd-venue sd-venue--rev reveal">
+        <div class="sd-venue__media"><div class="sd-venue__photo sd-venue__photo--main"><img src="sede-paterna.jpg" alt="Partido en el Pabellón Municipal C.D.M. Paterna" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-paterna-2.jpg" alt="Pista de parquet del pabellón de Paterna" loading="lazy" /></div><div class="sd-venue__photo sd-venue__photo--sm"><img src="sede-paterna-3.jpg" alt="Grada del pabellón de Paterna" loading="lazy" /></div></div>
+        <div class="sd-venue__text">
+          <div class="sd-venue__num">06</div>
+          
+          <span class="sd-venue__loc">Paterna · <span data-i18n="sd-c-valencia">Valencia</span></span>
+          <h3 class="sd-venue__name">Pabellón Municipal C.D.M. Paterna</h3>
+          <p class="sd-venue__kicker" data-i18n="sd-v6-k">Capacidad y ambiente de baloncesto</p>
+          <p class="sd-venue__desc" data-i18n="sd-v6-d">Un complejo deportivo con tres pistas de competición y un pabellón principal de parquet con amplia grada. Su capacidad y configuración permiten concentrar equipos, partidos y público, convirtiéndolo en un núcleo sólido para el modelo multisede VIC 2027.</p>
+          <div class="sd-venue__facts"><div class="sd-fact"><strong >3</strong><small data-i18n="sd-l-pistas">Pistas VIC 2027</small></div><div class="sd-fact"><strong data-i18n="sd-v6-n">1.600</strong><small data-i18n="sd-l-aforo">Aforo</small></div><div class="sd-fact"><strong data-i18n="sd-c-paterna">Paterna</strong><small data-i18n="sd-l-ubic">Ubicación</small></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOTOS GRID -->
-  <section class="inst-galeria">
-    <div class="inst-galeria__grid">
-      <div class="inst-galeria__item inst-galeria__item--big reveal">
-        <img src="Daniel-Rueda_ERRE-arquitectura_Lalqueria-del-Basket_23.jpg" alt="Pista principal L'Alqueria" loading="lazy" />
-      </div>
-      <div class="inst-galeria__item reveal">
-        <img src="l-alqueria-del-basket-pista-acb-photo.jpeg" alt="Pista ACB L'Alqueria" loading="lazy" />
-      </div>
-      <div class="inst-galeria__item reveal">
-        <img src="LAlqueria-del-basket-02.jpg" alt="L'Alqueria del Basket" loading="lazy" />
-      </div>
-      <div class="inst-galeria__item reveal">
-        <img src="ERRE-arquitectura_Alqueria-del-Basket_03_interior-loocker-rooms.jpg" alt="Vestuarios L'Alqueria" loading="lazy" />
-      </div>
-      <div class="inst-galeria__item reveal">
-        <img src="instalaciones-2.jpg" alt="Instalaciones L'Alqueria" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- CARACTERÍSTICAS -->
-  <section class="inst-features">
-    <div class="inst-features__header reveal">
-      <span class="section-header__tag" data-i18n="inst-feat-tag">Todo lo que necesitas</span>
-      <h2 class="section-header__title" data-i18n-html="inst-feat-title">Una experiencia<br/><em>completa</em></h2>
-    </div>
-    <div class="inst-features__grid">
-      <div class="inst-feature reveal">
-        <div class="inst-feature__icon">🏀</div>
-        <h3 data-i18n="inst-feat1-title">9 pistas cubiertas de alta competición</h3>
-        <p data-i18n="inst-feat1-desc">Parquet de última generación, videomarcador individual por pista, canastas regulables adaptables a cada categoría y paredes acolchadas para mayor seguridad.</p>
-      </div>
-      <div class="inst-feature reveal">
-        <div class="inst-feature__icon">🌤️</div>
-        <h3 data-i18n="inst-feat2-title">4 pistas exteriores</h3>
-        <p data-i18n="inst-feat2-desc">Diseñadas para baloncesto de formación, con canastas regulables y suelo especial anti-inundación. Perfectas para categorías base y competiciones de tiro.</p>
-      </div>
-      <div class="inst-feature reveal">
-        <div class="inst-feature__icon">☀️</div>
-        <h3 data-i18n="inst-feat3-title">Luz natural todo el día</h3>
-        <p data-i18n="inst-feat3-desc">El policarbonato de la cubierta permite aprovechar la luz natural hasta altas horas de la tarde, reduciendo el consumo energético y mejorando el ambiente de juego.</p>
-      </div>
-      <div class="inst-feature reveal">
-        <div class="inst-feature__icon">🏃</div>
-        <h3 data-i18n="inst-feat4-title">Vestuarios y zonas de preparación</h3>
-        <p data-i18n="inst-feat4-desc">Vestuarios al nivel profesional europeo con zonas de calentamiento, sala médica y fisioterapia disponibles durante todo el torneo.</p>
-      </div>
-      <div class="inst-feature reveal">
-        <div class="inst-feature__icon">👨‍👩‍👧</div>
-        <h3 data-i18n="inst-feat5-title">Zona de familias y espectadores</h3>
-        <p data-i18n="inst-feat5-desc">Cafetería, zonas de descanso y hasta 120 espectadores por pista, para que las familias vivan cada partido de cerca.</p>
-      </div>
-      <div class="inst-feature reveal">
-        <div class="inst-feature__icon">🏆</div>
-        <h3 data-i18n="inst-feat6-title">Sede oficial Valencia Basket</h3>
-        <p data-i18n="inst-feat6-desc">El mismo recinto donde entrenan y se forman los jugadores del Valencia Basket, club referente en la EuroLeague.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LA FONTETA -->
-  <section class="inst-intro inst-intro--alt">
-    <div class="inst-intro__inner reveal">
-      <div class="inst-intro__text">
-        <span class="section-header__tag" data-i18n="inst-fonteta-tag">Pabellón Fuente de San Luis</span>
-        <h2 class="inst-intro__title" data-i18n-html="inst-fonteta-title">La Fonteta,<br/><em>historia del baloncesto valenciano</em></h2>
-        <p data-i18n="inst-fonteta-p1">El Pabellón Fuente de San Luis, conocido popularmente como La Fonteta, fue durante décadas el hogar del Valencia Basket. Un escenario histórico que ha vivido momentos épicos del baloncesto español y europeo, y que hoy sigue siendo escenario de grandes competiciones.</p>
-        <p data-i18n="inst-fonteta-p2">Con capacidad para más de 9.000 espectadores, La Fonteta ofrece una atmósfera incomparable para los torneos VBC, conectando a los jóvenes jugadores con la historia viva del baloncesto valenciano.</p>
-      </div>
-      <div class="inst-intro__stats">
-        <div class="inst-stat">
-          <span class="inst-stat__num">9.000</span>
-          <span class="inst-stat__label" data-i18n="inst-fonteta-stat1">Espectadores</span>
+  <!-- ROIG ARENA -->
+  <section class="sd-section sd-roig">
+    <img src="sede-roig-arena.jpg" alt="" class="sd-roig__bg" loading="lazy" />
+    <div class="sd-roig__overlay"></div>
+    <div class="sd-inner">
+      <span class="sd-tag" data-i18n="sd-roig-tag">Experiencia VIC 2027</span>
+      <h2 class="sd-title" data-i18n-html="sd-roig-title">Roig Arena: <em>mucho más que las sedes</em></h2>
+      <p class="sd-lead" data-i18n="sd-roig-lead">Durante las fechas del torneo, los equipos podrán completar su experiencia en Valencia asistiendo a un partido oficial en el Roig Arena, con entradas gestionadas a través de la organización VIC y sujetas a calendario y disponibilidad.</p>
+      <div class="sd-roig__cards">
+        <div class="sd-roig__card reveal">
+          <small data-i18n="sd-roig1-t">Game experience</small>
+          <h3 data-i18n="sd-roig1-h">Partido oficial</h3>
+          <p data-i18n="sd-roig1-d">Valencia Basket vs Bàsquet Girona, 28 de marzo a las 17:00 h, al finalizar el acto de clausura del torneo. Reserva las entradas con antelación para aprovechar el descuento para equipos VIC.</p>
         </div>
-        <div class="inst-stat">
-          <span class="inst-stat__num">30+</span>
-          <span class="inst-stat__label" data-i18n="inst-fonteta-stat2">Años de historia</span>
+        <div class="sd-roig__card reveal">
+          <small data-i18n="sd-roig2-t">Arena experience</small>
+          <h3 data-i18n="sd-roig2-h">Museo & Tour</h3>
+          <p data-i18n="sd-roig2-d">Recorrido por el universo Valencia Basket, con acceso a zonas de trabajo e interior del bowl. Reserva con antelación para aprovechar el descuento para equipos VIC.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- FOTOS FONTETA -->
-  <section class="inst-galeria inst-galeria--alt">
-    <div class="inst-galeria__grid inst-galeria__grid--three">
-      <div class="inst-galeria__item reveal">
-        <img src="fuente-san-luis-2.jpg" alt="La Fonteta - Pabellón Fuente de San Luis" loading="lazy" />
-      </div>
-      <div class="inst-galeria__item reveal">
-        <img src="fuente-san-luis-5-960x450.jpg" alt="La Fonteta interior" loading="lazy" />
-      </div>
-      <div class="inst-galeria__item reveal">
-        <img src="fuente-san-luis-6-960x450.jpg" alt="La Fonteta pista" loading="lazy" />
-      </div>
+      <p class="sd-roig__note" data-i18n="sd-roig-note">Experiencia complementaria · El Roig Arena no es sede de competición VIC 2027. Actividades sujetas a calendario, disponibilidad y condiciones operativas del recinto.</p>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="inst-cta">
-    <div class="inst-cta__inner reveal">
-      <h2 class="inst-cta__title" data-i18n-html="inst-cta-title">¿Listo para jugar en<br/><em>L'Alqueria</em> y <em>La Fonteta</em>?</h2>
-      <p data-i18n="inst-cta-sub">Inscribe a tu equipo y vive la experiencia de competir en dos de los recintos más emblemáticos del baloncesto valenciano.</p>
-      <a href="pagos.html" class="btn btn--hero" data-i18n="inst-cta-btn">Inscribirse ahora</a>
-    </div>
-  </section>
-
-  <!-- PATROCINADORES -->
-  <section class="patrocinadores">
-    <div class="patrocinadores__inner">
-      <span class="patrocinadores__label" data-i18n="patrocinadores-label">Con el apoyo de</span>
-      <div class="patrocinadores__logos">
-        <div class="patrocinadores__logo"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" /></div>
-        <div class="patrocinadores__logo"><img src="VALENCIA INTERNATIONAL CUP (negro).png" alt="Valencia International Cup" /></div>
-        
-        <div class="patrocinadores__logo"><img src="logo-valencia-turisme.png" alt="València Turisme" /></div>
-        <div class="patrocinadores__logo"><img src="logo_turisme_cv.png" alt="Turisme Comunitat Valenciana" /></div>
+  <section class="sd-section sd-cta">
+    <div class="sd-inner">
+      <span class="sd-tag" data-i18n="sd-cta-tag">Valencia International Cup 2027</span>
+      <h2 class="sd-title" data-i18n-html="sd-cta-title">Te esperamos <em>en Valencia</em></h2>
+      <p class="sd-lead" data-i18n="sd-cta-lead">Gracias por conocer nuestras sedes. Escríbenos para inscribir a tu equipo y vivir la Valencia International Cup 2027 en primera persona.</p>
+      <div class="sd-cta__btns">
+        <a href="pagos.html" class="btn btn--hero" data-i18n="sd-btn-inscribe">Inscribe a tu equipo</a>
+        <a href="contacto.html" class="btn sd-btn-ghost" data-i18n="sd-cta-btn2">Contacta con nosotros</a>
       </div>
+      <p class="sd-cta__org" data-i18n="sd-cta-org">R&O Eventos Deportivos · Dirección deportiva VIC 2027</p>
+      <p class="sd-cta__contact"><a href="tel:+34670386418">+34 670 386 418</a> · <a href="mailto:info@valenciabasketcup.com">info@valenciabasketcup.com</a></p>
+      <p class="sd-disclaimer" data-i18n="sd-disclaimer">La organización se reserva el derecho a modificar, sustituir o ampliar las sedes indicadas en esta página.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
@@ -229,18 +311,19 @@
           <div class="footer__news-date" data-i18n="footer-news1-date">15 Junio 2026</div>
           <div class="footer__news-title" data-i18n="footer-news1-title">VBC 2027 abre inscripciones con récord histórico de solicitudes</div>
         </a>
-        <a href="noticia-3.html" class="footer__news-item" style="display:block;text-decoration:none;">
-          <div class="footer__news-date" data-i18n="footer-news2-date">28 Junio 2026</div>
-          <div class="footer__news-title" data-i18n="footer-news2-title">El CB Castellón se corona campeón de la Valencia Summer Cup 2026</div>
+        <a href="noticia-5.html" class="footer__news-item" style="display:block;text-decoration:none;">
+          <div class="footer__news-date" data-i18n="footer-news2-date">20 Mayo 2026</div>
+          <div class="footer__news-title" data-i18n="footer-news2-title">Los Training Stages internacionales consolidan su crecimiento con 15 equipos durante 2026</div>
         </a>
       </div>
       <div class="footer__col">
         <h5 data-i18n="footer-links-title">Links</h5>
         <ul>
           <li><a href="index.html" data-i18n="footer-link-inicio">Inicio</a></li>
-          <li><a href="instalaciones.html" data-i18n="footer-link-instalaciones">Instalaciones</a></li>
           <li><a href="galeria.html" data-i18n="footer-link-galeria">Galería</a></li>
           <li><a href="torneos.html" data-i18n="footer-link-torneos">Torneos</a></li>
+          <li><a href="guia-clubes.html" data-i18n="g-footer">Guía para clubes</a></li>
+          <li><a href="training-stages.html" data-i18n="footer-link-training">Training Stages</a></li>
           <li><a href="noticias.html" data-i18n="footer-link-noticias">Noticias</a></li>
           <li><a href="revista.html" data-i18n="footer-link-revista">Revista</a></li>
           <li><a href="pagos.html" data-i18n="footer-link-inscripcion">Inscripción</a></li>
@@ -255,39 +338,21 @@
         </div>
         <div class="footer__contact-item">
           <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-          <a href="mailto:info@valenciabasketcup.com">info@valenciabasketcup.com</a>
+          <a href="mailto:e.arnau@roeventos.com">e.arnau@roeventos.com</a>
         </div>
         <ul style="margin-top:20px;">
-          <li><a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener">L'Alqueria del Basket →</a></li>
-          <li><a href="https://roeventos.com" target="_blank" rel="noopener">R&O Eventos →</a></li>
-          <li><a href="https://www.valenciabasket.com" target="_blank" rel="noopener">Valencia Basket Club →</a></li>
-        </ul>
+          <li><a href="https://roeventos.com" target="_blank" rel="noopener">R&amp;O Eventos →</a></li>        </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <p data-i18n="footer-copy">© 2026 Valencia Basket Cup · Todos los derechos reservados</p>
-      <p style="margin-top:6px;font-size:0.78rem;"><a href="privacidad.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;" data-i18n="footer-privacy">Política de Privacidad</a></p>
+      <p style="margin-top:6px;font-size:0.78rem;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <a href="privacidad.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Política de Privacidad</a>
+        <a href="aviso-legal.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Aviso Legal</a>
+        <a href="cookies.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Política de Cookies</a>
+      </p>
     </div>
   </footer>
-
-  <button class="subscribe-btn" id="subscribeBtn" aria-label="Suscribirse al boletín"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></button>
-  <div class="subscribe-modal" id="subscribeModal">
-    <div class="subscribe-modal__backdrop" id="subscribeBackdrop"></div>
-    <div class="subscribe-modal__box">
-      <button class="subscribe-modal__close" id="subscribeClose"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-      <div class="subscribe-modal__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-      <h3 class="subscribe-modal__title" data-i18n="subscribe-title">Mantente al día</h3>
-      <p class="subscribe-modal__sub" data-i18n="subscribe-sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
-      <form class="subscribe-modal__form" id="subscribeForm">
-        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" data-i18n-placeholder="subscribe-email-placeholder" required />
-        <label class="subscribe-modal__consent">
-          <input type="checkbox" id="subscribeConsent" required />
-          <span data-i18n-html="subscribe-consent">Acepto recibir comunicaciones de Valencia Basket Cup y que mis datos sean tratados conforme a la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidad</a>.</span>
-        </label>
-        <button type="submit" class="subscribe-modal__submit" data-i18n="subscribe-submit">Suscribirse</button>
-      </form>
-    </div>
-  </div>
 
   <div class="lang-switcher" id="langSwitcher">
     <button class="lang-switcher__toggle" id="langToggle" aria-label="Cambiar idioma">🌐</button>
@@ -303,6 +368,9 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=10"></script>
+  <script src="js/main.js?v=17"></script>
+  <script src="js/instalaciones-i18n.js"></script>
+  <script src="js/maintenance.js"></script>
+  <script src="js/vbc-extras.js" defer></script>
 </body>
 </html>

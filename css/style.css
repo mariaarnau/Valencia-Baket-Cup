@@ -3665,3 +3665,12 @@ button.hero__date-pill:hover {
   .cookie-banner__btns { width: 100%; }
   .cookie-banner__accept, .cookie-banner__reject { flex: 1; text-align: center; }
 }
+
+/* Menú superior con la pestaña "Instalaciones" (8 enlaces): ajuste de espacios para pantallas de 901 a 1500 px. No cambia nada fuera de ese rango. */
+@media (min-width: 901px) and (max-width: 1500px) {
+  .nav__links { gap: clamp(10px, 1.4vw, 24px); }
+  .nav__links a { letter-spacing: 0.06em; font-size: 0.7rem; white-space: nowrap; }
+}
+@media (min-width: 901px) and (max-width: 1220px) {
+  .nav__logo-text { display: none; }
+}
