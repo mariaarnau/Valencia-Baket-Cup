@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <title>Revista · Valencia Basket Cup</title>
   <meta name="description" content="Consulta las revistas oficiales de los torneos Valencia Basket Cup, Valencia International Cup y Valencia Summer Cup." />
   <link rel="canonical" href="https://valenciabasketcup.com/revista.html" />
@@ -18,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
 
@@ -29,8 +33,8 @@
       <span class="nav__logo-text">Valencia Basket Cup</span>
     </div>
     <ul class="nav__links">
-      <li><a href="index.html#worldmap" data-i18n="nav-instalaciones">Instalaciones</a></li>
       <li><a href="torneos.html" data-i18n="nav-torneos">Torneos</a></li>
+      <li><a href="training-stages.html" data-i18n="nav-training">Training Stages</a></li>
       <li><a href="galeria.html" data-i18n="nav-galeria">Galería</a></li>
       <li><a href="noticias.html" data-i18n="nav-noticias">Noticias</a></li>
       <li><a href="revista.html" class="nav__active" data-i18n="nav-revista">Revista</a></li>
@@ -38,9 +42,7 @@
       <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
     </ul>
     <div class="nav__sponsors">
-      <a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener"><img src="LOGO ALQUERIA.png" alt="L'Alqueria del Basket" class="nav__sponsor-logo" /></a>
       <a href="https://roeventos.com" target="_blank" rel="noopener"><img src="RO (CALIDAD) (1).png" alt="Valencia Basket" class="nav__sponsor-logo" /></a>
-      <a href="https://www.valenciabasket.com/museo-tour" target="_blank" rel="noopener"><img src="Valencia-Basket-Club-2017.png" alt="Valencia Basket Club" class="nav__sponsor-logo nav__sponsor-logo--color" /></a>
     </div>
     <button class="nav__burger" id="burger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -78,7 +80,7 @@
     <div class="revista-ediciones__grid">
 
       <!-- VBC -->
-      <div class="revista-ed reveal" onclick="openPDF('1ebSIRdyb8Zc61fpvUHRO0yvozp_g2oJ5')">
+      <div class="revista-ed reveal" onclick="openLocalPDF('revista_vbc.pdf?v=1')">
         <div class="revista-ed__img">
           <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_0187_ik0pne.jpg" alt="Revista Valencia Basket Cup" loading="lazy" />
           <div class="revista-ed__img-overlay"></div>
@@ -89,7 +91,7 @@
             <span class="revista-ed__year" data-i18n="revista-vbc-year">Enero 2027</span>
           </div>
           <h3 class="revista-ed__name">Valencia Basket Cup</h3>
-          <p class="revista-ed__desc" data-i18n="revista-vbc-desc">3 — 5 Enero 2027 · L'Alqueria del Basket</p>
+          <p class="revista-ed__desc" data-i18n="revista-vbc-desc">3 — 5 Enero 2027 · Valencia</p>
           <div class="revista-ed__cta">
             <span data-i18n="revista-leer">Leer revista</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -98,7 +100,7 @@
       </div>
 
       <!-- VIC -->
-      <div class="revista-ed reveal" style="position:relative" onclick="openPDF('1P_7chSc0yBg_yKu2v6TCMbmzCTyZM5TW')">
+      <div class="revista-ed reveal" style="position:relative" onclick="openLocalPDF('revista-vic.pdf?v=4')">
         <div class="revista-ed__badge" data-i18n="revista-vic-badge">Edición especial</div>
         <div class="revista-ed__img">
           <img src="IMG_7420.jpg" alt="Revista Valencia International Cup" loading="lazy" />
@@ -110,7 +112,7 @@
             <span class="revista-ed__year" data-i18n="revista-vic-year">Marzo 2027</span>
           </div>
           <h3 class="revista-ed__name">Valencia International Cup</h3>
-          <p class="revista-ed__desc" data-i18n="revista-vic-desc">25 — 28 Marzo 2027 · L'Alqueria del Basket</p>
+          <p class="revista-ed__desc" data-i18n="revista-vic-desc">25 — 28 Marzo 2027 · Valencia</p>
           <div class="revista-ed__cta">
             <span data-i18n="revista-leer">Leer revista</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -119,7 +121,7 @@
       </div>
 
       <!-- VSC -->
-      <div class="revista-ed reveal" onclick="openPDF('1Eh1mXUqYRiJdDBpgg3lnVulfwlfeglmM')">
+      <div class="revista-ed reveal" onclick="openLocalPDF('revista_vsc.pdf?v=1')">
         <div class="revista-ed__img">
           <img src="https://res.cloudinary.com/dcs3qewtk/image/upload/q_auto,f_auto/IMG_9719_wopul4.jpg" alt="Revista Valencia Summer Cup" loading="lazy" />
           <div class="revista-ed__img-overlay"></div>
@@ -130,7 +132,7 @@
             <span class="revista-ed__year" data-i18n="revista-vsc-year">Junio 2026</span>
           </div>
           <h3 class="revista-ed__name">Valencia Summer Cup</h3>
-          <p class="revista-ed__desc" data-i18n="revista-vsc-desc">25 — 27 Junio 2026 · L'Alqueria del Basket</p>
+          <p class="revista-ed__desc" data-i18n="revista-vsc-desc">25 — 27 Junio 2026 · Valencia</p>
           <div class="revista-ed__cta">
             <span data-i18n="revista-leer">Leer revista</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -173,18 +175,19 @@
           <div class="footer__news-date" data-i18n="footer-news1-date">15 Junio 2026</div>
           <div class="footer__news-title" data-i18n="footer-news1-title">VBC 2027 abre inscripciones con récord histórico de solicitudes</div>
         </a>
-        <a href="noticia-3.html" class="footer__news-item" style="display:block;text-decoration:none;">
-          <div class="footer__news-date" data-i18n="footer-news2-date">28 Junio 2026</div>
-          <div class="footer__news-title" data-i18n="footer-news2-title">El CB Castellón se corona campeón de la Valencia Summer Cup 2026</div>
+        <a href="noticia-5.html" class="footer__news-item" style="display:block;text-decoration:none;">
+          <div class="footer__news-date" data-i18n="footer-news2-date">20 Mayo 2026</div>
+          <div class="footer__news-title" data-i18n="footer-news2-title">Los Training Stages internacionales consolidan su crecimiento con 15 equipos durante 2026</div>
         </a>
       </div>
       <div class="footer__col">
         <h5 data-i18n="footer-links-title">Links</h5>
         <ul>
           <li><a href="index.html" data-i18n="footer-link-inicio">Inicio</a></li>
-          <li><a href="instalaciones.html" data-i18n="footer-link-instalaciones">Instalaciones</a></li>
           <li><a href="galeria.html" data-i18n="footer-link-galeria">Galería</a></li>
           <li><a href="torneos.html" data-i18n="footer-link-torneos">Torneos</a></li>
+          <li><a href="guia-clubes.html" data-i18n="g-footer">Guía para clubes</a></li>
+          <li><a href="training-stages.html" data-i18n="footer-link-training">Training Stages</a></li>
           <li><a href="noticias.html" data-i18n="footer-link-noticias">Noticias</a></li>
           <li><a href="revista.html" data-i18n="footer-link-revista">Revista</a></li>
           <li><a href="pagos.html" data-i18n="footer-link-inscripcion">Inscripción</a></li>
@@ -202,9 +205,7 @@
           <a href="mailto:info@valenciabasketcup.com">info@valenciabasketcup.com</a>
         </div>
         <ul style="margin-top:20px;">
-          <li><a href="https://www.alqueriadelbasket.com" target="_blank" rel="noopener">L'Alqueria del Basket →</a></li>
           <li><a href="https://roeventos.com" target="_blank" rel="noopener">R&O Eventos →</a></li>
-          <li><a href="https://www.valenciabasket.com" target="_blank" rel="noopener">Valencia Basket Club →</a></li>
         </ul>
       </div>
     </div>
@@ -225,34 +226,6 @@
 
   <!-- CURSOR PERSONALIZADO -->
   <!-- SELECTOR IDIOMA -->
-  <!-- SUSCRIPCIÓN -->
-  <button class="subscribe-btn" id="subscribeBtn" aria-label="Suscribirse al boletín"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></button>
-
-  <div class="subscribe-modal" id="subscribeModal">
-    <div class="subscribe-modal__backdrop" id="subscribeBackdrop"></div>
-    <div class="subscribe-modal__box">
-      <button class="subscribe-modal__close" id="subscribeClose"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-      <div class="subscribe-modal__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-      <h3 class="subscribe-modal__title" data-i18n="subscribe-title">Mantente al día</h3>
-      <p class="subscribe-modal__sub" data-i18n="subscribe-sub">Recibe resultados de cada jornada, novedades de los torneos y noticias exclusivas directamente en tu correo.</p>
-      <ul class="subscribe-modal__list">
-        <li data-i18n="subscribe-li1">Resultados en tiempo real</li>
-        <li data-i18n="subscribe-li2">Horarios e información de torneos</li>
-        <li data-i18n="subscribe-li3">Novedades y noticias exclusivas</li>
-        <li data-i18n="subscribe-li4">Ofertas de inscripción anticipada</li>
-      </ul>
-      <form class="subscribe-modal__form" id="subscribeForm">
-        <input type="email" class="subscribe-modal__input" placeholder="Tu correo electrónico" data-i18n-placeholder="subscribe-email-placeholder" required />
-        <label class="subscribe-modal__consent">
-          <input type="checkbox" id="subscribeConsent" required />
-          <span data-i18n-html="subscribe-consent">Acepto recibir comunicaciones de Valencia Basket Cup y que mis datos sean tratados conforme a la <a href="privacidad.html" target="_blank" style="color:var(--orange)">Política de Privacidad</a>.</span>
-        </label>
-        <button type="submit" class="subscribe-modal__submit" data-i18n="subscribe-submit">Suscribirse</button>
-      </form>
-      <p class="subscribe-modal__legal" data-i18n="subscribe-legal">Puedes darte de baja en cualquier momento. Respetamos tu privacidad.</p>
-    </div>
-  </div>
-
   <div class="lang-switcher" id="langSwitcher">
     <button class="lang-switcher__toggle" id="langToggle" aria-label="Cambiar idioma">🌐</button>
     <div class="lang-switcher__dropdown">
@@ -267,6 +240,8 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <script src="js/main.js?v=10"></script>
+  <script src="js/main.js?v=17"></script>
+  <script src="js/maintenance.js"></script>
+  <script src="js/vbc-extras.js" defer></script>
 </body>
 </html>
